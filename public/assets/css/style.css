@@ -1,0 +1,39 @@
+img {
+	position: relative;
+	justify-content: center;
+	display: flex;
+	margin: auto 0;
+	width: 60;
+	height: 70;
+}
+
+.pull-center {
+	text-align: center;
+}
+
+.bold-cop {
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.small-cop {
+	font-size: 6px;
+}
+
+.table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table,
+th,
+td {
+	border: 1px solid #ddd;
+	text-align: left;
+	font-size: 8px;
+}
+
+th,
+td {
+	padding: 4px;
+}

@@ -1,0 +1,208 @@
+body {
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+.header {
+	background-color: #f1f1f1;
+	padding: 20px;
+	/* text-align: center; */
+}
+
+.header .logo-gym {
+	width: 100px;
+	height: 100px;
+}
+
+.header h5 {
+	font-size: 24px;
+	font-weight: 300;
+	color: goldenrod;
+	margin-top: 10;
+}
+
+.header strong {
+	color: green;
+}
+
+.header .title {
+	margin-top: -80px;
+	margin-left: 100px;
+	margin-top: -100px;
+}
+
+.header .title h4 {
+	padding-top: -25px;
+	font-weight: 100;
+	font-size: 12px;
+}
+
+/* End Header */
+
+/* Row */
+
+.title-lap h5 {
+	font-size: 12px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* End Row */
+
+/* Column */
+
+/* Create three unequal columns that floats next to each other */
+
+.col {
+	float: left;
+	padding: 0px;
+}
+
+/* Left and right column */
+
+.col.col-6 {
+	width: 50%;
+}
+
+/* Middle column */
+
+.col.col-12 {
+	width: 100%;
+}
+
+.col-25 {
+	float: left;
+	width: 25%;
+	/* margin-top: 6px; */
+}
+
+.col-40 {
+	float: left;
+	width: 40%;
+	/* margin-top: 6px; */
+}
+
+.col-50 {
+	float: left;
+	width: 75%;
+	/* margin-top: 6px; */
+}
+
+.col-40 {
+	float: left;
+	width: 40%;
+	/* margin-top: 6px; */
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Footer */
+
+.footer {
+	background-color: #f1f1f1;
+	padding: 10px;
+	text-align: center;
+}
+
+/* End Footer */
+
+/* Margin */
+
+.mt-2 {
+	margin-top: 20px;
+}
+
+.mt-3 {
+	margin-top: 30px;
+}
+
+.form-group {
+	margin-top: 8px;
+}
+
+.label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+
+.form-control {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+}
+
+.table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table th, td {
+	text-align: left;
+	padding: 5px;
+}
+
+.table th {
+	height: 40px;
+	background-color: #f1f1f1;
+	font-size: 13px;
+}
+
+.table td {
+	height: 20px;
+}
+
+.table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.table thead {
+	text-align: left;
+}
+
+.table.table-bordered th, td {
+	border: 1px solid #ddd;
+}
+
+/* Text Align */
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+/* TEnd ext Align */
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+	.col.col-2, .col.col-3, .col.col-4, .col.col-5, .col.col-6, .col.col-7, .col.col-8, .col.col-9, .col.col-10, .col.col-11, .col.col-12 {
+		width: 100%;
+	}
+}
+
+/* End Column */
