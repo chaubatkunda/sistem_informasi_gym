@@ -107,4 +107,14 @@ class Konfirmasi extends CI_Controller
 			redirect('dashboard');
 		}
 	}
+	public function detconfirmfasilitas($id)
+	{
+		$data = array(
+			'title' 	=> 'Detail Fasilitas',
+			'topik' 	=> '',
+			'fasilitas' => $this->konfirmasi->detailFasilitas($id),
+			'isi' 		=> 'konfirmasi/detail_fasilitas'
+		);
+		$this->load->view('layout/wrap', $data, false);
+	}
 }
