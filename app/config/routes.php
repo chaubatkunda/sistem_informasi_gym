@@ -142,10 +142,11 @@ $route['chek-validasi']             = 'transaksi/chekvalidasi';
 $route['chek-valbelum']             = 'transaksi/chekvalidasibelum';
 
 // !Konfirmasi
-$route['konfirmasi']                     = 'konfirmasi';
-$route['verifikasi.paket/(:any)']        = 'konfirmasi/veripaket/$1';
-$route['verifikasi.fasilitas/(:any)']    = 'konfirmasi/verifasilitas/$1';
-$route['save.confirm.fasilitas']         = 'konfirmasi/saveconfirmfasilitas';
+$route['konfirmasi']                        = 'konfirmasi';
+$route['verifikasi.paket/(:any)']           = 'konfirmasi/veripaket/$1';
+$route['verifikasi.fasilitas/(:any)']       = 'konfirmasi/verifasilitas/$1';
+$route['save.confirm.fasilitas']            = 'konfirmasi/saveconfirmfasilitas';
+$route['detconfirm.fasilitas/(:any)']       = 'detconfirm.fasilitas/$1';
 
 //*===================== Cetak Transaksi Paket =====================//
 $route['cetak-trans-detpaket/(:num)'] = 'cetak/cetaktrpaket/$1';
