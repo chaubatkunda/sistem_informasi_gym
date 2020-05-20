@@ -36,6 +36,18 @@
                             <td><?php echo $fasilitas->nama_fasilitas; ?></td>
                         </tr>
                         <tr>
+                            <th>Tanggal Pemakaian</th>
+                            <td>
+                                <?php echo indoDate($fasilitas->tgl_booking); ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Jam</th>
+                            <td>
+                                <?php echo indoTime($fasilitas->jam_mulai) . ", " . indoTime($fasilitas->jam_selesai); ?>
+                            </td>
+                        </tr>
+                        <tr>
                             <th>Harga</th>
                             <td><?php echo Rp($fasilitas->total_bayar); ?></td>
                         </tr>
