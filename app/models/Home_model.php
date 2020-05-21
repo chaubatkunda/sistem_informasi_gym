@@ -31,22 +31,12 @@ class Home_model extends CI_Model
 		return $this->db->get('t_jenis_senam')->num_rows();
 	}
 
-
-	public function countPaketMember($id_member)
+	public function countPaketMember($id)
 	{
-		return $this->db->get_where('t_transpaket', ['id_member' => $id_member])->num_rows();
+		return $this->db->get_where('t_transpaket', ['id_member' => $id])->num_rows();
 	}
-	public function getAllMyPaket($idmember)
+	public function countFasMember($id)
 	{
-		$this->db->order_by('kode_pembelian', 'ASC');
-		return $this->db->get_where('t_transpaket', ['id_member' => $idmember])->result_array();
-	}
-	public function getAllMyFasilitas($idmember)
-	{
-		return $this->db->get_where('t_transfasilitas', ['id_member' => $idmember])->result_array();
-	}
-	public function countFasMember($id_member)
-	{
-		return $this->db->get_where('t_transfasilitas', ['id_member' => $id_member])->num_rows();
+		return $this->db->get_where('t_transfasilitas', ['id_member' => $id])->num_rows();
 	}
 }

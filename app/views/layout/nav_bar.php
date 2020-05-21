@@ -11,13 +11,13 @@
 						<li <?php echo $this->uri->segment(1) == 'user' || $this->uri->segment(1) == '' ? 'class="active"' : '' ?>>
 							<a title="User" href="<?php echo base_url('user'); ?>" aria-expanded="false">
 								<i class="fa fa-fw fa-home" aria-hidden="true"></i>
-								<span class="mini-click-non">Home</span></a>
+								<span class="mini-click-non">Dashboard</span></a>
 						</li>
 					<?php endif; ?>
 					<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 						<li>
 							<a title="Dashboard" href="<?php echo base_url('dashboard'); ?>" aria-expanded="false">
-								<i class="fa fa-fw fa-tachometer"></i>
+								<i class="fa fa-fw fa-home"></i>
 								<span class="mini-click-non">Dashboard</span>
 							</a>
 						</li>
@@ -57,10 +57,10 @@
 								</li>
 							<?php else : ?>
 								<li>
-									<a href="<?php echo base_url('userPaket'); ?>"><span class="mini-sub-pro">Paket</span></a>
+									<a href="<?php echo base_url('user.paket'); ?>"><span class="mini-sub-pro">Paket</span></a>
 								</li>
 								<li>
-									<a href="<?php echo base_url('userFasilitas'); ?>"><span class="mini-sub-pro">Fasilitas</span></a>
+									<a href="<?php echo base_url('user.fasilitas'); ?>"><span class="mini-sub-pro">Fasilitas</span></a>
 								</li>
 							<?php endif; ?>
 						</ul>
@@ -84,8 +84,8 @@
 								</li>
 							<?php else : ?>
 								<li>
-									<a href="<?php echo base_url('transaksi.paket'); ?>">
-										<span class="mini-sub-pro">Paket</span>
+									<a href="<?php echo base_url('user.transaksi'); ?>">
+										<span class="mini-sub-pro">Transaksi</span>
 									</a>
 								</li>
 								<li>

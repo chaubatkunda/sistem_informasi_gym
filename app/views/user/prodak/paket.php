@@ -11,7 +11,6 @@
 								<thead>
 									<tr>
 										<th>No</th>
-										<th>ID</th>
 										<th>Paket</th>
 										<th>Harga</th>
 										<th>Periode</th>
@@ -22,17 +21,16 @@
 								<tbody>
 									<?php
 									$no = 1;
-									foreach ($paket as $pk) : ?>
+									foreach ($paket as $p) : ?>
 										<tr>
 											<td><?php echo $no++; ?></td>
-											<td><?php echo $pk['id_paket']; ?></td>
-											<td><?php echo $pk['nama_paket']; ?></td>
-											<td><?php echo number_format($pk['harga'], 0, ',', '.'); ?></td>
+											<td><?php echo $p->nama_paket; ?></td>
+											<td><?php echo Rp($p->harga); ?></td>
 											<td>
 												<?php
 												$tgl_sekarang = date('d-m-Y');
-												$tgl_awal = date('d-m-Y', strtotime($pk['tgl_awal']));
-												$tgl_akhir = date('d-m-Y', strtotime($pk['tgl_akhir']));
+												$tgl_awal = indoDate($p->tgl_awal);
+												$tgl_akhir = IndoDate($p->tgl_akhir);
 												if ($tgl_sekarang == $tgl_akhir) : ?>
 													<!-- echo date('d-m-Y', strtotime('+3 month', time())) . "\n"; -->
 													<strong class="text-danger">Tidak Aktif</strong>
@@ -44,7 +42,7 @@
 											<td>
 												<?php
 												$tgl_sekarang = date('d-m-Y');
-												$selesai = date('d-m-Y', strtotime($pk['tgl_akhir']));
+												$selesai = indoDate($p->tgl_akhir);
 												if ($tgl_sekarang >= $selesai) :
 												?>
 													<small>Aktif</small>
@@ -54,17 +52,17 @@
 											</td>
 											<td>
 												<?php if ($this->fungsi->user_login()['level'] == 2) : ?>
-													<a href="<?php echo base_url('beli-paket/') . $pk['id_paket']; ?>" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="left" title="Beli">
+													<a href="<?php echo base_url('beli.paket/') . $p->id_paket; ?>" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="left" title="Beli">
 														<i class="fa fa-money"></i> Beli
 													</a>
-													<a href="<?php echo base_url('detail-userPaket/') . $pk['id_paket']; ?>" class="btn btn-info btn-sm mr-2" data-toggle="tooltip" data-placement="right" title="Detail">
+													<a href="<?php echo base_url('detail-userPaket/') . $p->id_paket; ?>" class="btn btn-info btn-sm mr-2" data-toggle="tooltip" data-placement="right" title="Detail">
 														<i class="fa fa-info-circle"></i> Detail
 													</a>
 												<?php else : ?>
 													<a href="" class="btn btn-success btn-sm btn-user-beli" data-toggle="tooltip" data-placement="left" title="Beli">
 														<i class="fa fa-money"></i> Beli
 													</a>
-													<a href="<?php echo base_url('detail-userPaket/') . $pk['id_paket']; ?>" class="btn btn-info btn-sm mr-2" data-toggle="tooltip" data-placement="right" title="Detail">
+													<a href="<?php echo base_url('detail-userPaket/') . $p->id_paket; ?>" class="btn btn-info btn-sm mr-2" data-toggle="tooltip" data-placement="right" title="Detail">
 														<i class="fa fa-info-circle"></i> Detail
 													</a>
 												<?php endif; ?>

@@ -55,18 +55,19 @@ $route['block']                     = 'auth/blocked';
 $route['dashboard']                 = 'home';
 //!===================== Calon Member =====================//
 $route['calon-member']              = 'auth/daftar';
-$route['daftar']                    = 'user/daftar';
+// $route['daftar']                    = 'user/daftar';
 
 //?===================== User =====================//
 $route['user']                      = 'user';
-$route['myprofile']                 = 'user/profile';
-$route['userPaket']                 = 'user/paket';
-$route['detail-userPaket/(:num)']   = 'user/detailpaket/$1';
+$route['user.paket']                = 'user/paket';
+$route['user.fasilitas']            = 'user/fasilitas';
 
-$route['userFasilitas']             = 'user/fasilitas';
-$route['beli-paket/(:num)']         = 'user/belipaket/$1';
-$route['sewaFasilitas/(:any)']      = 'user/sewafas/$1';
-$route['sewafasilitas/(:any)']      = 'user/sewafasnonmember/$1';
+// $route['myprofile']                 = 'user/profile';
+// $route['detail-userPaket/(:num)']   = 'user/detailpaket/$1';
+
+// $route['beli-paket/(:num)']         = 'user/belipaket/$1';
+// $route['sewaFasilitas/(:any)']      = 'user/sewafas/$1';
+// $route['sewafasilitas/(:any)']      = 'user/sewafasnonmember/$1';
 //!===================== End User =====================//
 
 
