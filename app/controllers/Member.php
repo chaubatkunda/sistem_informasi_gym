@@ -198,6 +198,7 @@ class Member extends CI_Controller
 		$data = array(
 			'title' 	=> 'Konfirmasi Pembayaran',
 			'topik' 	=> '',
+			'paket'		=> $this->member->getAllTransPaket($id),
 			'isi' 		=> 'member/konfirm_pembayaran'
 		);
 		$this->load->view('layout/wrap', $data, false);

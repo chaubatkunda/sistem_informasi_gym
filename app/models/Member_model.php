@@ -36,6 +36,10 @@ class Member_model extends CI_Model
 	{
 		return $this->db->get_where('t_transfasilitas', ['kode_pembelian' => $id])->row();
 	}
+	public function getAllTransPaket($id)
+	{
+		return $this->db->get_where('t_transpaket', ['kode_pembelian' => $id])->row();
+	}
 	public function insert_member($datamember)
 	{
 		return $this->db->insert('t_member', $datamember);

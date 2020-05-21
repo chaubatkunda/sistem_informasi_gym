@@ -48,6 +48,64 @@ class Konfirmasi extends CI_Controller
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}
+	public function saveconfirmpaket($id)
+	{
+		$tunai = $this->input->post('chek-tunai', true);
+		$edc = $this->input->post('chek-edc', true);
+		$transfer = $this->input->post('chek-transfer', true);
+
+		if (isset($tunai)) {
+			$datap = [
+				// 'bukti_pembayaran'	=> $this->upload->data('file_name', true),
+				'ket_bayar'			=> $tunai,
+				'is_success'		=> 1
+			];
+			$this->konfirmasi->update_transpaket($datap, $id);
+			redirect('dashboard');
+		} elseif (isset($edc)) {
+			$datap = [
+				// 'bukti_pembayaran'	=> $this->upload->data('file_name', true),
+				'ket_bayar'			=> $edc,
+				'is_success'		=> 1
+			];
+
+			$this->konfirmasi->update_transpaket($datap, $id);
+			redirect('dashboard');
+		} elseif (isset($transfer)) {
+			$config['upload_path']          = './public/assets/buktitransfer/';
+			$config['allowed_types']        = 'jpg|jpeg|png';
+			$config['overwrite'] 			= TRUE;
+			$config['max_size']             = 2048;
+			$this->upload->initialize($config);
+
+			if ($this->upload->do_upload('file_upload')) {
+				// Data Fasilitas
+				$datap = [
+					'bukti_pembayaran'	=> $this->upload->data('file_name', true),
+					'ket_bayar'			=> $transfer,
+					'is_success'		=> 1
+				];
+				$this->konfirmasi->update_transpaket($datap, $id);
+				redirect('dashboard');
+			} else {
+				$error = $this->upload->display_errors('Gambar Tidak Dapat Diupload');
+				$this->session->set_flashdata('error', $error);
+				redirect('dashboard');
+			}
+		} else {
+			redirect('dashboard');
+		}
+	}
+	public function detconfirmpaket($id)
+	{
+		$data = array(
+			'title' 	=> 'Detail Pembelian Paket',
+			'topik' 	=> '',
+			'paket' 	=> $this->konfirmasi->detaiPaket($id),
+			'isi' 		=> 'konfirmasi/detail_paket'
+		);
+		$this->load->view('layout/wrap', $data, false);
+	}
 	public function verifasilitas($id)
 	{
 		$data = array(

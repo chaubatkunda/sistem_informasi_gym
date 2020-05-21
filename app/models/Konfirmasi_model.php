@@ -22,9 +22,18 @@ class Konfirmasi_model extends CI_Model
 		$this->db->from('t_transpaket');
 		$this->db->join('t_member', 't_member.id_member = t_transpaket.id_member');
 		$this->db->join('t_user', 't_user.id = t_member.id_user');
-		$this->db->where('ket_bayar', 2);
+		// $this->db->where('ket_bayar', 2);
 		// $this->db->where('ket_bayar', 3);
 		return $this->db->get()->result();
+	}
+	public function detaiPaket($id)
+	{
+		$this->db->select('*');
+		$this->db->from('t_transpaket');
+		$this->db->join('t_member', 't_member.id_member = t_transpaket.id_member');
+		$this->db->join('t_user', 't_user.id = t_member.id_user');
+		$this->db->where('kode_pembelian', $id);
+		return $this->db->get()->row();
 	}
 	public function getAllChekFasilitas()
 	{
@@ -58,6 +67,10 @@ class Konfirmasi_model extends CI_Model
 	public function update_fasilitas($dataf, $id)
 	{
 		return $this->db->update('t_transfasilitas', $dataf, ['kode_pembelian' => $id]);
+	}
+	public function update_transpaket($datap, $id)
+	{
+		return $this->db->update('t_transpaket', $datap, ['kode_pembelian' => $id]);
 	}
 
 	//!======================== Transaksi Fasilitas ========================//

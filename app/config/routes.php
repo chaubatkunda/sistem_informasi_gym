@@ -143,7 +143,12 @@ $route['chek-valbelum']             = 'transaksi/chekvalidasibelum';
 
 // !Konfirmasi
 $route['konfirmasi']                        = 'konfirmasi';
+// ? paket
 $route['verifikasi.paket/(:any)']           = 'konfirmasi/veripaket/$1';
+$route['save.confirm.paket/(:any)']         = 'konfirmasi/saveconfirmpaket/$1';
+$route['detconfirm.peket/(:any)']           = 'konfirmasi/detconfirmpaket/$1';
+
+// ? fasilitas
 $route['verifikasi.fasilitas/(:any)']       = 'konfirmasi/verifasilitas/$1';
 $route['save.confirm.fasilitas']            = 'konfirmasi/saveconfirmfasilitas';
 $route['detconfirm.fasilitas/(:any)']       = 'konfirmasi/detconfirmfasilitas/$1';

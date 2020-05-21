@@ -53,15 +53,19 @@
                                             <td><?php echo $p->nama_paket; ?></td>
                                             <td><?php echo Rp($p->harga_paket); ?></td>
                                             <td>
-                                                <?php if ($p->ket_bayar == 2) : ?>
-                                                    <span class="text-danger">Belum Lunas</span>
-                                                <?php else : ?>
+                                                <?php if ($p->is_success == 1) : ?>
                                                     <span class="text-success">Lunas</span>
+                                                <?php else : ?>
+                                                    <span class="text-danger">Belum Lunas</span>
                                                 <?php endif; ?>
                                             </td>
                                             <td>
-                                                <a href="<?php echo base_url('verifikasi.paket/') . $p->kode_pembelian; ?>" class="btn btn-success btn-sm">Verifikasi</a>
-                                                <a href="<?php echo base_url('konfirmasi.pembelian/') . $p->kode_pembelian; ?>" class="btn btn-primary btn-sm">Konfirmasi</a>
+                                                <?php if ($p->is_success == 1) : ?>
+                                                    <a href="<?php echo base_url('detconfirm.peket/') . $p->kode_pembelian; ?>" class="btn btn-info btn-sm">Detail</a>
+                                                <?php else : ?>
+                                                    <a href="<?php echo base_url('verifikasi.paket/') . $p->kode_pembelian; ?>" class="btn btn-success btn-sm">Verifikasi</a>
+                                                    <a href="<?php echo base_url('konfirmasi.pembelian/') . $p->kode_pembelian; ?>" class="btn btn-primary btn-sm">Konfirmasi</a>
+                                                <?php endif; ?>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

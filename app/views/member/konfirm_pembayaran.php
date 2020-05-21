@@ -1,12 +1,11 @@
 <div class="container-fluid">
     <div class="row">
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url('save.confirm.paket/') . $paket->kode_pembelian; ?>" method="post" enctype="multipart/form-data">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="sparkline10-list">
                     <h2 class="text-center text-primary">Konfirmasi Pembayaran</h2>
                     <div class="row">
-
                         <div class="col-md-5">
                             <div class="row">
                                 <div class="col-md-4 text-right">
@@ -77,7 +76,9 @@
 
                     </div>
                     <div class="form-group text-center">
-                        <button class="btn btn-primary">Continue <i class="fa fa-chevron-circle-right"></i></button>
+                        <button class="btn btn-primary">Continue
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </button>
                     </div>
                 </div>
 

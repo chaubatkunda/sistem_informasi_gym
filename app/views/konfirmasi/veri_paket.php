@@ -4,7 +4,7 @@
         <div class="col-md-6">
             <div class="sparkline13-list">
                 <h2 class="text-primary">Verifikasi
-                    <?php if ($paket->ket_bayar == 1) : ?>
+                    <?php if ($paket->is_success == 1) : ?>
                         <small class="text-success">Success</small>
                     <?php else : ?>
                         <small class="text-warning">Pending</small>
