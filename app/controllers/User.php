@@ -37,7 +37,7 @@ class User extends CI_Controller
 	public function belipaket($id)
 	{
 		$data = array(
-			'title' 		=> 'Paket',
+			'title' 		=> 'Detail Pembelian Paket',
 			'topik' 		=> '',
 			'paket'			=> $this->paket->getPakeById($id),
 			'isipaket'  	=> $this->paket->selectPkIsiPaket($id),
@@ -46,7 +46,7 @@ class User extends CI_Controller
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}
-	public function usertranspaket($id)
+	public function usertranspaket()
 	{
 	}
 

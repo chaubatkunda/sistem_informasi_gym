@@ -58,10 +58,10 @@ $route['calon-member']              = 'auth/daftar';
 // $route['daftar']                    = 'user/daftar';
 
 //?===================== User =====================//
-$route['user']                                  = 'user';
-$route['user.paket']                            = 'user/paket';
-$route['beli.paket/(:any)']                     = 'user/belipaket/$1';
-$route['user.transaksi.paket/(:any)']           = 'user/usertranspaket/$1';
+$route['user']                           = 'user';
+$route['user.paket']                     = 'user/paket';
+$route['beli.paket/(:any)']              = 'user/belipaket/$1';
+$route['user.transaksi.paket']           = 'user/usertranspaket';
 
 
 $route['user.fasilitas']            = 'user/fasilitas';

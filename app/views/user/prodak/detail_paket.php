@@ -8,7 +8,7 @@
 				<br>
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h5>Detail Pembelian Paket</h5>
+						<h5><?php echo $title; ?></h5>
 					</div>
 					<form action="<?php echo base_url('user.transaksi.paket'); ?>" method="post">
 						<div class="panel-body">
