@@ -65,7 +65,7 @@
                         </table>
                     </div>
                     <div class="btn-group pull-right">
-                        <a href="<?php echo base_url('detail.pembelian/') . $paket->id_paket . "/" . $member->id_member; ?>" class="btn btn-primary btn-lg"> Continue <i class="fa fa-chevron-circle-right"></i></a>
+                        <a href="<?php echo base_url('detail.pembelian/') . $paket->id_paket . "/" . $member->id_member; ?>" class="btn btn-primary"> Continue <i class="fa fa-chevron-circle-right"></i></a>
                         <!-- <button type="submit" class="btn btn-primary btn-lg">Next <i class="fa fa-chevron-circle-right"></i></button> -->
                     </div>
                 </form>

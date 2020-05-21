@@ -15,6 +15,18 @@ class User_model extends CI_Model
 	}
 	// ! End UserLogin
 
+	// !Chek Member
+	public function getChekMember($iduser)
+	{
+		$this->db->select('*');
+		$this->db->from('t_user');
+		$this->db->join('t_member', 't_member.id_user = t_user.id', 'left');
+		$this->db->where('t_user.id', $iduser);
+		return $this->db->get()->row();
+	}
+	// !End Chek Member
+
+
 	// ! User Fasilitas
 	public function getAllFasilitasByKet()
 	{
@@ -24,15 +36,6 @@ class User_model extends CI_Model
 	// public function getAllMyFasilitas($idmember)
 	// {
 	// 	return $this->db->get_where('t_transfasilitas', ['id_member' => $idmember])->result_array();
-	// }
-
-	// public function getChekMember($iduser)
-	// {
-	// 	$this->db->select('*');
-	// 	$this->db->from('t_user');
-	// 	$this->db->join('t_member', 't_member.id_user = t_user.id', 'left');
-	// 	$this->db->where('t_user.id', $iduser);
-	// 	return $this->db->get()->row();
 	// }
 
 
