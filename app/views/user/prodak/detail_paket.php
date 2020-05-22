@@ -3,9 +3,6 @@
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
 			<div class="sparkline10-list">
-
-				<br>
-				<br>
 				<div class="panel panel-primary">
 					<div class="panel-heading">
 						<h5><?php echo $title; ?></h5>
@@ -22,6 +19,7 @@
 											<h5>
 												Paket <strong class="badge"><?php echo $paket->nama_paket; ?></strong>
 											</h5>
+											<input type="hidden" name="nama_paket" value="<?php echo $paket->nama_paket; ?>">
 										</div>
 									</div>
 									<div class="row">
@@ -32,6 +30,7 @@
 											<h5>
 												<strong class="text-primary"><?php echo Rp($paket->harga); ?></strong>
 											</h5>
+											<input type="hidden" name="harga_paket" value="<?php echo $paket->harga; ?>">
 										</div>
 									</div>
 
@@ -45,6 +44,7 @@
 											<h5>
 												<strong class=""><?php echo $this->fungsi->kodeTransFasilitas(); ?></strong>
 											</h5>
+											<input type="hidden" name="kode_trans" value="<?php echo $this->fungsi->kodeTransFasilitas(); ?>">
 										</div>
 									</div>
 									<div class="row">
@@ -55,6 +55,7 @@
 											<h5>
 												<strong class=""><?php echo date('d-m-Y'); ?></strong>
 											</h5>
+											<input type="hidden" name="tgl_trans" value="<?php echo date('Y-m-d'); ?>">
 										</div>
 									</div>
 								</div>
@@ -75,9 +76,15 @@
 										foreach ($isipaket as $isi) :
 										?>
 											<tr>
-												<td><?php echo $no++; ?></td>
-												<td><?php echo $isi->jenis_senam; ?></td>
-												<td><?php echo $isi->kuota; ?> x</td>
+												<td>
+													<?php echo $no++; ?>
+												</td>
+												<td>
+													<?php echo $isi->jenis_senam; ?>
+												</td>
+												<td>
+													<?php echo $isi->kuota; ?> x
+												</td>
 												<td>
 													<?php
 													$query = $this->db->get_where('t_setpaket_det', ['id_setpaket' => $isi->id_setingpaket])->result();

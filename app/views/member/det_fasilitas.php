@@ -21,7 +21,7 @@
                                                 <th>Tanggal Pembelian</th>
                                                 <td>
                                                     <?php echo date('d-m-Y'); ?>
-                                                    <input type="hidden" name="tgl_trans" value="<?php echo date('Y-m-d H:i:s'); ?>">
+                                                    <input type="hidden" name="tgl_trans" value="<?php echo date('Y-m-d'); ?>">
                                                 </td>
                                             </tr>
                                             <tr>

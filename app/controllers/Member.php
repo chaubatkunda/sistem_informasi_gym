@@ -184,7 +184,7 @@ class Member extends CI_Controller
 			'id_member'			=> $this->input->post('id_member', true),
 			'nama_paket'		=> $this->input->post('nama_paket', true),
 			'harga_paket'		=> $this->input->post('harga_paket', true),
-			'ket_bayar'			=> 2
+			'ket_bayar'			=> 0
 		];
 		$this->member->insert_detailbeli($datapaket);
 		if ($this->db->affected_rows() > 0) {
