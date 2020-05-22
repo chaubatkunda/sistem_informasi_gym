@@ -23,6 +23,8 @@ class User extends CI_Controller
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}
+
+	// !user paket
 	public function paket()
 	{
 		$data = array(
@@ -94,13 +96,35 @@ class User extends CI_Controller
 		$data = array(
 			'title' 		=> 'Konfirmasi Pembayaran',
 			'topik' 		=> '',
-			// 'fasilitas' 	=> $this->user->getAllFasilitasByKet(),
+			'paket' 		=> $this->user->getAllTransPaketById($id),
 			'isi' 			=> 'user/prodak/konfirmasi_pembelian_paket'
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}
+	public function useraddconfirmtranspaket($id)
+	{
+		$config['upload_path']          = './public/assets/buktitransfer/';
+		$config['allowed_types']        = 'jpg|jpeg|png';
+		$config['overwrite'] 			= TRUE;
+		$this->upload->initialize($config);
 
+		if ($this->upload->do_upload('file_upload')) {
+			// $config['overwrite'] 			= TRUE;
+			$datap = [
+				'bukti_pembayaran'	=> $this->upload->data('file_name', true),
+				'ket_bayar'			=> 1,
+				'is_success'		=> 2
+			];
+			$this->konfirmasi->update_transpaket($datap, $id);
+			redirect('info.peket.success/' . $id);
+		} else {
+			$error = $this->upload->display_errors('Gambar Tidak Dapat Diupload');
+			$this->session->set_flashdata('error', $error);
+			redirect('info.peket.notsuccess/' . $id);
+		}
+	}
 
+	// !user fasilitas
 
 	public function fasilitas()
 	{

@@ -63,6 +63,7 @@ $route['user.paket']                            = 'user/paket';
 $route['beli.paket/(:any)']                     = 'user/belipaket/$1';
 $route['user.transaksi.paket']                  = 'user/usertranspaket';
 $route['user.konfirmasi.pembelian/(:any)']      = 'user/userconfirmtranspaket/$1';
+$route['user.addkonfirm.pembelian/(:any)']      = 'user/useraddconfirmtranspaket/$1';
 
 
 $route['user.fasilitas']            = 'user/fasilitas';
@@ -153,6 +154,8 @@ $route['konfirmasi']                        = 'konfirmasi';
 $route['verifikasi.paket/(:any)']           = 'konfirmasi/veripaket/$1';
 $route['save.confirm.paket/(:any)']         = 'konfirmasi/saveconfirmpaket/$1';
 $route['detconfirm.peket/(:any)']           = 'konfirmasi/detconfirmpaket/$1';
+$route['info.peket.success/(:any)']         = 'konfirmasi/infopaketsukses/$1';
+$route['info.peket.notsuccess/(:any)']      = 'konfirmasi/infopaketnotsukses/$1';
 
 // ? fasilitas
 $route['verifikasi.fasilitas/(:any)']       = 'konfirmasi/verifasilitas/$1';

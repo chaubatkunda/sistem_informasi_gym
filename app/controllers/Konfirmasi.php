@@ -18,7 +18,7 @@ class Konfirmasi extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		chek_admin();
+		// chek_admin();
 		not_login();
 	}
 	//!======================== End Login ========================//
@@ -56,7 +56,6 @@ class Konfirmasi extends CI_Controller
 
 		if (isset($tunai)) {
 			$datap = [
-				// 'bukti_pembayaran'	=> $this->upload->data('file_name', true),
 				'ket_bayar'			=> $tunai,
 				'is_success'		=> 1
 			];
@@ -64,7 +63,6 @@ class Konfirmasi extends CI_Controller
 			redirect('dashboard');
 		} elseif (isset($edc)) {
 			$datap = [
-				// 'bukti_pembayaran'	=> $this->upload->data('file_name', true),
 				'ket_bayar'			=> $edc,
 				'is_success'		=> 1
 			];
@@ -106,6 +104,18 @@ class Konfirmasi extends CI_Controller
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}
+
+	public function infopaketsukses($id)
+	{
+		$data = array(
+			'title' 	=> 'Success',
+			'topik' 	=> '',
+			// 'paket' 	=> $this->konfirmasi->detaiPaket($id),
+			'isi' 		=> 'user/prodak/info_pembelian_paket'
+		);
+		$this->load->view('layout/wrap', $data, false);
+	}
+
 	public function verifasilitas($id)
 	{
 		$data = array(

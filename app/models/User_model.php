@@ -26,6 +26,11 @@ class User_model extends CI_Model
 	}
 	// !End Chek Member
 
+	// !User Paket
+	public function getAllTransPaketById($id)
+	{
+		return $this->db->get_where('t_transpaket', ['kode_pembelian' => $id])->row();
+	}
 
 	// ! User Fasilitas
 	public function getAllFasilitasByKet()

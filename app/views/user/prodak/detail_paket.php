@@ -43,10 +43,10 @@
 										<div class="col-md-5">
 											<h5>
 												<strong class="">
-													<?php echo $this->fungsi->kodeTransFasilitas(); ?>
+													<?php echo $this->fungsi->kodeTransPaket(); ?>
 												</strong>
 											</h5>
-											<input type="hidden" name="kode_trans" value="<?php echo $this->fungsi->kodeTransFasilitas(); ?>" readonly>
+											<input type="hidden" name="kode_trans" value="<?php echo $this->fungsi->kodeTransPaket(); ?>" readonly>
 											<input type="hidden" name="id_member" value="<?php echo $this->fungsi->chek_member()->id_member; ?>" readonly>
 										</div>
 									</div>
@@ -101,8 +101,8 @@
 																<?php echo indoDate($tglp->tgl_masuk) . ", " . indoTime($tglp->jam_mulai) . " - " . indoTime($tglp->jam_selesai); ?>
 															</li>
 															<input type="hidden" name="tgl_masuk[]" value="<?php echo $tglp->tgl_masuk; ?>" readonly>
-															<input type="hidden" name="jm_mulai[]" value="<?php echo $tglp->jam_mulai; ?>" readonly>
-															<input type="hidden" name="jm_selesai[]" value="<?php echo $tglp->jam_selesai; ?>" readonly>
+															<input type="hidden" name="jam_mulai[]" value="<?php echo $tglp->jam_mulai; ?>" readonly>
+															<input type="hidden" name="jam_selesai[]" value="<?php echo $tglp->jam_selesai; ?>" readonly>
 															<input type="hidden" name="id_setpa[]" value="<?php echo $tglp->id_setpaket; ?>" readonly>
 														<?php endforeach; ?>
 													</ul>

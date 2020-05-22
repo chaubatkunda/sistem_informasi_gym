@@ -17,12 +17,11 @@
                                             <img class="media-object" src="<?php echo base_url('public/assets/img/logo/bri.jpg'); ?>" width="100%">
                                         </div>
                                         <div class="col-md-8">
-                                            <h5 class="">
+                                            <h5>
                                                 Bank Republik Indonesia <br>
                                                 <strong>043849384-3984983</strong> <br>
                                                 <small>Egy Gym Malang</small>
                                             </h5>
-                                            <small></small>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -30,12 +29,11 @@
                                             <img class="media-object" src="<?php echo base_url('public/assets/img/logo/bca.jpg'); ?>" width="100%">
                                         </div>
                                         <div class="col-md-8">
-                                            <h5 class="">
+                                            <h5>
                                                 Bank Central Asia <br>
                                                 <strong>043849384</strong> <br>
                                                 <small>Egy Gym Malang</small>
                                             </h5>
-                                            <small></small>
                                         </div>
                                     </div>
                                 </div>
@@ -74,9 +72,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </form>
     </div>
 </div>
