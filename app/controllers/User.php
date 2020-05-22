@@ -89,6 +89,17 @@ class User extends CI_Controller
 		redirect('user.konfirmasi.pembelian/' . $kodetrans);
 	}
 
+	public function userconfirmtranspaket($id)
+	{
+		$data = array(
+			'title' 		=> 'Konfirmasi Pembayaran',
+			'topik' 		=> '',
+			// 'fasilitas' 	=> $this->user->getAllFasilitasByKet(),
+			'isi' 			=> 'user/prodak/konfirmasi_pembelian_paket'
+		);
+		$this->load->view('layout/wrap', $data, false);
+	}
+
 
 
 	public function fasilitas()
