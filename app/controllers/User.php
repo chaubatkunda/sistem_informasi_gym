@@ -48,6 +48,45 @@ class User extends CI_Controller
 	}
 	public function usertranspaket()
 	{
+		$kodetrans 	= $this->input->post('kode_trans', true);
+		$jsenam 	= $this->input->post('jenis_senam', true);
+		$tglm		= $this->input->post('tgl_masuk', true);
+
+		// !Insert IsiPaket
+		for ($i = 0; $i < count($jsenam); $i++) {
+			$isipaket = [
+				'setpaket_id'		=> $this->input->post('id_setp', true)[$i],
+				'kode_pembelian'	=> $this->input->post('kode_trans', true),
+				'jenis_senam'		=> $this->input->post('jenis_senam', true)[$i],
+				'kuota'				=> $this->input->post('kuota', true)[$i],
+			];
+			$this->member->insert_isipaket($isipaket);
+		}
+
+		// !Insert TanggalLatihan
+		for ($ii = 0; $ii < count($tglm); $ii++) {
+			$tgllatih = [
+				'setpaket_id'		=> $this->input->post('id_setpa', true)[$ii],
+				'kode_pembelian'	=> $this->input->post('kode_trans', true),
+				'tgl_mulai'			=> $this->input->post('tgl_masuk', true)[$ii],
+				'jam_mulai'			=> $this->input->post('jam_mulai', true)[$ii],
+				'jam_selesai'		=> $this->input->post('jam_selesai', true)[$ii],
+			];
+			$this->member->insert_tglisipaket($tgllatih);
+		}
+
+		// !Insert Paket
+		$datapaket = [
+			'tgl_trans'			=> $this->input->post('tgl_trans', true),
+			'kode_pembelian'	=> $this->input->post('kode_trans', true),
+			'id_member'			=> $this->input->post('id_member', true),
+			'nama_paket'		=> $this->input->post('nama_paket', true),
+			'harga_paket'		=> $this->input->post('harga_paket', true),
+			'ket_bayar'			=> 0,
+			'is_success'		=> 2
+		];
+		$this->member->insert_detailbeli($datapaket);
+		redirect('user.konfirmasi.pembelian/' . $kodetrans);
 	}
 
 

@@ -19,7 +19,7 @@
 											<h5>
 												Paket <strong class="badge"><?php echo $paket->nama_paket; ?></strong>
 											</h5>
-											<input type="hidden" name="nama_paket" value="<?php echo $paket->nama_paket; ?>">
+											<input type="hidden" name="nama_paket" value="<?php echo $paket->nama_paket; ?>" readonly>
 										</div>
 									</div>
 									<div class="row">
@@ -30,7 +30,7 @@
 											<h5>
 												<strong class="text-primary"><?php echo Rp($paket->harga); ?></strong>
 											</h5>
-											<input type="hidden" name="harga_paket" value="<?php echo $paket->harga; ?>">
+											<input type="hidden" name="harga_paket" value="<?php echo $paket->harga; ?>" readonly>
 										</div>
 									</div>
 
@@ -42,9 +42,12 @@
 										</div>
 										<div class="col-md-5">
 											<h5>
-												<strong class=""><?php echo $this->fungsi->kodeTransFasilitas(); ?></strong>
+												<strong class="">
+													<?php echo $this->fungsi->kodeTransFasilitas(); ?>
+												</strong>
 											</h5>
-											<input type="hidden" name="kode_trans" value="<?php echo $this->fungsi->kodeTransFasilitas(); ?>">
+											<input type="hidden" name="kode_trans" value="<?php echo $this->fungsi->kodeTransFasilitas(); ?>" readonly>
+											<input type="hidden" name="id_member" value="<?php echo $this->fungsi->chek_member()->id_member; ?>" readonly>
 										</div>
 									</div>
 									<div class="row">
@@ -55,7 +58,7 @@
 											<h5>
 												<strong class=""><?php echo date('d-m-Y'); ?></strong>
 											</h5>
-											<input type="hidden" name="tgl_trans" value="<?php echo date('Y-m-d'); ?>">
+											<input type="hidden" name="tgl_trans" value="<?php echo date('Y-m-d'); ?>" readonly>
 										</div>
 									</div>
 								</div>
@@ -81,9 +84,12 @@
 												</td>
 												<td>
 													<?php echo $isi->jenis_senam; ?>
+													<input type="hidden" name="jenis_senam[]" value="<?php echo $isi->jenis_senam; ?>" readonly>
+													<input type="hidden" name="id_setp[]" value="<?php echo $isi->id_setingpaket; ?>" readonly>
 												</td>
 												<td>
 													<?php echo $isi->kuota; ?> x
+													<input type="hidden" name="kuota[]" value="<?php echo $isi->kuota; ?>" readonly>
 												</td>
 												<td>
 													<?php
@@ -91,7 +97,13 @@
 													?>
 													<ul class="list-group">
 														<?php foreach ($query as $tglp) : ?>
-															<li><?php echo indoDate($tglp->tgl_masuk) . ", " . indoTime($tglp->jam_mulai) . " - " . indoTime($tglp->jam_selesai); ?></li>
+															<li>
+																<?php echo indoDate($tglp->tgl_masuk) . ", " . indoTime($tglp->jam_mulai) . " - " . indoTime($tglp->jam_selesai); ?>
+															</li>
+															<input type="hidden" name="tgl_masuk[]" value="<?php echo $tglp->tgl_masuk; ?>" readonly>
+															<input type="hidden" name="jm_mulai[]" value="<?php echo $tglp->jam_mulai; ?>" readonly>
+															<input type="hidden" name="jm_selesai[]" value="<?php echo $tglp->jam_selesai; ?>" readonly>
+															<input type="hidden" name="id_setpa[]" value="<?php echo $tglp->id_setpaket; ?>" readonly>
 														<?php endforeach; ?>
 													</ul>
 												</td>
