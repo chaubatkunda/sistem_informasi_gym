@@ -3507,7 +3507,7 @@ td.text-right.mail-date {
 /*----------------------------------------*/
 /*  16. Google Map
 /*----------------------------------------*/
-#map,
+/* #map,
 #map1,
 #map2,
 #googleMap,
@@ -3521,7 +3521,7 @@ td.text-right.mail-date {
 .google-map-single {
 	width: 100%;
 	height: 300px;
-}
+} */
 
 /*----------------------------------------*/
 /*  17. Images Cropper
@@ -6268,8 +6268,33 @@ div#sparklinehome canvas {
 	display: none;
 }
 
+.jumbotron {
+	width: 250px;
+	height: 250px;
+	transition: 0.8 all;
+	align-items: center;
+	margin: auto;
+	-webkit-box-shadow: 1px 2px 43px 1px rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: 1px 2px 43px 1px rgba(0, 0, 0, 0.33);
+	box-shadow: 1px 2px 43px 1px rgba(0, 0, 0, 0.33);
+	border-radius: 200px 200px 200px 200px !important;
+	background: rgb(68, 157, 68);
+}
+
+.jumbotron h2,
+.educate-icon {
+	color: white;
+}
+
+.btn-kasih {
+	margin-bottom: 200px;
+	align-items: center;
+	margin: auto;
+}
+
+
 /*----------------------------------------*/
-/*  23. footer
+/*  24. footer
 /*----------------------------------------*/
 .footer-copy-right p {
 	margin: 0px;

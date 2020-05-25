@@ -31,6 +31,10 @@ class User_model extends CI_Model
 	{
 		return $this->db->get_where('t_transpaket', ['kode_pembelian' => $id])->row();
 	}
+	public function getDetMyPaket($id)
+	{
+		return $this->db->get_where('t_transpaket', ['id_member' => $id])->result();
+	}
 
 	// ! User Fasilitas
 	public function getAllFasilitasByKet()
@@ -38,10 +42,7 @@ class User_model extends CI_Model
 		return $this->db->get_where('t_fasilitas', ['ket' => 1])->result_array();
 	}
 
-	// public function getAllMyFasilitas($idmember)
-	// {
-	// 	return $this->db->get_where('t_transfasilitas', ['id_member' => $idmember])->result_array();
-	// }
+
 
 
 	// public function chekTanggalbooking($tglbk, $tgltr, $jamtr)

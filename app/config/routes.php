@@ -172,6 +172,10 @@ $route['cetak-filterFasilitas'] = 'cetak/cetakfilterfasilitas';
 $route['cetak-laporanFasilitas'] = 'cetak/cetaklapfasilitas';
 
 //!===================== Transaksi My Paket =====================//
+
+$route['user.transaksi']     = 'user/riwayattransaksi';
+
+
 $route['transaksi-mypaket']     = 'user/mypaket';
 $route['transaksipaket']        = 'user/traspaket';
 $route['transaksi-myfasilitas'] = 'user/myfasilitas';

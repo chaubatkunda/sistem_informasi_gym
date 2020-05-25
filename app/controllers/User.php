@@ -12,8 +12,7 @@ class User extends CI_Controller
 
 	public function index()
 	{
-		$id_member = $this->fungsi->user_login()['id'];
-		$id = $this->db->get_where('t_member', ['id_user' => $id_member])->row()->id_member;
+		$id = $this->fungsi->chek_member()->id_member;
 		$data = array(
 			'title' 		=> 'User',
 			'topik' 		=> '',
@@ -133,6 +132,20 @@ class User extends CI_Controller
 			'topik' 		=> '',
 			'fasilitas' 	=> $this->user->getAllFasilitasByKet(),
 			'isi' 			=> 'user/prodak/fasilitas'
+		);
+		$this->load->view('layout/wrap', $data, false);
+	}
+
+
+	// * Riwayar Transaksi
+	public function riwayattransaksi()
+	{
+		$id = $this->fungsi->chek_member()->id_member;
+		$data = array(
+			'title' 		=> 'Riwayat Transaksi',
+			'topik' 		=> 'Riwayat Transaksi',
+			'paket' 		=> $this->user->getDetMyPaket($id),
+			'isi' 			=> 'user/prodak/riwayat_transaksi'
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}

@@ -22,7 +22,6 @@ class Konfirmasi extends CI_Controller
 		not_login();
 	}
 	//!======================== End Login ========================//
-
 	//?======================== Data Konfirmasi ========================//
 	public function index()
 	{

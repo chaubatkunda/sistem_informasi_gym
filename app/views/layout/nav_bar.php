@@ -88,11 +88,6 @@
 										<span class="mini-sub-pro">Transaksi</span>
 									</a>
 								</li>
-								<li>
-									<a href="<?php echo base_url('transaksi.myfasilitas'); ?>">
-										<span class="mini-sub-pro">Fasilitas</span>
-									</a>
-								</li>
 							<?php endif; ?>
 						</ul>
 					</li>
