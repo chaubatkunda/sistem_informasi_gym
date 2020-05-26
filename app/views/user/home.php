@@ -6,8 +6,10 @@
 					<div class="analytics-sparkle-line reso-mg-b-30">
 						<div class="analytics-content">
 							<h5>My Paket</h5>
-							<h2><span class="counter"><?php echo $totalpaket; ?></span> <span class="tuition-fees">Jumlah Paket</span></h2>
-
+							<h2>
+								<span class="counter"><?php echo $totalpaket; ?></span>
+								<span class="tuition-fees">Jumlah Paket</span>
+							</h2>
 						</div>
 					</div>
 				</div>

@@ -145,8 +145,8 @@ $route['detmember']                 = 'transaksi_fasilitas/detmember';
 $route['periodeTransPaket']         = 'transaksi/periodetranspaket';
 $route['detailTransPaket/(:any)']   = 'transaksi/dettranspaket/$1';
 $route['validasiPaket/(:any)']      = 'transaksi/validasipaket/$1';
-$route['chek-validasi']             = 'transaksi/chekvalidasi';
-$route['chek-valbelum']             = 'transaksi/chekvalidasibelum';
+// $route['chek-validasi']             = 'transaksi/chekvalidasi';
+// $route['chek-valbelum']             = 'transaksi/chekvalidasibelum';
 
 // !Konfirmasi
 $route['konfirmasi']                        = 'konfirmasi';

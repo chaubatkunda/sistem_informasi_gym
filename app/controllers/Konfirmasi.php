@@ -45,7 +45,15 @@ class Konfirmasi extends CI_Controller
 			'paket' 	=> $this->konfirmasi->verPaket($id),
 			'isi' 		=> 'konfirmasi/veri_paket'
 		);
-		$this->load->view('layout/wrap', $data, false);
+		$this->form_validation->set_rules('valid-paket[]', 'Pilih Chek Ya', 'trim|required');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('layout/wrap', $data, false);
+		} else {
+			$this->db->set('is_success', $this->input->post('valid-paket', true)[0]);
+			$this->db->where('kode_pembelian', $id);
+			$this->db->update('t_transpaket');
+			redirect('dashboard', 'refresh');
+		}
 	}
 	public function saveconfirmpaket($id)
 	{

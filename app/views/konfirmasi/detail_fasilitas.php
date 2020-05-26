@@ -56,11 +56,10 @@
                             <td>
                                 <?php if ($fasilitas->is_success == 1) : ?>
                                     <?php if ($fasilitas->ket_bayar == 1) : ?>
-                                        <span class="text-success">Tunai</span>
-                                    <?php elseif ($fasilitas->ket_bayar == 2) : ?>
                                         <span class="text-success">Transfer</span>
                                         <a class="btn btn-success btn-sm" href="#" data-toggle="modal" data-target="#imgConformBayarFasilitas">Show</a>
-
+                                    <?php elseif ($fasilitas->ket_bayar == 2) : ?>
+                                        <span class="text-success">Tunai</span>
                                     <?php elseif ($fasilitas->ket_bayar == 3) : ?>
                                         <span class="text-success">EDC</span>
                                     <?php else : ?>
