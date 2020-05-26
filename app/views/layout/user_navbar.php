@@ -29,7 +29,7 @@
                     </li>
                     <li>
                         <a href="<?php echo base_url('user.transaksi'); ?>" aria-expanded="false">
-                            <i class="fa fa-fw fa-file" aria-hidden="true"></i>
+                            <i class="fa fa-fw fa-files-o" aria-hidden="true"></i>
                             <span class="mini-click-non">Transaksi</span>
                         </a>
 
