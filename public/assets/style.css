@@ -589,7 +589,6 @@ ul {
 	padding: 18px 10px;
 }
 
-.header-right-info {}
 
 .header-right-info ul.header-right-menu li {
 	display: inline-block;
@@ -2691,7 +2690,7 @@ ul.two-part-sp li {
 }
 
 .mini-navbar .header-top-area {
-	left: 80px;
+	left: 100px;
 	z-index: 9999;
 }
 
@@ -3452,13 +3451,7 @@ li.multipleInput-email {
 	border-radius: 2px;
 }
 
-li.multipleInput-email a {
-	background: #none;
-	color: #fff;
-	margin-left: 4px;
-	display: inline-block;
-	padding: 0px 1px;
-}
+
 
 .form-horizontal .control-label {
 	padding-top: 10px;

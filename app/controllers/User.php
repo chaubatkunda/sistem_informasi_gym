@@ -20,7 +20,7 @@ class User extends CI_Controller
 			'totalpaket' 	=> $this->home->countPaketMember($id),
 			'isi' 			=> 'user/home'
 		);
-		$this->load->view('layout/wrap', $data, false);
+		$this->load->view('layout/user_wrap', $data, false);
 	}
 
 	// !user paket
@@ -32,7 +32,7 @@ class User extends CI_Controller
 			'paket' 		=> $this->paket->getAllPaket(),
 			'isi' 			=> 'user/prodak/paket'
 		);
-		$this->load->view('layout/wrap', $data, false);
+		$this->load->view('layout/user_wrap', $data, false);
 	}
 
 	public function belipaket($id)
@@ -45,7 +45,7 @@ class User extends CI_Controller
 			'member'		=> $this->fungsi->chek_member(),
 			'isi' 			=> 'user/prodak/detail_paket'
 		);
-		$this->load->view('layout/wrap', $data, false);
+		$this->load->view('layout/user_wrap', $data, false);
 	}
 	public function usertranspaket()
 	{
@@ -98,7 +98,7 @@ class User extends CI_Controller
 			'paket' 		=> $this->user->getAllTransPaketById($id),
 			'isi' 			=> 'user/prodak/konfirmasi_pembelian_paket'
 		);
-		$this->load->view('layout/wrap', $data, false);
+		$this->load->view('layout/user_wrap', $data, false);
 	}
 	public function useraddconfirmtranspaket($id)
 	{
@@ -133,7 +133,7 @@ class User extends CI_Controller
 			'fasilitas' 	=> $this->user->getAllFasilitasByKet(),
 			'isi' 			=> 'user/prodak/fasilitas'
 		);
-		$this->load->view('layout/wrap', $data, false);
+		$this->load->view('layout/user_wrap', $data, false);
 	}
 
 
@@ -147,7 +147,7 @@ class User extends CI_Controller
 			'paket' 		=> $this->user->getDetMyPaket($id),
 			'isi' 			=> 'user/prodak/riwayat_transaksi'
 		);
-		$this->load->view('layout/wrap', $data, false);
+		$this->load->view('layout/user_wrap', $data, false);
 	}
 
 	// public function profile()
@@ -211,7 +211,7 @@ class User extends CI_Controller
 	// 	$chekedc = $this->input->post('chek-edc', true);
 	// 	$this->form_validation->set_rules('id_member', 'ID Member', 'trim|required');
 	// 	if ($this->form_validation->run() == false) {
-	// 		$this->load->view('layout/wrap', $data, false);
+	// 		$this->load->view('layout/user_wrap', $data, false);
 	// 	} else {
 	// 		$this->user->simpanTransPaket($chektransfer, $chektunai, $chekedc);
 	// 		$this->user->simpanTransIsiPaket();
@@ -239,7 +239,7 @@ class User extends CI_Controller
 	// 	);
 
 	// 	if ($this->form_validation->run() == false) {
-	// 		$this->load->view('layout/wrap', $data, false);
+	// 		$this->load->view('layout/user_wrap', $data, false);
 	// 	} else {
 	// 		$this->user->simpanFasilitas($chektransfer, $chektunai, $chekedc);
 	// 		if ($this->db->affected_rows() > 0) {
@@ -266,7 +266,7 @@ class User extends CI_Controller
 	// 		'fasilitas' 	=> $this->fasilitas->getAllFasilitasById($id),
 	// 		'isi' 			=> 'user/prodak/sewa-fasnonmember'
 	// 	);
-	// 	$this->load->view('layout/wrap', $data, false);
+	// 	$this->load->view('layout/user_wrap', $data, false);
 
 	// 	$chektransfer 	= $this->input->post('chek-transfer', true);
 	// 	$chektunai 		= $this->input->post('chek-tunai', true);
@@ -276,7 +276,7 @@ class User extends CI_Controller
 	// 	$this->form_validation->set_rules('jmpakai', 'Jam Pakai', 'trim|required|valid_time');
 
 	// 	if ($this->form_validation->run() == false) {
-	// 		$this->load->view('layout/wrap', $data, false);
+	// 		$this->load->view('layout/user_wrap', $data, false);
 	// 	} else {
 	// 		// die;
 	// 		if ($queryNamaFas == $queryTrNamaFas) {
@@ -311,7 +311,7 @@ class User extends CI_Controller
 	// 		'mypaket' 	=> $this->home->getAllMyPaket($idmember),
 	// 		'isi' 		=> 'transaksi/paket/mypaket'
 	// 	);
-	// 	$this->load->view('layout/wrap', $data, false);
+	// 	$this->load->view('layout/user_wrap', $data, false);
 	// }
 
 	// public function traspaket()
@@ -322,7 +322,7 @@ class User extends CI_Controller
 	// 		'paket' 	=> $this->paket->getAllPaket(),
 	// 		'isi' 		=> 'transaksi/paket/addpaket'
 	// 	);
-	// 	$this->load->view('layout/wrap', $data, false);
+	// 	$this->load->view('layout/user_wrap', $data, false);
 	// }
 
 	// public function myfasilitas()
@@ -335,6 +335,6 @@ class User extends CI_Controller
 	// 		'transaksi' 	=> $this->home->getAllMyFasilitas($idmember),
 	// 		'isi' 			=> 'transaksi/fasilitas/myfasilitas'
 	// 	);
-	// 	$this->load->view('layout/wrap', $data, false);
+	// 	$this->load->view('layout/user_wrap', $data, false);
 	// }
 }
