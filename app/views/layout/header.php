@@ -106,7 +106,6 @@
   <!-- style CSS
 		============================================ -->
   <link rel="stylesheet" href="<?php echo base_url('public/assets/'); ?>style.css">
-  <link rel="stylesheet" href="<?php echo base_url('public/assets/'); ?>css.css">
   <!-- responsive CSS
 		============================================ -->
   <link rel="stylesheet" href="<?php echo base_url('public/assets/'); ?>css/responsive.css">

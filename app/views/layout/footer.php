@@ -193,24 +193,40 @@
     });
 </script>
 <script>
-    $(function() {
-        var key = document.getElementById('cari');
-        var tabel = document.getElementById('table-member');
-        // var notabel = document.getElementById('notable-member');
-
-        key.addEventListener('keyup', function() {
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    tabel.innerHTML = xhr.responseText;
-                }
-            }
-            xhr.open('GET', '<?php echo base_url('cari.member?key='); ?>' + key.value, true);
-            xhr.send();
+    $(document).ready(function() {
+        // Toltip
+        $(function() {
+            $(".btn-userfasilitas").on('click', function() {
+                $('.user-fasilitas').show();
+                $('.user-paket').hide();
+            });
+            $(".btn-userpaket").on('click', function() {
+                $('.user-fasilitas').hide();
+                $('.user-paket').show();
+            });
         });
-
     });
 </script>
+<?php if ($this->uri->segment(1) !== 'user.transaksi') : ?>
+    <script>
+        $(function() {
+            var key = document.getElementById('cari');
+            var tabel = document.getElementById('table-member');
+
+            key.addEventListener('keyup', function() {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        tabel.innerHTML = xhr.responseText;
+                    }
+                }
+                xhr.open('GET', '<?php echo base_url('cari.member?key='); ?>' + key.value, true);
+                xhr.send();
+            });
+
+        });
+    </script>
+<?php endif; ?>
 </body>
 
 

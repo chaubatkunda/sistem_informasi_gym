@@ -145,6 +145,7 @@ class User extends CI_Controller
 			'title' 		=> 'Riwayat Transaksi',
 			'topik' 		=> 'Riwayat Transaksi',
 			'paket' 		=> $this->user->getDetMyPaket($id),
+			'fasilitas' 	=> $this->user->getDetMyFasilitas($id),
 			'isi' 			=> 'user/prodak/riwayat_transaksi'
 		);
 		$this->load->view('layout/user_wrap', $data, false);

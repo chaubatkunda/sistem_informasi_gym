@@ -37,6 +37,10 @@ class User_model extends CI_Model
 	}
 
 	// ! User Fasilitas
+	public function getDetMyFasilitas($id)
+	{
+		return $this->db->get_where('t_transfasilitas', ['id_member' => $id])->result();
+	}
 	public function getAllFasilitasByKet()
 	{
 		return $this->db->get_where('t_fasilitas', ['ket' => 1])->result_array();
