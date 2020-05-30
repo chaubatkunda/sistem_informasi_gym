@@ -73,22 +73,8 @@ class Transaksipaket_model extends CI_Model
     }
 
     //!======================== End Transaksi Paket ========================//
-    //?======================== Validasi Paket ========================//
-    public function validasiPaket($id)
-    {
-        $data = [
-            'ket_bayar' => 1
-        ];
-        return $this->db->update('t_transpaket', $data, ['id_transp' => $id]);
-    }
-    public function validasiPaketBelum($id)
-    {
-        $data = [
-            'ket_bayar' => 3
-        ];
-        return $this->db->update('t_transpaket', $data, ['id_transp' => $id]);
-    }
-    //!======================== End Validasi Paket ========================//
+
+
     //?======================== Detail Paket ========================//
     public function getAllDetPaketById($id)
     {

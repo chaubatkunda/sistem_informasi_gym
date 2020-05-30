@@ -66,14 +66,8 @@ $route['user.konfirmasi.pembelian/(:any)']      = 'user/userconfirmtranspaket/$1
 $route['user.addkonfirm.pembelian/(:any)']      = 'user/useraddconfirmtranspaket/$1';
 
 
-$route['user.fasilitas']            = 'user/fasilitas';
-
-// $route['myprofile']                 = 'user/profile';
-// $route['detail-userPaket/(:num)']   = 'user/detailpaket/$1';
-
-// $route['beli-paket/(:num)']         = 'user/belipaket/$1';
-// $route['sewaFasilitas/(:any)']      = 'user/sewafas/$1';
-// $route['sewafasilitas/(:any)']      = 'user/sewafasnonmember/$1';
+$route['user.fasilitas']                                = 'user/userconfirmfasilitas/$1';
+$route['user.konfirmasi.fasilitas/(:any)']              = 'user/fasilitas';
 //!===================== End User =====================//
 
 
@@ -99,20 +93,17 @@ $route['aktif-tidak']               = 'member/aktiftidak';
 $route['pesertaPaket']              = 'pesertapaket';
 
 //TODO===================== Paket =====================//
-$route['paket']                     = 'paket';
+$route['paket']                      = 'paket';
 $route['add.paket']                  = 'paket/addpaket';
 $route['detail.paket/(:num)']        = 'paket/detpaket/$1';
 $route['edit.paket/(:num)']          = 'paket/editpaket/$1';
 $route['hapus.paket/(:num)']         = 'paket/hapuspaket/$1';
-$route['addDetailPaket/(:num)']     = 'paket/adddetpaket/$1';
-$route['hapusDetail/(:num)']        = 'paket/hapusdetpaket/$1';
-$route['editDetail/(:num)']         = 'paket/editdetpaket/$1';
+$route['add.detail.paket/(:num)']    = 'paket/adddetpaket/$1';
+$route['hapus.detail/(:num)']        = 'paket/hapusdetpaket/$1';
+$route['edit.detail/(:num)']         = 'paket/editdetpaket/$1';
 
 // !Kusam
-// $route['tgldetpaket']               = 'paket/tgldetpaket';
-// $route['shtglpkt']                  = 'paket/showtgldetpaket';
 $route['getpaket']                  = 'paket/getpaketbyid';
-// $route['getdetpaket']               = 'paket/getdetpaketid';
 
 //*===================== Fasilitas =====================//
 $route['fasilitas']                 = 'fasilitas';
@@ -127,15 +118,6 @@ $route['add.senam']                  = 'senam/addsenam';
 $route['edit.senam/(:any)']          = 'senam/editsenam/$1';
 $route['hapus.senam/(:any)']         = 'senam/hapussenam/$1';
 
-//?===================== Transaksi Fasilitas =====================//
-// $route['transaksiFasilitas']        = 'transaksi_fasilitas';
-// $route['transaksiPeriodeFasilitas'] = 'transaksi_fasilitas/periode';
-// $route['add.transaksi.fasilitas']         = 'transaksi_fasilitas/aadtransfasilitas';
-// $route['chekValbelumya']            = 'transaksi_fasilitas/validfasilya';
-// $route['chekValtidak']              = 'transaksi_fasilitas/validfasiltidak';
-// $route['validasiFasilitas/(:num)']  = 'transaksi_fasilitas/validfasi/$1';
-// $route['cetakFasilitas/(:any)']     = 'transaksi_fasilitas/cetakfasilitasbyid/$1';
-
 //TODO===================== Transaksi Paket =====================//
 $route['transaksi']                 = 'transaksi';
 $route['cari.member']               = 'transaksi/carimember';
@@ -145,8 +127,6 @@ $route['detmember']                 = 'transaksi_fasilitas/detmember';
 $route['periodeTransPaket']         = 'transaksi/periodetranspaket';
 $route['detailTransPaket/(:any)']   = 'transaksi/dettranspaket/$1';
 $route['validasiPaket/(:any)']      = 'transaksi/validasipaket/$1';
-// $route['chek-validasi']             = 'transaksi/chekvalidasi';
-// $route['chek-valbelum']             = 'transaksi/chekvalidasibelum';
 
 // !Konfirmasi
 $route['konfirmasi']                        = 'konfirmasi';
@@ -175,10 +155,6 @@ $route['cetak-laporanFasilitas'] = 'cetak/cetaklapfasilitas';
 
 $route['user.transaksi']     = 'user/riwayattransaksi';
 
-
-$route['transaksi-mypaket']     = 'user/mypaket';
-$route['transaksipaket']        = 'user/traspaket';
-$route['transaksi-myfasilitas'] = 'user/myfasilitas';
 
 
 //!===================== Instruktur =====================//

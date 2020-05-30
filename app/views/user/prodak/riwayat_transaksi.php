@@ -89,7 +89,7 @@
                                 <?php else : ?>
                                     <img src="<?php echo base_url('public/assets/icon/warning.png'); ?>">
                                     <div class="comment-details">
-                                        <a href="<?php echo base_url('user.konfirmasi.pembelian/') . $f->kode_pembelian; ?>">
+                                        <a href="<?php echo base_url('user.konfirmasi.fasilitas/') . $f->kode_pembelian; ?>">
                                             <h4><?php echo indoDate($f->tgl_transfasilitas); ?></h4>
                                             <h4 class="text-primary">Status
                                                 <!-- <span class="comment-replay text-success">Verified</span> -->

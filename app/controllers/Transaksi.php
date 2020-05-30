@@ -93,16 +93,7 @@ class Transaksi extends CI_Controller
         );
         $this->load->view('layout/wrap', $data, false);
     }
-    public function chekvalidasi()
-    {
-        $id = $this->input->post('idTrans');
-        $this->transpaket->validasiPaket($id);
-    }
-    public function chekvalidasibelum()
-    {
-        $id = $this->input->post('idBelum');
-        $this->transpaket->validasiPaketBelum($id);
-    }
+
 
 
     //!======================== End Transaksi Paket ========================//

@@ -107,12 +107,12 @@ class Paket extends CI_Controller
     public function detpaket($id)
     {
         $data = array(
-            'title'     => 'Detail Paket',
-            'topik'     => 'Data Paket',
-            'detpaket'     => $this->paket->selectPkIsiPaket($id),
-            'tgldet'     => $this->paket->tglDetPaket($id),
-            'paket'     => $this->paket->getPakeById($id),
-            'isi'         => 'paket/detail'
+            'title'         => 'Detail Paket',
+            'topik'         => 'Data Paket',
+            'detpaket'      => $this->paket->selectPkIsiPaket($id),
+            'tgldet'        => $this->paket->tglDetPaket($id),
+            'paket'         => $this->paket->getPakeById($id),
+            'isi'           => 'paket/detail'
         );
         $this->load->view('layout/wrap', $data, false);
     }
@@ -126,7 +126,7 @@ class Paket extends CI_Controller
             'paket'     => $this->paket->getPakeById($id),
             'senam'     => $this->senam->getAllJenisSenam(),
             'kuota'     => ['1', '2', '3'],
-            'isi'       => 'paket/add-det'
+            'isi'       => 'paket/add_det'
         );
         $this->form_validation->set_rules('senam', 'Senam', 'required');
         $this->form_validation->set_rules('kuota', 'Kuota', 'required|trim|numeric|max_length[2]');
@@ -137,28 +137,26 @@ class Paket extends CI_Controller
             if ($this->paket->simpanDetkPaket($id) == true) {
                 if ($this->db->affected_rows() > 0) {
                     $this->session->set_flashdata('detpaket', 'Berhasil Ditambahkan');
-                    redirect('detailPaket/' . $id);
+                    redirect('detail.paket/' . $id);
                 } else {
                     $this->session->set_flashdata('detpaket', 'Gagal Ditambahkan');
-                    redirect('detailPaket/' . $id);
+                    redirect('detail.paket/' . $id);
                 }
             } else {
                 $this->session->set_flashdata('detpaket', 'Gagal Ditambahkan');
-                redirect('detailPaket/' . $id);
+                redirect('detail.paket/' . $id);
             }
         }
     }
     public function editdetpaket($id)
     {
-        $data['paket'] = $this->paket->getAllSetingPaketById($id);
-        $idp = $data['paket']['id_paket'];
-
+        $idp = $this->paket->getAllSetingPaketById($id)->id_paket;
         $data = array(
             'title'     => 'Detail Paket',
             'topik'     => 'Data Paket',
-            'senam'     => $this->member->getAllJenisSenam(),
+            'senam'     => $this->senam->getAllJenisSenam(),
             'paket'     => $this->paket->getAllSetingPaketById($id),
-            'isi'       => 'paket/edit-det'
+            'isi'       => 'paket/edit_det'
         );
 
 
@@ -170,14 +168,14 @@ class Paket extends CI_Controller
             if ($this->paket->updateDetkPaket($id) == true) {
                 if ($this->db->affected_rows() > 0) {
                     $this->session->set_flashdata('detpaket', 'Berhasil Diubah');
-                    redirect('detail-paket/' . $idp);
+                    redirect('detail.paket/' . $idp);
                 } else {
                     $this->session->set_flashdata('detpaket', 'Gagal Diubah');
-                    redirect('detail-paket/' . $idp);
+                    redirect('detail.paket/' . $idp);
                 }
             } else {
                 $this->session->set_flashdata('detpaket', 'Gagal Diubah');
-                redirect('detail-paket/' . $idp);
+                redirect('detail.paket/' . $idp);
             }
         }
     }
@@ -188,10 +186,10 @@ class Paket extends CI_Controller
         $this->paket->hapusDetkPaket($id);
         if ($this->db->affected_rows() > 0) {
             $this->session->set_flashdata('detpaket', 'Berhasil Dihapus');
-            redirect('detailPaket/' . $idset);
+            redirect('detail.paket/' . $idset);
         } else {
             $this->session->set_flashdata('detpaket', 'Gagal Dihapus');
-            redirect('detailPaket/' . $idset);
+            redirect('detail.paket/' . $idset);
         }
     }
 

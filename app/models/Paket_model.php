@@ -103,7 +103,7 @@ class Paket_model extends CI_Model
         $this->db->join("t_jenis_senam", "t_jenis_senam.id_senam = t_setingpaket.id_jenis_senam");
         // $this->db->order_by("t_paket.id_paket", "ASC");
         $this->db->where("t_setingpaket.id_setingpaket", $id);
-        return $this->db->get()->row_array();
+        return $this->db->get()->row();
     }
     public function simpanPaket($datap)
     {
