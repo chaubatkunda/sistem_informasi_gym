@@ -4,8 +4,8 @@
         <div class="col-md-6">
             <div class="sparkline13-list">
                 <h2 class="text-primary">Verifikasi
-                    <?php if ($fasilitas->is_success == 1) : ?>
-                        <small class="text-success">Success</small>
+                    <?php if ($fasilitas->ket_bayar) : ?>
+                        <small class="text-success">Menunggu Konfirmasi</small>
                     <?php else : ?>
                         <small class="text-warning">Pending</small>
                     <?php endif; ?>
@@ -28,19 +28,19 @@
                             <th>Ket Bayar</th>
                             <td>
                                 <?php if ($fasilitas->is_success == 1) : ?>
+                                    <span class="text-success">Success</span>
+                                <?php else : ?>
                                     <?php if ($fasilitas->ket_bayar == 1) : ?>
-                                        <span class="text-success">Tunai</span>
-                                    <?php elseif ($fasilitas->ket_bayar == 2) : ?>
                                         <span class="text-success">Transfer</span>
                                         <a class="btn btn-success btn-sm" href="#" data-toggle="modal" data-target="#imgConformBayarFasilitas">Show</a>
-
+                                    <?php elseif ($fasilitas->ket_bayar == 2) : ?>
+                                        <span class="text-success">Tunai</span>
                                     <?php elseif ($fasilitas->ket_bayar == 3) : ?>
                                         <span class="text-success">EDC</span>
                                     <?php else : ?>
                                         <img src="<?php echo base_url('public/assets/buktitransfer/') . $fasilitas->bukti_pembayaran; ?>" alt="">
                                     <?php endif; ?>
-                                <?php else : ?>
-                                    <span class="text-warning">Pending</span>
+
                                 <?php endif; ?>
                             </td>
                         <tr>
@@ -48,7 +48,6 @@
                                 <button class="btn btn-success btn-sm">Ya</button>
                                 <a href="<?php echo base_url('konfirmasi'); ?>" class="btn btn-danger btn-sm">Tidak</a>
                             </td>
-                        </tr>
                         </tr>
                     </table>
                 </div>
@@ -67,7 +66,7 @@
                 </div>
             </div>
             <div class="modal-body">
-                <i class="educate-icon educate-checked modal-check-pro"></i>
+                <!-- <i class="educate-icon educate-checked modal-check-pro"></i> -->
                 <!-- <h2>Suksess</h2> -->
                 <img src="<?php echo base_url('public/assets/buktitransfer/') . $fasilitas->bukti_pembayaran; ?>" alt="">
             </div>

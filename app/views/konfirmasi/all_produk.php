@@ -70,18 +70,6 @@
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
-                                <!-- <tfoot>
-                                    <tr>
-                                        <th>NO</th>
-                                        <th>Tanggal Transaksi</th>
-                                        <th>ID/Nama</th>
-                                        <th>Kode Transaksi</th>
-                                        <th>Paket</th>
-                                        <th>Harga</th>
-                                        <th>Ket Bayar</th>
-                                        <th>Opsi</th>
-                                    </tr>
-                                </tfoot> -->
                             </table>
                         </div>
                     </div>
@@ -124,8 +112,11 @@
                                                 <?php if ($f->is_success == 1) : ?>
                                                     <a href="<?php echo base_url('detconfirm.fasilitas/') . $f->kode_pembelian; ?>" class="btn btn-info btn-sm">Detail</a>
                                                 <?php else : ?>
-                                                    <a href="<?php echo base_url('verifikasi.fasilitas/') . $f->kode_pembelian; ?>" class="btn btn-danger btn-sm">Verifikasi</a>
-                                                    <a href="<?php echo base_url('konfirmasi.fasilitas/') . $f->kode_pembelian; ?>" class="btn btn-primary btn-sm">Konfirmasi</a>
+                                                    <?php if ($f->ket_bayar) : ?>
+                                                        <a href="<?php echo base_url('verifikasi.fasilitas/') . $f->kode_pembelian; ?>" class="btn btn-danger btn-sm">Verifikasi</a>
+                                                    <?php else : ?>
+                                                        <a href="<?php echo base_url('konfirmasi.fasilitas/') . $f->kode_pembelian; ?>" class="btn btn-primary btn-sm">Konfirmasi</a>
+                                                    <?php endif; ?>
                                                 <?php endif; ?>
                                             </td>
                                         </tr>

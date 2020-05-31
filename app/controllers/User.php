@@ -134,17 +134,76 @@ class User extends CI_Controller
 		);
 		$this->load->view('layout/user_wrap', $data, false);
 	}
+	public function sewafasilitas($id)
+	{
+		$data = array(
+			'title' 		=> 'Sewa Fasilitas',
+			'topik' 		=> '',
+			'fasilitas'	=> $this->fasilitas->getAllFasilitasById($id),
+			// 'fasilitas' 	=> $this->user->getAllFasilitasByKet($id),
+			'isi' 			=> 'user/prodak/sewa_fasilitas'
+		);
+		$this->form_validation->set_rules('tgl_booking', 'Tanggal Booking', 'required');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('layout/user_wrap', $data, false);
+		} else {
+			$jmselesai = $this->input->post('jam_mulai', true);
+			$durasi = $this->input->post('durasijam', true);
+			$kode = $this->input->post('kode_beli', true);
+			$time = date("H:i", strtotime($jmselesai));
+			$dateJmPki = date_create($time);
+			date_add($dateJmPki, date_interval_create_from_date_string('+' . $durasi . ' hours'));
+			$strjmsleles = date_format($dateJmPki, 'H:i');
+
+			$data = [
+				'tgl_transfasilitas'	=> $this->input->post('tgl_trans', true),
+				'id_member'				=> $this->input->post('id_member', true),
+				'tgl_booking'			=> $this->input->post('tgl_booking', true),
+				'jam_mulai'				=> $this->input->post('jam_mulai', true),
+				'jam_selesai'			=> $strjmsleles,
+				'nama_fasilitas'		=> $this->input->post('nama_fasilitas', true),
+				'kode_pembelian'		=> $this->input->post('kode_beli', true),
+				'total_bayar'			=> $this->input->post('total', true),
+				'ket_bayar'				=> 0,
+				'is_success'			=> 2
+			];
+			$this->member->insert_chekout_fasilitas($data);
+			redirect('user.konfirmasi.fasilitas/' . $kode);
+		}
+	}
+
 	public function userconfirmfasilitas($id)
 	{
 		$data = array(
-			'title' 		=> 'Fasilitas',
-			'topik' 		=> '',
-			'fasilitas' 	=> $this->user->getAllFasilitasByKet(),
-			'isi' 			=> 'user/prodak/fasilitas'
+			'title' 		=> 'Konfirmasi Pembayaran Fasilitas',
+			'topik' 		=> 'Konfirmasi Pembayaran Fasilitas',
+			'idf'			=> $id,
+			'isi' 			=> 'user/prodak/konfirmasi_pembelian_fasilitas'
 		);
 		$this->load->view('layout/user_wrap', $data, false);
 	}
 
+	public function usersaveconfirmfasilitas($id)
+	{
+		$config['upload_path']          = './public/assets/buktitransfer/';
+		$config['allowed_types']        = 'jpg|jpeg|png';
+		$config['overwrite'] 			= TRUE;
+		$this->upload->initialize($config);
+
+		if ($this->upload->do_upload('file_upload')) {
+			$datap = [
+				'bukti_pembayaran'	=> $this->upload->data('file_name', true),
+				'ket_bayar'			=> 1,
+				'is_success'		=> 2
+			];
+			$this->konfirmasi->update_fasilitas($datap, $id);
+			redirect('user.transaksi');
+		} else {
+			$error = $this->upload->display_errors('Gambar Tidak Dapat Diupload');
+			$this->session->set_flashdata('error', $error);
+			redirect('user.konfirmasi.fasilitas/' . $id);
+		}
+	}
 
 
 	// * Riwayar Transaksi

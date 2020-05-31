@@ -43,7 +43,7 @@ class User_model extends CI_Model
 	}
 	public function getAllFasilitasByKet()
 	{
-		return $this->db->get_where('t_fasilitas', ['ket' => 1])->result_array();
+		return $this->db->get_where('t_fasilitas', ['ket' => 1])->result();
 	}
 
 

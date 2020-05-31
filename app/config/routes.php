@@ -66,8 +66,10 @@ $route['user.konfirmasi.pembelian/(:any)']      = 'user/userconfirmtranspaket/$1
 $route['user.addkonfirm.pembelian/(:any)']      = 'user/useraddconfirmtranspaket/$1';
 
 
-$route['user.fasilitas']                                = 'user/userconfirmfasilitas/$1';
-$route['user.konfirmasi.fasilitas/(:any)']              = 'user/fasilitas';
+$route['user.fasilitas']                                = 'user/fasilitas';
+$route['sewa.fasilitas/(:any)']                         = 'user/sewafasilitas/$1';
+$route['user.konfirmasi.fasilitas/(:any)']              = 'user/userconfirmfasilitas/$1';
+$route['user.savekonfirmasi.fasilitas/(:any)']          = 'user/usersaveconfirmfasilitas/$1';
 //!===================== End User =====================//
 
 
