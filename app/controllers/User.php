@@ -232,4 +232,15 @@ class User extends CI_Controller
 		);
 		$this->load->view('layout/user_wrap', $data, false);
 	}
+	public function userdatailpaket($id)
+	{
+		$data = array(
+			'title' 		=> 'Detail Paket',
+			'topik' 		=> 'Detail Paket /' . $id,
+			'paket'		 	=> $this->user->getDetPaket($id),
+			'isipaket'		=> $this->user->getDetIsiPaket($id),
+			'isi' 			=> 'user/prodak/detail_paket_user'
+		);
+		$this->load->view('layout/user_wrap', $data, false);
+	}
 }

@@ -35,6 +35,15 @@ class User_model extends CI_Model
 	{
 		return $this->db->get_where('t_transpaket', ['id_member' => $id])->result();
 	}
+	public function getDetPaket($id)
+	{
+		return $this->db->get_where('t_transpaket', ['kode_pembelian' => $id])->row();
+	}
+	public function getDetIsiPaket($id)
+	{
+		// $id = $this->getDetPaket(0);
+		return $this->db->get_where('t_transisipaket', ['kode_pembelian' => $id])->result();
+	}
 
 	// ! User Fasilitas
 	public function getDetMyFasilitas($id)

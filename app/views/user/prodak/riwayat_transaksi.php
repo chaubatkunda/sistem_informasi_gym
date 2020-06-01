@@ -11,7 +11,7 @@
                             <?php if ($p->is_success == 1) : ?>
                                 <img src="<?php echo base_url('public/assets/icon/success.png'); ?>">
                                 <div class="comment-details">
-                                    <a href="">
+                                    <a href="<?php echo base_url('user.detail.paket/') . $p->kode_pembelian; ?>">
                                         <h4><?php echo indoDate($p->tgl_trans); ?></h4>
                                         <h4 class="text-primary">Status
                                             <span class="comment-replay text-success">Verified</span>

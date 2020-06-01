@@ -158,6 +158,7 @@ $route['cetak-laporanFasilitas'] = 'cetak/cetaklapfasilitas';
 
 $route['user.transaksi']                = 'user/riwayattransaksi';
 $route['user.detail.fas/(:any)']        = 'user/userdatailfas/$1';
+$route['user.detail.paket/(:any)']      = 'user/userdatailpaket/$1';
 
 
 
