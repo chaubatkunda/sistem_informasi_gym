@@ -41,6 +41,10 @@ class User_model extends CI_Model
 	{
 		return $this->db->get_where('t_transfasilitas', ['id_member' => $id])->result();
 	}
+	public function getDetFasilitas($id)
+	{
+		return $this->db->get_where('t_transfasilitas', ['kode_pembelian' => $id])->row();
+	}
 	public function getAllFasilitasByKet()
 	{
 		return $this->db->get_where('t_fasilitas', ['ket' => 1])->result();

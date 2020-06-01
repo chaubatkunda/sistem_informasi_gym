@@ -221,4 +221,15 @@ class User extends CI_Controller
 		);
 		$this->load->view('layout/user_wrap', $data, false);
 	}
+
+	public function userdatailfas($id)
+	{
+		$data = array(
+			'title' 		=> 'Detail Fasilitas',
+			'topik' 		=> 'Detail Fasilitas /' . $id,
+			'fasilitas' 	=> $this->user->getDetFasilitas($id),
+			'isi' 			=> 'user/prodak/detail_fasilitas_user'
+		);
+		$this->load->view('layout/user_wrap', $data, false);
+	}
 }

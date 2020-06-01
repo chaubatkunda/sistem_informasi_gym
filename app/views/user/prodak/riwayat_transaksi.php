@@ -1,8 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-3">
-
-        </div>
+        <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="sparkline10-list">
                 <button class="btn btn-primary btn-userpaket">Paket</button>
@@ -58,7 +56,7 @@
                             <?php if ($f->is_success == 1) : ?>
                                 <img src="<?php echo base_url('public/assets/icon/success.png'); ?>">
                                 <div class="comment-details">
-                                    <a href="">
+                                    <a href="<?php echo base_url('user.detail.fas/') . $f->kode_pembelian; ?>">
                                         <h4><?php echo indoDate($f->tgl_transfasilitas); ?></h4>
                                         <h4 class="text-primary">Status
                                             <span class="comment-replay text-success">Verified</span>

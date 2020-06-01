@@ -110,15 +110,15 @@ $route['getpaket']                  = 'paket/getpaketbyid';
 //*===================== Fasilitas =====================//
 $route['fasilitas']                 = 'fasilitas';
 $route['detfas']                    = 'fasilitas/detfas';
-$route['add.fasilitas']              = 'fasilitas/addfasilitas';
-$route['edit.fasilitas/(:any)']      = 'fasilitas/editfasilitas/$1';
-$route['hapus.fasilitas/(:any)']     = 'fasilitas/hapusfasilitas/$1';
+$route['add.fasilitas']             = 'fasilitas/addfasilitas';
+$route['edit.fasilitas/(:any)']     = 'fasilitas/editfasilitas/$1';
+$route['hapus.fasilitas/(:any)']    = 'fasilitas/hapusfasilitas/$1';
 
 //!===================== Senam =====================//
 $route['senam']                     = 'senam';
-$route['add.senam']                  = 'senam/addsenam';
-$route['edit.senam/(:any)']          = 'senam/editsenam/$1';
-$route['hapus.senam/(:any)']         = 'senam/hapussenam/$1';
+$route['add.senam']                 = 'senam/addsenam';
+$route['edit.senam/(:any)']         = 'senam/editsenam/$1';
+$route['hapus.senam/(:any)']        = 'senam/hapussenam/$1';
 
 //TODO===================== Transaksi Paket =====================//
 $route['transaksi']                 = 'transaksi';
@@ -143,6 +143,7 @@ $route['info.peket.notsuccess/(:any)']      = 'konfirmasi/infopaketnotsukses/$1'
 $route['verifikasi.fasilitas/(:any)']       = 'konfirmasi/verifasilitas/$1';
 $route['save.confirm.fasilitas']            = 'konfirmasi/saveconfirmfasilitas';
 $route['detconfirm.fasilitas/(:any)']       = 'konfirmasi/detconfirmfasilitas/$1';
+$route['save.cofirmfasil/(:any)']           = 'konfirmasi/savefericonfirm/$1';
 
 //*===================== Cetak Transaksi Paket =====================//
 $route['cetak-trans-detpaket/(:num)'] = 'cetak/cetaktrpaket/$1';
@@ -155,7 +156,8 @@ $route['cetak-laporanFasilitas'] = 'cetak/cetaklapfasilitas';
 
 //!===================== Transaksi My Paket =====================//
 
-$route['user.transaksi']     = 'user/riwayattransaksi';
+$route['user.transaksi']                = 'user/riwayattransaksi';
+$route['user.detail.fas/(:any)']        = 'user/userdatailfas/$1';
 
 
 

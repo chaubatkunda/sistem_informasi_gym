@@ -132,6 +132,15 @@ class Konfirmasi extends CI_Controller
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}
+	public function savefericonfirm($id)
+	{
+		$dataf = [
+			'ket_bayar'		=> 1,
+			'is_success'	=> 1
+		];
+		$this->konfirmasi->update_fasilitas($dataf, $id);
+		redirect('konfirmasi');
+	}
 	public function saveconfirmfasilitas()
 	{
 		$id = $this->input->post('kodep', true);
