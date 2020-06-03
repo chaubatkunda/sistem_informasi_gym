@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <form action="<?php echo base_url('save.confirm.paket/') . $paket->kode_pembelian; ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url('admin/save_confirm_paket/') . $paket->kode_pembelian; ?>" method="post" enctype="multipart/form-data">
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="sparkline10-list">

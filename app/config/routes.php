@@ -74,13 +74,13 @@ $route['user.savekonfirmasi.fasilitas/(:any)']          = 'user/usersaveconfirmf
 
 
 //?===================== Member =====================//
-$route['admin/member']                            = 'member/member';
-$route['admin/add.member']                        = 'member/addmember';
-$route['pilih.produk/(:any)']               = 'member/pilihproduk/$1';
-$route['cheout.paket/(:num)/(:any)']        = 'member/chekoutpaket/$1/$2';
-$route['detail.pembelian/(:num)/(:any)']    = 'member/detailbeli/$1/$2';
-$route['add.pembelian']                     = 'member/add_detailbeli';
-$route['konfirmasi.pembelian/(:any)']       = 'member/konfirmbeli/$1';
+$route['admin/member']                                  = 'member/member';
+$route['admin/add.member']                              = 'member/addmember';
+$route['admin/pilih_produk/(:any)']                     = 'member/pilihproduk/$1';
+$route['admin/cheout_paket/(:num)/(:any)']              = 'member/chekoutpaket/$1/$2';
+$route['admin/detail_pembelian_paket/(:num)/(:any)']    = 'member/detailbeli/$1/$2';
+$route['admin/add_beli_paket']                          = 'member/add_detailbeli';
+$route['admin/konfirmasi_pembelian/(:any)']             = 'member/konfirmbeli/$1';
 
 $route['chek.fasilitas/(:any)/(:any)']      = 'member/chekfasilitas/$1/$2';
 $route['chekout.fasilitas']                 = 'member/chekoutfasilitas';
@@ -92,7 +92,7 @@ $route['aktif-ya']                  = 'member/aktifya';
 $route['aktif-tidak']               = 'member/aktiftidak';
 
 //?===================== PesertaPaket =====================//
-$route['pesertaPaket']              = 'pesertapaket';
+$route['admin/peserta_paket']              = 'pesertapaket';
 
 //TODO===================== Paket =====================//
 $route['paket']                      = 'paket';
@@ -134,7 +134,7 @@ $route['validasiPaket/(:any)']      = 'transaksi/validasipaket/$1';
 $route['konfirmasi']                        = 'konfirmasi';
 // ? paket
 $route['verifikasi.paket/(:any)']           = 'konfirmasi/veripaket/$1';
-$route['save.confirm.paket/(:any)']         = 'konfirmasi/saveconfirmpaket/$1';
+$route['admin/save_confirm_paket/(:any)']         = 'konfirmasi/saveconfirmpaket/$1';
 $route['detconfirm.peket/(:any)']           = 'konfirmasi/detconfirmpaket/$1';
 $route['info.peket.success/(:any)']         = 'konfirmasi/infopaketsukses/$1';
 $route['info.peket.notsuccess/(:any)']      = 'konfirmasi/infopaketnotsukses/$1';

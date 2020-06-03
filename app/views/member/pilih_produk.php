@@ -10,7 +10,7 @@
                         <button class="btn btn-custon-four btn-primary btn-lg btn-paket">Paket</button>
                         <button class="btn btn-custon-four btn-primary btn-lg btn-fasilitas">Fasilitas</button>
                     </div>
-                    <div class="table-responsive table-paket" hidden>
+                    <div class="table-responsive table-paket">
                         <table class="table" id="table">
                             <thead>
                                 <tr>
@@ -30,7 +30,7 @@
                                         <td><?php echo $pk->nama_paket; ?></td>
                                         <td align="right"><?php echo Rp($pk->harga); ?></td>
                                         <td class="text-center">
-                                            <a href="<?php echo base_url('cheout.paket/') . $pk->id_paket . "/" . $member->id_member; ?>" class="btn btn-primary btn-sm"><i class="fa fa-money"></i> Beli</a>
+                                            <a href="<?php echo base_url('admin/cheout_paket/') . $pk->id_paket . "/" . $member->id_member; ?>" class="btn btn-primary btn-sm"><i class="fa fa-money"></i> Beli</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -57,7 +57,7 @@
                                         <td><?php echo $fas->fasilitas; ?></td>
                                         <td class="text-right"><?php echo Rp($fas->harga); ?></td>
                                         <td class="text-center">
-                                            <a href="<?php echo base_url('chek.fasilitas/') . $fas->id_fasilitas . "/" . $member->id_member; ?>" class="btn btn-primary btn-sm"><i class="fa fa-money"></i> Sewa</a>
+                                            <a href="<?php echo base_url('admin/chek_fasilitas/') . $fas->id_fasilitas . "/" . $member->id_member; ?>" class="btn btn-primary btn-sm"><i class="fa fa-money"></i> Sewa</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

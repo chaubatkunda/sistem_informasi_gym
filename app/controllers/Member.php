@@ -50,11 +50,6 @@ class Member extends CI_Controller
 			'paket' 	=> $this->paket->getAllPaket(),
 			'isi' 		=> 'member/add'
 		);
-		// $chektransfer = $this->input->post('chek-transfer', true);
-		// $chektunai = $this->input->post('chek-tunai', true);
-		// $chekedc = $this->input->post('chek-edc', true);
-		// $chekpaket = $this->input->post('chek-paket', true);
-		// $chekfasil = $this->input->post('chek-fasil', true);
 		$idmember = $this->input->post('idmember', true);
 
 		$this->form_validation->set_rules('nama', 'Nama', 'required|trim');
@@ -89,9 +84,9 @@ class Member extends CI_Controller
 			$this->member->insert_user($datauser);
 			$this->member->insert_member($datamember);
 			if ($this->db->affected_rows() > 0) {
-				redirect('pilih.produk/' . $idmember);
+				redirect('admin/pilih_produk/' . $idmember);
 			} else {
-				redirect('add.member');
+				redirect('admin/add_member');
 			}
 		}
 	}
@@ -100,14 +95,14 @@ class Member extends CI_Controller
 		if ($this->member->deleteMember($id)) {
 			if ($this->db->affected_rows() > 0) {
 				$this->session->set_flashdata('member', 'Berhasil Dihapus');
-				redirect('member');
+				redirect('admin/member');
 			} else {
 				$this->session->set_flashdata('member', 'Gagal Dihapus');
-				redirect('member');
+				redirect('admin/member');
 			}
 		} else {
 			$this->session->set_flashdata('member', 'Gagal Dihapus');
-			redirect('member');
+			redirect('admin/member');
 		}
 	}
 
@@ -131,7 +126,7 @@ class Member extends CI_Controller
 			'paket'		=> $this->paket->getPakeById($id),
 			'isipaket'  => $this->paket->selectPkIsiPaket($id),
 			'member'	=> $this->member->getAllMemberById($idm),
-			'isi' 		=> 'member/detail_produk'
+			'isi' 		=> 'member/detail_paket'
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}
@@ -143,7 +138,7 @@ class Member extends CI_Controller
 			'paket'		=> $this->paket->getPakeById($id),
 			'isipaket'  => $this->paket->selectPkIsiPaket($id),
 			'member'	=> $this->member->getAllMemberById($idm),
-			'isi' 		=> 'member/pembayaran'
+			'isi' 		=> 'member/detail_pembelian_paket'
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}
@@ -187,11 +182,7 @@ class Member extends CI_Controller
 			'ket_bayar'			=> 0
 		];
 		$this->member->insert_detailbeli($datapaket);
-		if ($this->db->affected_rows() > 0) {
-			redirect('konfirmasi.pembelian/' . $kodetrans);
-		} else {
-			redirect('dashboard');
-		}
+		redirect('admin/konfirmasi_pembelian/' . $kodetrans);
 	}
 	public function konfirmbeli($id)
 	{
@@ -199,7 +190,7 @@ class Member extends CI_Controller
 			'title' 	=> 'Konfirmasi Pembayaran',
 			'topik' 	=> '',
 			'paket'		=> $this->member->getAllTransPaket($id),
-			'isi' 		=> 'member/konfirm_pembayaran'
+			'isi' 		=> 'member/konfirm_bayar_paket'
 		);
 		$this->load->view('layout/wrap', $data, false);
 	}

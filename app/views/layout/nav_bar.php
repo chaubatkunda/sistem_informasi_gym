@@ -28,13 +28,13 @@
 							</a>
 							<ul class="submenu-angle" aria-expanded="true">
 								<li>
-									<a title="Add Member" href="<?php echo base_url('add.member'); ?>"><span class="mini-sub-pro">Add Member</span></a>
+									<a href="<?php echo base_url('admin/add_member'); ?>"><span class="mini-sub-pro">Add Member</span></a>
 								</li>
 								<li>
-									<a title="Member" href="<?php echo base_url('member'); ?>"><span class="mini-sub-pro">Member</span></a>
+									<a href="<?php echo base_url('admin/member'); ?>"><span class="mini-sub-pro">Member</span></a>
 								</li>
 								<li>
-									<a title="Member" href="<?php echo base_url('peserta.paket'); ?>"><span class="mini-sub-pro">Peserta Paket</span></a>
+									<a href="<?php echo base_url('admin/peserta_paket'); ?>"><span class="mini-sub-pro">Peserta Paket</span></a>
 								</li>
 							</ul>
 						</li>
