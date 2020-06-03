@@ -37,7 +37,7 @@ class Senam extends CI_Controller
         $data = array(
             'title'     => 'Senam',
             'topik'     => '',
-            'isi'       => 'senam/add-senam'
+            'isi'       => 'senam/add_senam'
         );
 
         $this->form_validation->set_rules('senam', 'Senam', 'required|trim|is_unique[t_jenis_senam.jenis_senam]');
@@ -49,14 +49,14 @@ class Senam extends CI_Controller
             if ($this->senam->simpanSenam() == true) {
                 if ($this->db->affected_rows() > 0) {
                     $this->session->set_flashdata('senam', 'Berhasil Disimpan');
-                    redirect('senam');
+                    redirect('admin/senam');
                 } else {
                     $this->session->set_flashdata('senam', 'Gagal Disimpan');
-                    redirect('senam');
+                    redirect('admin/senam');
                 }
             } else {
                 $this->session->set_flashdata('senam', 'Gagal Disimpan');
-                redirect('senam');
+                redirect('admin/senam');
             }
         }
     }
@@ -66,7 +66,7 @@ class Senam extends CI_Controller
             'title'     => 'Edit Senam',
             'topik'     => '',
             'senam'     => $this->senam->getAllSenamById($id),
-            'isi'       => 'senam/edit-senam'
+            'isi'       => 'senam/edit_senam'
         );
 
         $this->form_validation->set_rules('senam', 'Senam', 'required|trim');
@@ -78,14 +78,14 @@ class Senam extends CI_Controller
             if ($this->senam->updateSenam($id) == true) {
                 if ($this->db->affected_rows() > 0) {
                     $this->session->set_flashdata('senam', 'Berhasil Diubah');
-                    redirect('senam');
+                    redirect('admin/senam');
                 } else {
                     $this->session->set_flashdata('senam', 'Gagal Diubah');
-                    redirect('senam');
+                    redirect('admin/senam');
                 }
             } else {
                 $this->session->set_flashdata('senam', 'Gagal Diubah');
-                redirect('senam');
+                redirect('admin/senam');
             }
         }
     }
@@ -95,14 +95,14 @@ class Senam extends CI_Controller
         if ($this->senam->deleteSenam($id) == true) {
             if ($this->db->affected_rows() > 0) {
                 $this->session->set_flashdata('senam', 'Berhasil Dihapus');
-                redirect('senam');
+                redirect('admin/senam');
             } else {
                 $this->session->set_flashdata('senam', 'Gagal Dihapus');
-                redirect('senam');
+                redirect('admin/senam');
             }
         } else {
             $this->session->set_flashdata('senam', 'Gagal Dihapus');
-            redirect('senam');
+            redirect('admin/senam');
         }
     }
     //! ============================== End Senam ==============================//

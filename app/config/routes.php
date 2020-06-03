@@ -116,10 +116,10 @@ $route['admin/edit_fasilitas/(:any)']     = 'fasilitas/editfasilitas/$1';
 $route['admin/hapus_fasilitas/(:any)']    = 'fasilitas/hapusfasilitas/$1';
 
 //!===================== Senam =====================//
-$route['senam']                     = 'senam';
-$route['add.senam']                 = 'senam/addsenam';
-$route['edit.senam/(:any)']         = 'senam/editsenam/$1';
-$route['hapus.senam/(:any)']        = 'senam/hapussenam/$1';
+$route['admin/senam']                     = 'senam';
+$route['admin/add_senam']                 = 'senam/addsenam';
+$route['admin/edit_senam/(:any)']         = 'senam/editsenam/$1';
+$route['admin/hapus_senam/(:any)']        = 'senam/hapussenam/$1';
 
 //TODO===================== Transaksi Paket =====================//
 $route['transaksi']                 = 'transaksi';
