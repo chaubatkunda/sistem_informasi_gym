@@ -47,7 +47,7 @@
 						<ul class="submenu-angle" aria-expanded="true">
 							<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 								<li>
-									<a title="Paket" href="<?php echo base_url('paket'); ?>"><span class="mini-sub-pro">Paket</span></a>
+									<a title="Paket" href="<?php echo base_url('admin/paket'); ?>"><span class="mini-sub-pro">Paket</span></a>
 								</li>
 								<li>
 									<a title="Fasilitas" href="<?php echo base_url('fasilitas'); ?>"><span class="mini-sub-pro">Fasilitas</span></a>

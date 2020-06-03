@@ -95,7 +95,7 @@ $route['aktif-tidak']               = 'member/aktiftidak';
 $route['admin/peserta_paket']              = 'pesertapaket';
 
 //TODO===================== Paket =====================//
-$route['paket']                      = 'paket';
+$route['admin/paket']                      = 'paket';
 $route['add.paket']                  = 'paket/addpaket';
 $route['detail.paket/(:num)']        = 'paket/detpaket/$1';
 $route['edit.paket/(:num)']          = 'paket/editpaket/$1';
