@@ -43,10 +43,10 @@ class Cetak extends CI_Controller
 		$title = 'Cetak Detail Paket';
 		// $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [100, 100]]);
 		$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-P']);
-		$periode = date('d-m-Y', strtotime($tgl1)) . " Sampai " . date('d-m-Y', strtotime($tgl2));
+		$periode = indoDate($tgl1) . " Sampai " . indoDate($tgl2);
 		$cetak = $this->laporan->filterLaporanPaket($tgl1, $tgl2);
 		$total = $this->laporan->sumSearchPaket($tgl1, $tgl2);
-		$data = $this->load->view('cetak/filter-paket', ['title' => $title, 'cetak' => $cetak, 'total' => $total, 'periode' => $periode], TRUE);
+		$data = $this->load->view('cetak/filter_paket', ['title' => $title, 'cetak' => $cetak, 'total' => $total, 'periode' => $periode], TRUE);
 		$mpdf->WriteHTML($data);
 		// $mpdf->AutoPrint(true);
 		$mpdf->Output();
@@ -74,7 +74,7 @@ class Cetak extends CI_Controller
 		$title = 'Laporan Paket';
 		$lap = $this->laporan->getAllTransPaket();
 		$total = $this->laporan->sumAllPaket();
-		$data = $this->load->view('cetak/lap-paket', ['lap' => $lap, 'total' => $total, 'title' => $title], TRUE);
+		$data = $this->load->view('cetak/lap_paket', ['lap' => $lap, 'total' => $total, 'title' => $title], TRUE);
 		$mpdf->WriteHTML($data);
 		// $mpdf->AutoPrint(true);
 		$mpdf->Output();

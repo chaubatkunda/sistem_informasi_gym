@@ -22,6 +22,7 @@ class Konfirmasi_model extends CI_Model
 		$this->db->from('t_transpaket');
 		$this->db->join('t_member', 't_member.id_member = t_transpaket.id_member');
 		$this->db->join('t_user', 't_user.id = t_member.id_user');
+		$this->db->where('t_transpaket.is_success', 2);
 		return $this->db->get()->result();
 	}
 	public function detaiPaket($id)
@@ -39,7 +40,7 @@ class Konfirmasi_model extends CI_Model
 		$this->db->from('t_transfasilitas');
 		$this->db->join('t_member', 't_member.id_member = t_transfasilitas.id_member');
 		$this->db->join('t_user', 't_user.id = t_member.id_user');
-		// $this->db->where('ket_bayar', 2);
+		$this->db->where('is_success', 2);
 		return $this->db->get()->result();
 	}
 

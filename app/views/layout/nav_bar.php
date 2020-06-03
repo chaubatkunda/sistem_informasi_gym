@@ -99,9 +99,6 @@
 							</a>
 						</li>
 					<?php endif; ?>
-					<!--! <li>
-						<a href="<?php echo base_url('jadwal'); ?>" aria-expanded="false"><span class="mini-sub-pro"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Jadwal</span></a>
-					</li> -->
 					<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 						<li>
 							<a title="Instruktur" href="<?php echo base_url('instruktur'); ?>"><span class="mini-sub-pro"><i class="fa fa-fw fa-users"></i> Instruktur</span></a>
@@ -113,10 +110,10 @@
 							</a>
 							<ul class="submenu-angle" aria-expanded="true">
 								<li>
-									<a title="Lap. Paket" href="<?php echo base_url('laporan.paket'); ?>"><span class="mini-sub-pro">Lap. Paket</span></a>
+									<a title="Lap. Paket" href="<?php echo base_url('admin/laporan_paket'); ?>"><span class="mini-sub-pro">Lap. Paket</span></a>
 								</li>
 								<li>
-									<a title="Lap. Fasilitas" href="<?php echo base_url('laporan.fasilitas'); ?>"><span class="mini-sub-pro">Lap. Fasilitas</span></a>
+									<a title="Lap. Fasilitas" href="<?php echo base_url('admin/laporan_fasilitas'); ?>"><span class="mini-sub-pro">Lap. Fasilitas</span></a>
 								</li>
 							</ul>
 						</li>

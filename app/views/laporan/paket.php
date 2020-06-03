@@ -14,11 +14,11 @@
 							<i class="fa fa-spinner"></i> Refresh
 						</a>
 						<?php if (!empty($total)) : ?>
-							<a href="<?php echo base_url('cetak-filterPaket') . $cetak; ?>" class="btn btn-default" target="_blank" title="Cetak Filter Tanggal">
+							<a href="<?php echo base_url('admin/cetak_filterPaket') . $cetak; ?>" class="btn btn-default" target="_blank" title="Cetak Filter Tanggal">
 								<i class="fa fa-print"></i> Cetak
 							</a>
 						<?php else : ?>
-							<a href="<?php echo base_url('cetak-laporanPaket'); ?>" class="btn btn-default" target="_blank" title="Cetak Full">
+							<a href="<?php echo base_url('admin/cetak_laporan_paket'); ?>" class="btn btn-default" target="_blank" title="Cetak Full">
 								<i class="fa fa-print"></i> Cetak
 							</a>
 						<?php endif; ?>

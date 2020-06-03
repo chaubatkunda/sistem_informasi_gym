@@ -74,8 +74,8 @@ $route['user.savekonfirmasi.fasilitas/(:any)']          = 'user/usersaveconfirmf
 
 
 //?===================== Member =====================//
-$route['member']                            = 'member/member';
-$route['add.member']                        = 'member/addmember';
+$route['admin/member']                            = 'member/member';
+$route['admin/add.member']                        = 'member/addmember';
 $route['pilih.produk/(:any)']               = 'member/pilihproduk/$1';
 $route['cheout.paket/(:num)/(:any)']        = 'member/chekoutpaket/$1/$2';
 $route['detail.pembelian/(:num)/(:any)']    = 'member/detailbeli/$1/$2';
@@ -149,10 +149,10 @@ $route['save.cofirmfasil/(:any)']           = 'konfirmasi/savefericonfirm/$1';
 $route['cetak-trans-detpaket/(:num)'] = 'cetak/cetaktrpaket/$1';
 $route['download-trans-detpaket/(:num)'] = 'cetak/downloadtrpaket/$1';
 
-$route['cetak-filterPaket'] = 'cetak/cetakfilterpaket';
-$route['cetak-laporanPaket'] = 'cetak/cetaklappaket';
-$route['cetak-filterFasilitas'] = 'cetak/cetakfilterfasilitas';
-$route['cetak-laporanFasilitas'] = 'cetak/cetaklapfasilitas';
+$route['admin/cetak_filterPaket']             = 'cetak/cetakfilterpaket';
+$route['admin/cetak_laporan_paket']     = 'cetak/cetaklappaket';
+$route['cetak-filterFasilitas']         = 'cetak/cetakfilterfasilitas';
+$route['cetak-laporanFasilitas']        = 'cetak/cetaklapfasilitas';
 
 //!===================== Transaksi My Paket =====================//
 
@@ -166,8 +166,8 @@ $route['user.detail.paket/(:any)']      = 'user/userdatailpaket/$1';
 $route['instruktur'] = 'master/instruktur';
 
 //?===================== Laporan =====================//
-$route['laporan.paket']         = 'laporan/paket';
-$route['laporan.fasilitas']     = 'laporan/fasilitas';
+$route['admin/laporan_paket']         = 'laporan/paket';
+$route['admin/laporan_fasilitas']     = 'laporan/fasilitas';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

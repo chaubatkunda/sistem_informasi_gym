@@ -41,25 +41,9 @@ class Laporan extends CI_Controller
 	}
 	public function fasilitas()
 	{
-
-
-		// $data['title'] = ':: Laporan Fasilitas';
-		// $data['transaksi'] = $this->laporan->getAllTransFasilitas();
 		$tgl1 = $this->input->post('tgl1', true);
 		$tgl2 = $this->input->post('tgl2', true);
 		$cetak = '?tgl1=' . $tgl1 . '&tgl2=' . $tgl2;
-		// $data['cetak'] = $cetak;
-		// if ($tgl1 and $tgl2) {
-		// 	$data['transaksi'] = $this->laporan->filterLaporanFasilitas($tgl1, $tgl2);
-		// 	$data['total'] = $this->laporan->sumSearchFasilitas($tgl1, $tgl2);
-		// }
-		// $this->load->view('template/header', $data);
-		// $this->load->view('template/navbar', $data);
-		// $this->load->view('laporan/fasilitas', $data);
-		// $this->load->view('template/footer');
-
-
-
 
 		if ($tgl1 and $tgl2) {
 			$data = array(

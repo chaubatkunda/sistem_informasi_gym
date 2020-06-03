@@ -22,7 +22,7 @@
 	<div class="row  mt-3">
 		<div class="col-md-12">
 			<div class="title-lap">
-				<h5 class="text-center">LAPORAN PAKET <br> <?php echo $periode; ?></h5>
+				<h5 class="text-center">LAPORAN PAKET</h5>
 			</div>
 			<table class="table table-bordered">
 				<thead>
@@ -37,25 +37,23 @@
 				<tbody>
 					<?php
 					$no = 1;
-					foreach ($cetak as $ct) :
+					foreach ($lap as $ct) :
 					?>
 						<tr>
 							<td><?php echo $no++; ?></td>
 							<td><?php echo date('d-m-Y', strtotime($ct['tgl_trans'])); ?></td>
 							<td><?php echo $ct['kode_pembelian']; ?></td>
-							<td><?php echo $ct['nama_paket']; ?></td>
-							<td><?php echo number_format($ct['harga_paket'], 0, ',', '.'); ?></td>
+							<td class="text-center"><?php echo $ct['nama_paket']; ?></td>
+							<td class="text-right"><?php echo Rp($ct['harga_paket']); ?></td>
 						</tr>
 					<?php endforeach; ?>
 				</tbody>
-				<?php if (!empty($total)) : ?>
-					<tr>
-						<td colspan="4" style="text-align: right;">Total</td>
-						<td>
-							<?php echo number_format($total, 0, ',', '.'); ?>
-						</td>
-					</tr>
-				<?php endif; ?>
+				<tr>
+					<td colspan="4" class="text-right">Total</td>
+					<td class="text-right">
+						<?php echo Rp($total); ?>
+					</td>
+				</tr>
 			</table>
 		</div>
 	</div>
