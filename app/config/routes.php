@@ -112,8 +112,8 @@ $route['getpaket']                  = 'paket/getpaketbyid';
 $route['admin/fasilitas']                 = 'fasilitas';
 $route['detfas']                    = 'fasilitas/detfas';
 $route['admin/add_fasilitas']             = 'fasilitas/addfasilitas';
-$route['edit.fasilitas/(:any)']     = 'fasilitas/editfasilitas/$1';
-$route['hapus.fasilitas/(:any)']    = 'fasilitas/hapusfasilitas/$1';
+$route['admin/edit_fasilitas/(:any)']     = 'fasilitas/editfasilitas/$1';
+$route['admin/hapus_fasilitas/(:any)']    = 'fasilitas/hapusfasilitas/$1';
 
 //!===================== Senam =====================//
 $route['senam']                     = 'senam';

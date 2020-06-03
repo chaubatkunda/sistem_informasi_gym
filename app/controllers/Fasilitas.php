@@ -83,7 +83,7 @@ class Fasilitas extends CI_Controller
             'topik'     => '',
             'durasi'    => ['1', '2', '3', '4'],
             'fasilitas' => $this->fasilitas->getAllFasilitasById($id),
-            'isi'       => 'fasilitas/edit-fasilitas'
+            'isi'       => 'fasilitas/edit_fasilitas'
         );
         $this->form_validation->set_rules('fasilitas', 'Fasilias', 'required|trim');
         $this->form_validation->set_rules('harga', 'Harga', 'required|trim|max_length[8]');
@@ -112,18 +112,9 @@ class Fasilitas extends CI_Controller
                     'ket' => $this->input->post('chek-baik', true)
                 ];
             }
-            if ($this->fasilitas->updateFasilitas($datar, $id) == true) {
-                if ($this->db->affected_rows() > 0) {
-                    $this->session->set_flashdata('fasilitas', 'Berhasil Diubah');
-                    redirect('fasilitas');
-                } else {
-                    $this->session->set_flashdata('fasilitas', 'Gagal Diubah');
-                    redirect('fasilitas');
-                }
-            } else {
-                $this->session->set_flashdata('fasilitas', 'Gagal Diubah');
-                redirect('fasilitas');
-            }
+            $this->fasilitas->updateFasilitas($datar, $id);
+            $this->session->set_flashdata('fasilitas', 'Gagal Diubah');
+            redirect('admin/fasilitas');
         }
     }
     public function hapusfasilitas($id)
@@ -131,14 +122,14 @@ class Fasilitas extends CI_Controller
         if ($this->fasilitas->deleteFasilitas($id) == true) {
             if ($this->db->affected_rows() > 0) {
                 $this->session->set_flashdata('fasilitas', 'Berhasil Dihapus');
-                redirect('fasilitas');
+                redirect('admin/fasilitas');
             } else {
                 $this->session->set_flashdata('fasilitas', 'Gagal Dihapus');
-                redirect('fasilitas');
+                redirect('admin/fasilitas');
             }
         } else {
             $this->session->set_flashdata('fasilitas', 'Gagal Dihapus');
-            redirect('fasilitas');
+            redirect('admin/fasilitas');
         }
     }
     //!============================== EndFasilitas ==============================//
