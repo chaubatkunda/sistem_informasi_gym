@@ -50,10 +50,10 @@
 									<a title="Paket" href="<?php echo base_url('admin/paket'); ?>"><span class="mini-sub-pro">Paket</span></a>
 								</li>
 								<li>
-									<a title="Fasilitas" href="<?php echo base_url('fasilitas'); ?>"><span class="mini-sub-pro">Fasilitas</span></a>
+									<a title="Fasilitas" href="<?php echo base_url('admin/fasilitas'); ?>"><span class="mini-sub-pro">Fasilitas</span></a>
 								</li>
 								<li>
-									<a title="Senam" href="<?php echo base_url('senam'); ?>"><span class="mini-sub-pro">Senam</span></a>
+									<a title="Senam" href="<?php echo base_url('admin/senam'); ?>"><span class="mini-sub-pro">Senam</span></a>
 								</li>
 							<?php else : ?>
 								<li>

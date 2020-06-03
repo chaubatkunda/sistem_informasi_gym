@@ -98,17 +98,18 @@ $route['admin/peserta_paket']              = 'pesertapaket';
 $route['admin/paket']                      = 'paket';
 $route['admin/add.paket']                  = 'paket/addpaket';
 $route['admin/detail_paket/(:num)']        = 'paket/detpaket/$1';
-$route['edit.paket/(:num)']          = 'paket/editpaket/$1';
-$route['hapus.paket/(:num)']         = 'paket/hapuspaket/$1';
+$route['admin/edit_paket/(:num)']          = 'paket/editpaket/$1';
+$route['admin/hapus_paket/(:num)']         = 'paket/hapuspaket/$1';
 $route['admin/add_detail_paket/(:num)']    = 'paket/adddetpaket/$1';
 $route['admin/hapus_detail/(:num)']        = 'paket/hapusdetpaket/$1';
+
 $route['edit.detail/(:num)']         = 'paket/editdetpaket/$1';
 
 // !Kusam
 $route['getpaket']                  = 'paket/getpaketbyid';
 
 //*===================== Fasilitas =====================//
-$route['fasilitas']                 = 'fasilitas';
+$route['admin/fasilitas']                 = 'fasilitas';
 $route['detfas']                    = 'fasilitas/detfas';
 $route['add.fasilitas']             = 'fasilitas/addfasilitas';
 $route['edit.fasilitas/(:any)']     = 'fasilitas/editfasilitas/$1';

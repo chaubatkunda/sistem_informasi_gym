@@ -73,7 +73,7 @@ class Paket extends CI_Controller
             'durasi'    => ['1', '2', '3', '4'],
             'bulan'     => date("m", strtotime($paket->tgl_akhir)) - date("m", strtotime($paket->tgl_awal)),
             'paket'     => $paket,
-            'isi'       => 'paket/edit-paket'
+            'isi'       => 'paket/edit_paket'
         );
         $this->form_validation->set_rules('paket', 'Paket', 'required|trim|max_length[3]');
         $this->form_validation->set_rules('harga', 'Harga', 'required|trim|max_length[7]');
@@ -97,10 +97,10 @@ class Paket extends CI_Controller
             ];
             if ($this->paket->updatePaket($datap, $id) == true) {
                 $this->session->set_flashdata('paket', 'Berhasil Diubah');
-                redirect('paket');
+                redirect('admin/paket');
             } else {
                 $this->session->set_flashdata('paket', 'Gagal Diubah');
-                redirect('paket');
+                redirect('admin/paket');
             }
         }
     }
@@ -159,7 +159,6 @@ class Paket extends CI_Controller
             'isi'       => 'paket/edit_det'
         );
 
-
         $this->form_validation->set_rules('senam', 'Senam', 'required', ['required' => 'Wajib Diisi']);
         $this->form_validation->set_rules('kuota', 'Kuota', 'required|trim|numeric|max_length[2]');
         if ($this->form_validation->run() == false) {
@@ -199,14 +198,14 @@ class Paket extends CI_Controller
         if ($this->paket->hapusPaket($id) == true) {
             if ($this->db->affected_rows() > 0) {
                 $this->session->set_flashdata('paket', 'Berhasil Dihapus');
-                redirect('paket');
+                redirect('admin/paket');
             } else {
                 $this->session->set_flashdata('paket', 'Gagal Dihapus');
-                redirect('paket');
+                redirect('admin/paket');
             }
         } else {
             $this->session->set_flashdata('paket', 'Gagal Dihapus');
-            redirect('paket');
+            redirect('admin/paket');
         }
     }
     public function getpaketbyid()
