@@ -1,5 +1,3 @@
-<!-- Static Table Start -->
-<div class="data-table-area mg-b-15">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-2"></div>
@@ -37,7 +35,7 @@
 										<td><?php echo $m->id_member; ?></td>
 										<td><?php echo $m->nama; ?></td>
 										<td>
-											<a href="<?php echo base_url('pilih.produk/') . $m->id_member; ?>" class="btn btn-primary btn-sm">Continue <i class="fa fa-chevron-circle-right"></i></a>
+											<a href="<?php echo base_url('admin/pilih_produk/') . $m->id_member; ?>" class="btn btn-primary btn-sm">Continue <i class="fa fa-chevron-circle-right"></i></a>
 										</td>
 									</tr>
 								<?php endforeach; ?>
@@ -49,4 +47,3 @@
 			</div>
 		</div>
 	</div>
-</div>

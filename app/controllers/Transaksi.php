@@ -32,7 +32,7 @@ class Transaksi extends CI_Controller
         $this->pagination->initialize($config);
         $start         = $this->uri->segment(3);
         $data = array(
-            'title'     => 'Transaksi Paket',
+            'title'     => 'Transaksi',
             'topik'     => '',
             'start'     => $start,
             'member'       => $this->transpaket->getCountMember($config['per_page'],  $start),

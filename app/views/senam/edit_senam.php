@@ -47,11 +47,11 @@
                                                         <div class="col-lg-9">
                                                             <div class="login-horizental cancel-wp pull-left form-bc-ele">
                                                                 <button class="btn btn-custon-three btn-primary" type="submit">
-                                                                    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+                                                                    <i class="fa fa-floppy-o"></i>
                                                                     Simpan
                                                                 </button>
-                                                                <a href="<?php echo base_url('senam'); ?>" class="btn btn-custon-three btn-danger">
-                                                                    <i class="fa fa-times edu-danger-error" aria-hidden="true"></i>
+                                                                <a href="<?php echo base_url('admin/senam'); ?>" class="btn btn-custon-three btn-danger">
+                                                                    <i class="fa fa-times edu-danger-error"></i>
                                                                     Batal
                                                                 </a>
                                                             </div>

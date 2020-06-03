@@ -82,9 +82,9 @@ $route['admin/detail_pembelian_paket/(:num)/(:any)']    = 'member/detailbeli/$1/
 $route['admin/add_beli_paket']                          = 'member/add_detailbeli';
 $route['admin/konfirmasi_pembelian/(:any)']             = 'member/konfirmbeli/$1';
 
-$route['chek.fasilitas/(:any)/(:any)']      = 'member/chekfasilitas/$1/$2';
-$route['chekout.fasilitas']                 = 'member/chekoutfasilitas';
-$route['konfirmasi.fasilitas/(:any)']       = 'member/confirmfasil/$1';
+$route['admin/chek_fasilitas/(:any)/(:any)']      = 'member/chekfasilitas/$1/$2';
+$route['admin/chekout_fasilitas']                 = 'member/chekoutfasilitas';
+$route['admin/konfirmasi_fasilitas/(:any)']       = 'member/confirmfasil/$1';
 
 
 $route['hapus-member/(:num)']       = 'member/hapusmember/$1';
@@ -122,10 +122,11 @@ $route['admin/edit_senam/(:any)']         = 'senam/editsenam/$1';
 $route['admin/hapus_senam/(:any)']        = 'senam/hapussenam/$1';
 
 //TODO===================== Transaksi Paket =====================//
-$route['transaksi']                 = 'transaksi';
+$route['admin/transaksi']                 = 'transaksi';
 $route['cari.member']               = 'transaksi/carimember';
-$route['transaksiPaket']            = 'transaksi/transpaket';
 
+// !Kusam
+$route['transaksiPaket']            = 'transaksi/transpaket';
 $route['detmember']                 = 'transaksi_fasilitas/detmember';
 $route['periodeTransPaket']         = 'transaksi/periodetranspaket';
 $route['detailTransPaket/(:any)']   = 'transaksi/dettranspaket/$1';
@@ -142,7 +143,7 @@ $route['info.peket.notsuccess/(:any)']      = 'konfirmasi/infopaketnotsukses/$1'
 
 // ? fasilitas
 $route['verifikasi.fasilitas/(:any)']       = 'konfirmasi/verifasilitas/$1';
-$route['save.confirm.fasilitas']            = 'konfirmasi/saveconfirmfasilitas';
+$route['admin/save_confirm_fasilitas']            = 'konfirmasi/saveconfirmfasilitas';
 $route['detconfirm.fasilitas/(:any)']       = 'konfirmasi/detconfirmfasilitas/$1';
 $route['save.cofirmfasil/(:any)']           = 'konfirmasi/savefericonfirm/$1';
 

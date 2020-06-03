@@ -73,12 +73,12 @@
 						<ul class="submenu-angle" aria-expanded="true">
 							<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 								<li>
-									<a title="Paket" href="<?php echo base_url('transaksi'); ?>">
+									<a href="<?php echo base_url('admin/transaksi'); ?>">
 										<span class="mini-sub-pro">Transaksi</span>
 									</a>
 								</li>
 								<li>
-									<a title="Menu Transaksi Fasilitas" href="<?php echo base_url('konfirmasi'); ?>">
+									<a href="<?php echo base_url('admin/konfirmasi'); ?>">
 										<span class="mini-sub-pro">Konfirmasi</span>
 									</a>
 								</li>

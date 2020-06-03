@@ -230,7 +230,7 @@ class Member extends CI_Controller
 			'is_success'			=> 2
 		];
 		$this->member->insert_chekout_fasilitas($data);
-		redirect('konfirmasi.fasilitas/' . $kode);
+		redirect('admin/konfirmasi_fasilitas/' . $kode);
 	}
 	public function confirmfasil($id)
 	{
