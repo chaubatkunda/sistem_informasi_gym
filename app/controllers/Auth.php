@@ -68,11 +68,10 @@ class Auth extends CI_Controller
 	}
 	public function daftar()
 	{
-		$this->form_validation->set_rules('nama', 'Nama', 'trim|required', ['required' => 'Wajib Diisi']);
-		$this->form_validation->set_rules('username', 'Username', 'trim|required', ['required' => 'Wajib Diisi']);
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+		$this->form_validation->set_rules('username', 'Username', 'trim|required');
 		$this->form_validation->set_rules('password', 'Password', 'required|trim|alpha_numeric|min_length[3]|matches[password1]',);
 		$this->form_validation->set_rules('password1', 'Password', 'required|trim|alpha_numeric|min_length[3]|matches[password1]');
-
 		$this->db->select_max('id');
 		$queryUser = $this->db->get('t_user')->row_array();
 		$genIduser = $queryUser['id'] + 1;

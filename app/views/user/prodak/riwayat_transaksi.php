@@ -5,10 +5,11 @@
                 <a href="#" class="list-group-item active">
                     Cras justo odio
                 </a>
-                <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                <a href="#" class="list-group-item">Morbi leo risus</a>
-                <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                <a href="#" class="list-group-item">Vestibulum at eros</a>
+                <button class="list-group-item btn-userpaket">Paket</button>
+                <button class="list-group-item btn-userfasilitas">Fasilitas</button>
+                <a href="#" class="list-group-item">Success</a>
+                <a href="#" class="list-group-item">Menunggu Konfirmasi</a>
+                <a href="#" class="list-group-item">Pending</a>
             </div>
         </div>
         <div class="col-md-6">
@@ -18,8 +19,6 @@
                 </div>
                 <div class="panel-body">
                     <div class="sparkline10-list">
-                        <button class="btn btn-primary btn-userpaket">Paket</button>
-                        <button class="btn btn-primary btn-userfasilitas">Fasilitas</button>
                         <div class="user-paket">
                             <?php foreach ($paket as $p) : ?>
                                 <div class="user-comment">
