@@ -96,12 +96,12 @@ $route['admin/peserta_paket']              = 'pesertapaket';
 
 //TODO===================== Paket =====================//
 $route['admin/paket']                      = 'paket';
-$route['add.paket']                  = 'paket/addpaket';
-$route['detail.paket/(:num)']        = 'paket/detpaket/$1';
+$route['admin/add.paket']                  = 'paket/addpaket';
+$route['admin/detail_paket/(:num)']        = 'paket/detpaket/$1';
 $route['edit.paket/(:num)']          = 'paket/editpaket/$1';
 $route['hapus.paket/(:num)']         = 'paket/hapuspaket/$1';
-$route['add.detail.paket/(:num)']    = 'paket/adddetpaket/$1';
-$route['hapus.detail/(:num)']        = 'paket/hapusdetpaket/$1';
+$route['admin/add_detail_paket/(:num)']    = 'paket/adddetpaket/$1';
+$route['admin/hapus_detail/(:num)']        = 'paket/hapusdetpaket/$1';
 $route['edit.detail/(:num)']         = 'paket/editdetpaket/$1';
 
 // !Kusam

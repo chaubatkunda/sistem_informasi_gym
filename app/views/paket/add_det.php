@@ -126,10 +126,10 @@
 								</div>
 							</div>
 							<div class="panel-footer">
-								<button class="btn btn-custon-three btn-primary" type="submit">
+								<button class="btn btn-primary" type="submit">
 									<i class="fa fa-floppy-o"></i> Simpan
 								</button>
-								<a href="<?php echo base_url('detail.paket/') . $paket->id_paket; ?>" class="btn btn-custon-three btn-danger">
+								<a href="<?php echo base_url('admin/detail_paket/') . $paket->id_paket; ?>" class="btn btn-danger">
 									<i class="fa fa-times edu-danger-error"></i> Batal
 								</a>
 							</div>

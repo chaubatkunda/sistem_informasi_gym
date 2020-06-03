@@ -137,14 +137,14 @@ class Paket extends CI_Controller
             if ($this->paket->simpanDetkPaket($id) == true) {
                 if ($this->db->affected_rows() > 0) {
                     $this->session->set_flashdata('detpaket', 'Berhasil Ditambahkan');
-                    redirect('detail.paket/' . $id);
+                    redirect(base_url('admin/detail_paket/' . $id));
                 } else {
                     $this->session->set_flashdata('detpaket', 'Gagal Ditambahkan');
-                    redirect('detail.paket/' . $id);
+                    redirect(base_url('admin/detail_paket/' . $id));
                 }
             } else {
                 $this->session->set_flashdata('detpaket', 'Gagal Ditambahkan');
-                redirect('detail.paket/' . $id);
+                redirect(base_url('admin/detail_paket/' . $id));
             }
         }
     }
@@ -186,10 +186,10 @@ class Paket extends CI_Controller
         $this->paket->hapusDetkPaket($id);
         if ($this->db->affected_rows() > 0) {
             $this->session->set_flashdata('detpaket', 'Berhasil Dihapus');
-            redirect('detail.paket/' . $idset);
+            redirect(base_url('admin/detail_paket/' . $idset));
         } else {
             $this->session->set_flashdata('detpaket', 'Gagal Dihapus');
-            redirect('detail.paket/' . $idset);
+            redirect(base_url('admin/detail_paket/' . $idset));
         }
     }
 
