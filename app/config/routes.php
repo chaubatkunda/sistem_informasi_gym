@@ -133,7 +133,7 @@ $route['detailTransPaket/(:any)']   = 'transaksi/dettranspaket/$1';
 $route['validasiPaket/(:any)']      = 'transaksi/validasipaket/$1';
 
 // !Konfirmasi
-$route['konfirmasi']                        = 'konfirmasi';
+$route['admin/konfirmasi']                        = 'konfirmasi';
 // ? paket
 $route['verifikasi.paket/(:any)']           = 'konfirmasi/veripaket/$1';
 $route['admin/save_confirm_paket/(:any)']         = 'konfirmasi/saveconfirmpaket/$1';

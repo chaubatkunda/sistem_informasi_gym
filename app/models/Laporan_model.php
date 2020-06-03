@@ -5,7 +5,7 @@ class Laporan_model extends CI_Model
 {
 	public function getAllTransFasilitas()
 	{
-		return $this->db->get_where('t_transfasilitas', ['ket_bayar' => 1])->result_array();
+		return $this->db->get_where('t_transfasilitas', ['is_success' => 1])->result_array();
 	}
 	public function filterLaporanFasilitas($tgl1, $tgl2)
 	{
@@ -33,7 +33,7 @@ class Laporan_model extends CI_Model
 	public function getAllTransPaket()
 	{
 		$this->db->order_by('kode_pembelian', 'ASC');
-		return $this->db->get_where('t_transpaket', ['ket_bayar' => 1])->result_array();
+		return $this->db->get_where('t_transpaket', ['is_success' => 1])->result_array();
 	}
 	public function filterLaporanPaket($tgl1, $tgl2)
 	{
