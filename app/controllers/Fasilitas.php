@@ -43,7 +43,7 @@ class Fasilitas extends CI_Controller
             'topik'     => '',
             'fasilitas' => $this->fasilitas->getAllFasilitas(),
             'durasi'    => ['1', '2', '3', '4'],
-            'isi'       => 'fasilitas/add-fasilitas'
+            'isi'       => 'fasilitas/add_fasilitas'
         );
 
         $this->form_validation->set_rules('fasilitas', 'Fasilias', 'required|trim');
@@ -65,14 +65,14 @@ class Fasilitas extends CI_Controller
             if ($this->fasilitas->simpanFasilitas($dataf) == true) {
                 if ($this->db->affected_rows() > 0) {
                     $this->session->set_flashdata('fasilitas', 'Berhasil Ditambahkan');
-                    redirect('fasilitas');
+                    redirect('admin/fasilitas');
                 } else {
                     $this->session->set_flashdata('fasilitas', 'Gagal Ditambahkan');
-                    redirect('fasilitas');
+                    redirect('admin/fasilitas');
                 }
             } else {
                 $this->session->set_flashdata('fasilitas', 'Gagal Ditambahkan');
-                redirect('fasilitas');
+                redirect('admin/fasilitas');
             }
         }
     }

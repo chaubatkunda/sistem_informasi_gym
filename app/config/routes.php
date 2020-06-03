@@ -111,7 +111,7 @@ $route['getpaket']                  = 'paket/getpaketbyid';
 //*===================== Fasilitas =====================//
 $route['admin/fasilitas']                 = 'fasilitas';
 $route['detfas']                    = 'fasilitas/detfas';
-$route['add.fasilitas']             = 'fasilitas/addfasilitas';
+$route['admin/add_fasilitas']             = 'fasilitas/addfasilitas';
 $route['edit.fasilitas/(:any)']     = 'fasilitas/editfasilitas/$1';
 $route['hapus.fasilitas/(:any)']    = 'fasilitas/hapusfasilitas/$1';
 
