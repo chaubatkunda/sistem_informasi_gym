@@ -245,14 +245,4 @@ class Member extends CI_Controller
 
 	//!============================== Endmember ==============================//
 
-	//* ============================== Instruktur ==============================//
-	public function instruktur()
-	{
-		$data['title'] = 'Instruktur';
-		$this->load->view('template/header', $data);
-		$this->load->view('template/navbar', $data);
-		$this->load->view('instruktur/home', $data);
-		$this->load->view('template/footer');
-	}
-	//! ============================== End Instruktur ==============================//
 }

@@ -110,10 +110,11 @@ $route['getpaket']                  = 'paket/getpaketbyid';
 
 //*===================== Fasilitas =====================//
 $route['admin/fasilitas']                 = 'fasilitas';
-$route['detfas']                    = 'fasilitas/detfas';
 $route['admin/add_fasilitas']             = 'fasilitas/addfasilitas';
 $route['admin/edit_fasilitas/(:any)']     = 'fasilitas/editfasilitas/$1';
 $route['admin/hapus_fasilitas/(:any)']    = 'fasilitas/hapusfasilitas/$1';
+
+$route['detfas']                    = 'fasilitas/detfas';
 
 //!===================== Senam =====================//
 $route['admin/senam']                     = 'senam';
@@ -165,7 +166,7 @@ $route['user.detail.paket/(:any)']      = 'user/userdatailpaket/$1';
 
 
 //!===================== Instruktur =====================//
-$route['instruktur'] = 'master/instruktur';
+$route['admin/instruktur'] = 'instruktur';
 
 //?===================== Laporan =====================//
 $route['admin/laporan_paket']         = 'laporan/paket';

@@ -101,7 +101,7 @@
 					<?php endif; ?>
 					<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 						<li>
-							<a title="Instruktur" href="<?php echo base_url('instruktur'); ?>"><span class="mini-sub-pro"><i class="fa fa-fw fa-users"></i> Instruktur</span></a>
+							<a href="<?php echo base_url('admin/instruktur'); ?>"><span class="mini-sub-pro"><i class="fa fa-fw fa-users"></i> Instruktur</span></a>
 						</li>
 						<li>
 							<a class="has-arrow" href="#" aria-expanded="false">
@@ -110,10 +110,10 @@
 							</a>
 							<ul class="submenu-angle" aria-expanded="true">
 								<li>
-									<a title="Lap. Paket" href="<?php echo base_url('admin/laporan_paket'); ?>"><span class="mini-sub-pro">Lap. Paket</span></a>
+									<a href="<?php echo base_url('admin/laporan_paket'); ?>"><span class="mini-sub-pro">Lap. Paket</span></a>
 								</li>
 								<li>
-									<a title="Lap. Fasilitas" href="<?php echo base_url('admin/laporan_fasilitas'); ?>"><span class="mini-sub-pro">Lap. Fasilitas</span></a>
+									<a href="<?php echo base_url('admin/laporan_fasilitas'); ?>"><span class="mini-sub-pro">Lap. Fasilitas</span></a>
 								</li>
 							</ul>
 						</li>
