@@ -31,6 +31,23 @@ class Instruktur extends CI_Controller
         ];
         $this->load->view('layout/wrap', $data, false);
     }
+    public function create()
+    {
+        $this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+        $this->form_validation->set_rules('telp', 'Telpon', 'trim|required|numeric|min_length[6]|max_length[12]');
+        $this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+        $data = [
+            'title'         => 'Create',
+            'topik'         => 'Create',
+            'instruktur'    => $this->instruktur->getAllInstruktur(),
+            'isi'           => 'instruktur/add'
+        ];
+        if ($this->form_validation->run() == false) {
+            $this->load->view('layout/wrap', $data, false);
+        } else {
+            echo "Berhasil";
+        }
+    }
 
     public function delete($id)
     {
