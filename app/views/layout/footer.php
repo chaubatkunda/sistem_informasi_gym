@@ -229,6 +229,4 @@
 <?php endif; ?>
 </body>
 
-
-
 </html>

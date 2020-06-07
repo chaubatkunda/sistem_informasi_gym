@@ -167,6 +167,7 @@ $route['user.detail.paket/(:any)']      = 'user/userdatailpaket/$1';
 
 //!===================== Instruktur =====================//
 $route['admin/instruktur'] = 'instruktur';
+$route['admin/hapus_instruktur/(:num)'] = 'instruktur/delete/$1';
 
 //?===================== Laporan =====================//
 $route['admin/laporan_paket']         = 'laporan/paket';

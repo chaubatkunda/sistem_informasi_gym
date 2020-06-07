@@ -24,11 +24,22 @@ class Instruktur extends CI_Controller
     public function index()
     {
         $data = [
-            'title'     => 'Instruktur',
-            'topik'     => 'Instruktur',
-            'isi'       => 'instruktur/home'
+            'title'         => 'Instruktur',
+            'topik'         => 'Instruktur',
+            'instruktur'    => $this->instruktur->getAllInstruktur(),
+            'isi'           => 'instruktur/home'
         ];
         $this->load->view('layout/wrap', $data, false);
+    }
+
+    public function delete($id)
+    {
+        $this->instruktur->delete($id);
+        if ($this->db->affected_rows() > 0) {
+            redirect('admin/instruktur');
+        } else {
+            redirect('admin/instruktur');
+        }
     }
     //! ============================== End Instruktur ==============================//
 }

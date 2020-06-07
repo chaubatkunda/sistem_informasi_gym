@@ -142,6 +142,7 @@ $autoload['model'] = array(
     'Senam_model'               => 'senam',
     'User_model'                => 'user',
     'Home_model'                => 'home',
+    'Instruktur_model'          => 'instruktur',
     'Konfirmasi_model'          => 'konfirmasi',
     'Transaksipaket_model'      => 'transpaket',
     'Laporan_model'             => 'laporan'
