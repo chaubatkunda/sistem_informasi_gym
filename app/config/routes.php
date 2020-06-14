@@ -61,6 +61,7 @@ $route['calon-member']              = 'auth/daftar';
 $route['user']                                  = 'user';
 $route['user.paket']                            = 'user/paket';
 $route['beli.paket/(:any)']                     = 'user/belipaket/$1';
+$route['user.detai_paket/(:any)']               = 'user/detailpaket/$1';
 $route['user.transaksi.paket']                  = 'user/usertranspaket';
 $route['user.konfirmasi.pembelian/(:any)']      = 'user/userconfirmtranspaket/$1';
 $route['user.addkonfirm.pembelian/(:any)']      = 'user/useraddconfirmtranspaket/$1';

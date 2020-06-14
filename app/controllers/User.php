@@ -43,6 +43,18 @@ class User extends CI_Controller
 			'paket'			=> $this->paket->getPakeById($id),
 			'isipaket'  	=> $this->paket->selectPkIsiPaket($id),
 			'member'		=> $this->fungsi->chek_member(),
+			'isi' 			=> 'user/prodak/chek_paket'
+		);
+		$this->load->view('layout/user_wrap', $data, false);
+	}
+	public function detailpaket($id)
+	{
+		$data = array(
+			'title' 		=> 'Detail Paket',
+			'topik' 		=> '',
+			'paket'			=> $this->paket->getPakeById($id),
+			'isipaket'  	=> $this->paket->selectPkIsiPaket($id),
+			'member'		=> $this->fungsi->chek_member(),
 			'isi' 			=> 'user/prodak/detail_paket'
 		);
 		$this->load->view('layout/user_wrap', $data, false);

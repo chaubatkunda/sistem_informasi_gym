@@ -30,7 +30,6 @@
 									<td>
 										<?php
 										$tgla = date("Y-m-d");
-										$tglb = $pk->tgl_awal;
 										$tglc = $pk->tgl_akhir;
 										if ($tgla >= $tglc) {
 											echo "Tidak Aktif";

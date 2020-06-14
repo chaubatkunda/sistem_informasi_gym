@@ -1,129 +1,80 @@
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
-			<div class="sparkline10-list">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h5><?php echo $title; ?></h5>
-					</div>
-					<form action="<?php echo base_url('user.transaksi.paket'); ?>" method="post">
-						<div class="panel-body">
-							<div class="row">
-								<div class="col-md-6">
-									<div class="row">
-										<div class="col-md-5">
-											<label for="" class="form-label">Jenis Pembelian</label>
-										</div>
-										<div class="col-md-5">
-											<h5>
-												Paket <strong class="badge"><?php echo $paket->nama_paket; ?></strong>
-											</h5>
-											<input type="hidden" name="nama_paket" value="<?php echo $paket->nama_paket; ?>" readonly>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-5">
-											<label for="" class="form-label">Harga</label>
-										</div>
-										<div class="col-md-5">
-											<h5>
-												<strong class="text-primary"><?php echo Rp($paket->harga); ?></strong>
-											</h5>
-											<input type="hidden" name="harga_paket" value="<?php echo $paket->harga; ?>" readonly>
-										</div>
-									</div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="sparkline13-list">
+                <div class="btn-group pull-right" role="group">
+                    <a href="<?php echo base_url('user.paket'); ?>" class="btn btn-custon-three btn-success">
+                        <i class="fa fa-fw fa-undo"></i>
+                    </a>
+                </div>
+                <br>
+                <br>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                    </div>
+                    <!-- Table -->
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <label class="form-label col-md-4">Paket</label>
+                                    <label class="form-label col-md-6"><?php echo $paket->nama_paket; ?></label>
+                                </div>
+                                <div class="row">
+                                    <label class="form-label col-md-4">Harga</label>
+                                    <label class="form-label col-md-6 text-primary"><?php echo Rp($paket->harga); ?></label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <label class="form-label col-md-6 text-right">Aktif</label>
+                                    <label class="form-label col-md-6 text-success"><?php echo indoDate($paket->tgl_awal); ?></label>
+                                </div>
+                                <div class="row">
+                                    <label class="form-label col-md-6 text-right">Non Aktif</label>
+                                    <label class="form-label col-md-6 text-danger"><?php echo indoDate($paket->tgl_akhir); ?></label>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Senam</th>
+                                    <th>Kuota</th>
+                                    <th>Tanggal Latihan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($isipaket as $pk) : ?>
+                                    <tr>
+                                        <td>
+                                            <?php echo $pk->jenis_senam; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $pk->kuota; ?>
+                                            <strong>x</strong>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            $dettgl = $this->db->get_where('t_setpaket_det', ['id_setpaket' => $pk->id_setingpaket])->result(); ?>
 
-								</div>
-								<div class="col-md-6">
-									<div class="row">
-										<div class="col-md-5">
-											<label for="" class="form-label">Kode Transaksi</label>
-										</div>
-										<div class="col-md-5">
-											<h5>
-												<strong class="">
-													<?php echo $this->fungsi->kodeTransPaket(); ?>
-												</strong>
-											</h5>
-											<input type="hidden" name="kode_trans" value="<?php echo $this->fungsi->kodeTransPaket(); ?>" readonly>
-											<input type="hidden" name="id_member" value="<?php echo $this->fungsi->chek_member()->id_member; ?>" readonly>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-5">
-											<label for="" class="form-label">Tanggal</label>
-										</div>
-										<div class="col-md-5">
-											<h5>
-												<strong class=""><?php echo date('d-m-Y'); ?></strong>
-											</h5>
-											<input type="hidden" name="tgl_trans" value="<?php echo date('Y-m-d'); ?>" readonly>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="table-responsive">
-								<table class="table table-bordered">
-									<thead>
-										<tr>
-											<th>No</th>
-											<th>Senam</th>
-											<th>Kuota</th>
-											<th>Tanggal Latihan</th>
-										</tr>
-									</thead>
-									<tbody>
-										<?php
-										$no = 1;
-										foreach ($isipaket as $isi) :
-										?>
-											<tr>
-												<td>
-													<?php echo $no++; ?>
-												</td>
-												<td>
-													<?php echo $isi->jenis_senam; ?>
-													<input type="hidden" name="jenis_senam[]" value="<?php echo $isi->jenis_senam; ?>" readonly>
-													<input type="hidden" name="id_setp[]" value="<?php echo $isi->id_setingpaket; ?>" readonly>
-												</td>
-												<td>
-													<?php echo $isi->kuota; ?> x
-													<input type="hidden" name="kuota[]" value="<?php echo $isi->kuota; ?>" readonly>
-												</td>
-												<td>
-													<?php
-													$query = $this->db->get_where('t_setpaket_det', ['id_setpaket' => $isi->id_setingpaket])->result();
-													?>
-													<ul class="list-group">
-														<?php foreach ($query as $tglp) : ?>
-															<li>
-																<?php echo indoDate($tglp->tgl_masuk) . ", " . indoTime($tglp->jam_mulai) . " - " . indoTime($tglp->jam_selesai); ?>
-															</li>
-															<input type="hidden" name="tgl_masuk[]" value="<?php echo $tglp->tgl_masuk; ?>" readonly>
-															<input type="hidden" name="jam_mulai[]" value="<?php echo $tglp->jam_mulai; ?>" readonly>
-															<input type="hidden" name="jam_selesai[]" value="<?php echo $tglp->jam_selesai; ?>" readonly>
-															<input type="hidden" name="id_setpa[]" value="<?php echo $tglp->id_setpaket; ?>" readonly>
-														<?php endforeach; ?>
-													</ul>
-												</td>
-											</tr>
-										<?php endforeach; ?>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="panel-footer text-right">
-							<a href="<?php echo base_url('user.paket'); ?>" class="btn btn-danger">
-								<i class="fa fa-fw fa-undo"></i>
-							</a>
-							<button type="submit" class="btn btn-primary">
-								Continue <i class="fa fa-chevron-circle-right"></i>
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+                                            <ul class="list-group">
+                                                <?php
+                                                foreach ($dettgl as $dtt) :
+                                                ?>
+                                                    <li class="">
+                                                        <?php echo indoDate($dtt->tgl_masuk) . ", " . indoTime($dtt->jam_mulai) . " - " . indoTime($dtt->jam_selesai); ?>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
