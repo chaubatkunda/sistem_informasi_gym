@@ -19,7 +19,9 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <label class="form-label col-md-4">Paket</label>
-                                    <label class="form-label col-md-6"><?php echo $paket->nama_paket; ?></label>
+                                    <label class="form-label col-md-6">
+                                        <strong class="badge"><?php echo $paket->nama_paket; ?></strong>
+                                    </label>
                                 </div>
                                 <div class="row">
                                     <label class="form-label col-md-4">Harga</label>
@@ -34,6 +36,12 @@
                                 <div class="row">
                                     <label class="form-label col-md-6 text-right">Non Aktif</label>
                                     <label class="form-label col-md-6 text-danger"><?php echo indoDate($paket->tgl_akhir); ?></label>
+                                </div>
+                                <div class="row">
+                                    <label class="form-label col-md-6 text-right">Status</label>
+                                    <label class="form-label col-md-6">
+                                        <?php echo date('Y-m-d') > $paket->tgl_akhir ? '<strong class="text-danger">Tidak Aktif</strong>' : '<strong class="text-success">Aktif</strong>'; ?>
+                                    </label>
                                 </div>
                             </div>
                         </div>

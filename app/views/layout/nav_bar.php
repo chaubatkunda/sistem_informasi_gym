@@ -245,7 +245,7 @@
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="breadcome-list">
 							<?php if ($this->fungsi->user_login()['level'] == 3) : ?>
-								<a href="<?php echo base_url('daftar'); ?>" class="btn btn-custon-three btn-primary">Daftar</a>
+								<a href="<?php echo base_url('daftar'); ?>" class="btn btn-custon-three btn-primary">Daftar Sebagai Member</a>
 							<?php endif; ?>
 							<h5 class="text-center"><?php echo $topik; ?></h5>
 						</div>

@@ -23,6 +23,17 @@ class User extends CI_Controller
 		$this->load->view('layout/user_wrap', $data, false);
 	}
 
+	public function daftar()
+	{
+		$data = array(
+			'title' 		=> 'Paket',
+			'topik' 		=> '',
+			'paket' 		=> $this->paket->getAllPaket(),
+			'isi' 			=> 'user/add_member'
+		);
+		$this->load->view('layout/user_wrap', $data, false);
+	}
+
 	// !user paket
 	public function paket()
 	{

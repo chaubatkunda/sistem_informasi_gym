@@ -61,10 +61,10 @@
                                             </td>
                                             <td>
                                                 <?php if ($p->is_success == 1) : ?>
-                                                    <a href="<?php echo base_url('detconfirm.peket/') . $p->kode_pembelian; ?>" class="btn btn-info btn-sm">Detail</a>
+                                                    <a href="<?php echo base_url('admin/detconfirm.peket/') . $p->kode_pembelian; ?>" class="btn btn-info btn-sm">Detail</a>
                                                 <?php else : ?>
-                                                    <a href="<?php echo base_url('verifikasi.paket/') . $p->kode_pembelian; ?>" class="btn btn-success btn-sm">Verifikasi</a>
-                                                    <a href="<?php echo base_url('konfirmasi.pembelian/') . $p->kode_pembelian; ?>" class="btn btn-primary btn-sm">Konfirmasi</a>
+                                                    <a href="<?php echo base_url('admin/verifikasi.paket/') . $p->kode_pembelian; ?>" class="btn btn-success btn-sm">Verifikasi</a>
+                                                    <a href="<?php echo base_url('admin/konfirmasi_pembelian/') . $p->kode_pembelian; ?>" class="btn btn-primary btn-sm">Konfirmasi</a>
                                                 <?php endif; ?>
                                             </td>
                                         </tr>
@@ -115,7 +115,7 @@
                                                     <?php if ($f->ket_bayar) : ?>
                                                         <a href="<?php echo base_url('verifikasi.fasilitas/') . $f->kode_pembelian; ?>" class="btn btn-danger btn-sm">Verifikasi</a>
                                                     <?php else : ?>
-                                                        <a href="<?php echo base_url('konfirmasi.fasilitas/') . $f->kode_pembelian; ?>" class="btn btn-primary btn-sm">Konfirmasi</a>
+                                                        <a href="<?php echo base_url('admin/konfirmasi_fasilitas/') . $f->kode_pembelian; ?>" class="btn btn-primary btn-sm">Konfirmasi</a>
                                                     <?php endif; ?>
                                                 <?php endif; ?>
                                             </td>

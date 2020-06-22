@@ -21,8 +21,8 @@ class Auth extends CI_Controller
 		$username = $this->input->post('username', true);
 		$password = $this->input->post('password', true);
 
-		$this->form_validation->set_rules('username', 'Username', 'required', ['required' => 'Username* Harus Diisi']);
-		$this->form_validation->set_rules('password', 'Password', 'required', ['required' => 'Password* Harus Diisi']);
+		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
 
 		$user_login = $this->user->getUserLogin($username);
 
@@ -70,8 +70,8 @@ class Auth extends CI_Controller
 	{
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
-		$this->form_validation->set_rules('password', 'Password', 'required|trim|alpha_numeric|min_length[3]|matches[password1]',);
-		$this->form_validation->set_rules('password1', 'Password', 'required|trim|alpha_numeric|min_length[3]|matches[password1]');
+		$this->form_validation->set_rules('password', 'Password', 'required|trim|alpha_numeric|min_length[3]|matches[password1]');
+		$this->form_validation->set_rules('password1', 'Password', 'required|trim|alpha_numeric|min_length[3]|matches[password]');
 		$this->db->select_max('id');
 		$queryUser = $this->db->get('t_user')->row_array();
 		$genIduser = $queryUser['id'] + 1;

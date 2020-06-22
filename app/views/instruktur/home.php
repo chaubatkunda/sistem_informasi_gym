@@ -35,8 +35,8 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-info btn-sm">Detail</button>
-                                        <a href="<?php echo base_url('admin/hapus_instruktur/' . $i->id_instruktur); ?>" class="btn btn-danger btn-sm">Hapus</a>
                                         <a href="" class="btn btn-primary btn-sm">Edit</a>
+                                        <a href="<?php echo base_url('admin/hapus_instruktur/' . $i->id_instruktur); ?>" class="btn btn-danger btn-sm">Hapus</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>

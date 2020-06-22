@@ -54,8 +54,8 @@ $route['logout']                    = 'auth/logout';
 $route['block']                     = 'auth/blocked';
 $route['dashboard']                 = 'home';
 //!===================== Calon Member =====================//
-$route['calon-member']              = 'auth/daftar';
-// $route['daftar']                    = 'user/daftar';
+$route['registrasi']              = 'auth/daftar';
+$route['daftar']                  = 'user/daftar';
 
 //?===================== User =====================//
 $route['user']                                  = 'user';
@@ -137,7 +137,7 @@ $route['validasiPaket/(:any)']      = 'transaksi/validasipaket/$1';
 // !Konfirmasi
 $route['admin/konfirmasi']                        = 'konfirmasi';
 // ? paket
-$route['verifikasi.paket/(:any)']           = 'konfirmasi/veripaket/$1';
+$route['admin/verifikasi.paket/(:any)']           = 'konfirmasi/veripaket/$1';
 $route['admin/save_confirm_paket/(:any)']         = 'konfirmasi/saveconfirmpaket/$1';
 $route['detconfirm.peket/(:any)']           = 'konfirmasi/detconfirmpaket/$1';
 $route['info.peket.success/(:any)']         = 'konfirmasi/infopaketsukses/$1';

@@ -45,7 +45,14 @@ class Instruktur extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->load->view('layout/wrap', $data, false);
         } else {
-            echo "Berhasil";
+            $instruktur = [
+                'nama_instruktur'   =>   $this->input->post('nama', true),
+                'no_hp'           => $this->input->post('telp', true),
+                'alamat'            => $this->input->post('alamat', true),
+                'aktif'             => 1
+            ];
+            $this->instruktur->insert_instruktur($instruktur);
+            redirect('admin/instruktur');
         }
     }
 
