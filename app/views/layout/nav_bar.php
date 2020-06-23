@@ -101,9 +101,6 @@
 					<?php endif; ?>
 					<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 						<li>
-							<a href="<?php echo base_url('admin/instruktur'); ?>"><span class="mini-sub-pro"><i class="fa fa-fw fa-users"></i> Instruktur</span></a>
-						</li>
-						<li>
 							<a class="has-arrow" href="#" aria-expanded="false">
 								<i class="fa fa-fw fa-money" aria-hidden="true"></i>
 								<span class="mini-click-non">Laporan</span>
@@ -117,6 +114,18 @@
 								</li>
 							</ul>
 						</li>
+						<li>
+							<a href="<?php echo base_url('admin/instruktur'); ?>"><span class="mini-sub-pro"><i class="fa fa-fw fa-users"></i> Instruktur</span></a>
+						</li>
+
+						<li>
+							<a href="<?php echo base_url('admin/galeri'); ?>">
+								<span class="mini-sub-pro">
+									<i class="fa fa-fw fa-image"></i> Galeri
+								</span>
+							</a>
+						</li>
+
 						<li>
 							<a title="Info" href="<?php echo base_url('info'); ?>">
 								<i class="fa fa-fw fa-info-circle" rue"></i>

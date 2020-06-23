@@ -149,6 +149,10 @@ $route['admin/save_confirm_fasilitas']            = 'konfirmasi/saveconfirmfasil
 $route['detconfirm.fasilitas/(:any)']       = 'konfirmasi/detconfirmfasilitas/$1';
 $route['save.cofirmfasil/(:any)']           = 'konfirmasi/savefericonfirm/$1';
 
+// * Galeri
+$route['admin/galeri']                  = 'galeri';
+$route['admin/galeri/create']           = 'galeri/create';
+
 //*===================== Cetak Transaksi Paket =====================//
 $route['cetak-trans-detpaket/(:num)'] = 'cetak/cetaktrpaket/$1';
 $route['download-trans-detpaket/(:num)'] = 'cetak/downloadtrpaket/$1';
