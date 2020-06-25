@@ -55,7 +55,6 @@ class Instruktur extends CI_Controller
             redirect('admin/instruktur');
         }
     }
-
     public function delete($id)
     {
         $this->instruktur->delete($id);
@@ -65,5 +64,68 @@ class Instruktur extends CI_Controller
             redirect('admin/instruktur');
         }
     }
+
+    public function detail($id)
+    {
+
+        $data = [
+            'title'         => 'Detail Instruktur',
+            'topik'         => 'Instruktur',
+            'detail'        => $this->instruktur->detil_instruktur($id),
+            'instruktur'    => $this->instruktur->getAllInstrukturById($id),
+            'isi'           => 'instruktur/detail-instruktur'
+        ];
+        $this->load->view('layout/wrap', $data, false);
+    }
+    public function detailt_create($id)
+    {
+        $data = [
+            'title'         => 'Detail Instruktur',
+            'topik'         => 'Instruktur',
+            'instruktur'    => $this->instruktur->getAllInstrukturById($id),
+            'senam'         => $this->senam->getAllJenisSenam(),
+            'isi'           => 'instruktur/create_detail'
+        ];
+        $this->form_validation->set_rules('jenis_senam', 'Jenis Senam', 'trim|required');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('layout/wrap', $data, false);
+        } else {
+            $ins = [
+                'instruktur_id'     => $this->input->post('instruktur', true),
+                'senam_id'     => $this->input->post('jenis_senam', true)
+            ];
+            $this->instruktur->insert_detail($ins);
+            redirect('admin/instruktur/detail/' . $id);
+        }
+    }
+    public function detailt_edit($id)
+    {
+        $idi = $this->input->post('instruktur', true);
+        $data = [
+            'title'         => 'Detail Instruktur',
+            'topik'         => 'Instruktur',
+            'instruktur'    => $this->instruktur->getAllInstrukturById($id),
+            'senam'         => $this->senam->getAllJenisSenam(),
+            'det'           => $this->instruktur->detail_instrukturbyId($id),
+            'isi'           => 'instruktur/edit_detail'
+        ];
+        $this->form_validation->set_rules('jenis_senam', 'Jenis Senam', 'trim|required');
+        if ($this->form_validation->run() == false) {
+            $this->load->view('layout/wrap', $data, false);
+        } else {
+            $ins = [
+                'senam_id'     => $this->input->post('jenis_senam', true)
+            ];
+            $this->instruktur->update_detail($id, $ins);
+            redirect('admin/instruktur/detail/' . $idi);
+        }
+    }
+    public function detailt_delete($id)
+    {
+        $ins = $this->input->get('ins', true);
+        $this->instruktur->delete_detail($id);
+        redirect('admin/instruktur/detail/' . $ins);
+    }
+
     //! ============================== End Instruktur ==============================//
 }

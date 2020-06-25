@@ -171,9 +171,13 @@ $route['user.detail.paket/(:any)']      = 'user/userdatailpaket/$1';
 
 
 //!===================== Instruktur =====================//
-$route['admin/instruktur']              = 'instruktur';
-$route['admin/instruktur/create']       = 'instruktur/create';
-$route['admin/hapus_instruktur/(:num)'] = 'instruktur/delete/$1';
+$route['admin/instruktur']                  = 'instruktur';
+$route['admin/instruktur/create']           = 'instruktur/create';
+$route['admin/instruktur/detail/(:num)']    = 'instruktur/detail/$1';
+$route['admin/instruktur/detail/create/(:num)']    = 'instruktur/detailt_create/$1';
+$route['admin/instruktur/detail/edit/(:num)']    = 'instruktur/detailt_edit/$1';
+$route['admin/instruktur/detail/delete/(:num)']    = 'instruktur/detailt_delete/$1';
+$route['admin/hapus_instruktur/(:num)']     = 'instruktur/delete/$1';
 
 //?===================== Laporan =====================//
 $route['admin/laporan_paket']         = 'laporan/paket';
