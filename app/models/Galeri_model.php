@@ -18,7 +18,6 @@ class Galeri_model extends CI_Model
         $this->db->select('*');
         $this->db->from('t_galeri');
         $this->db->join('t_jenis_senam', 't_jenis_senam.id_senam = t_galeri.senam_id');
-        $this->db->join('t_fasilitas', 't_fasilitas.id_fasilitas = t_galeri.fasilitas_id');
         return $this->db->get()->result();
     }
 }

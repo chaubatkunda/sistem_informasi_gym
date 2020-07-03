@@ -12,7 +12,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @return      ...
  */
 
-class Transaksipaket_model extends CI_Model
+class Pembelian_model extends CI_Model
 {
 
     //?======================== Transaksi Paket ========================//

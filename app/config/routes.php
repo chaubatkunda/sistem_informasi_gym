@@ -124,7 +124,7 @@ $route['admin/edit_senam/(:any)']         = 'senam/editsenam/$1';
 $route['admin/hapus_senam/(:any)']        = 'senam/hapussenam/$1';
 
 //TODO===================== Transaksi Paket =====================//
-$route['admin/transaksi']                 = 'transaksi';
+$route['admin/pembelian/member']    = 'pembelian';
 $route['cari.member']               = 'transaksi/carimember';
 
 // !Kusam
@@ -159,6 +159,7 @@ $route['download-trans-detpaket/(:num)'] = 'cetak/downloadtrpaket/$1';
 
 $route['admin/cetak_filterPaket']             = 'cetak/cetakfilterpaket';
 $route['admin/cetak_laporan_paket']     = 'cetak/cetaklappaket';
+
 $route['cetak-filterFasilitas']         = 'cetak/cetakfilterfasilitas';
 $route['cetak-laporanFasilitas']        = 'cetak/cetaklapfasilitas';
 

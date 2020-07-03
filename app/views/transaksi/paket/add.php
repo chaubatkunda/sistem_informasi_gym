@@ -3,16 +3,16 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<div class="sparkline10-list mg-tb-30 responsive-mg-t-0">
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<div class="input-group">
 							<span class="input-group-addon" id="basic-addon1">
 								<i class="fa fa-search"></i>
 							</span>
 							<input type="text" name="cari" class="form-control" placeholder="Cari Berdasarkan ID dan Nama" id="cari" autocomplete="off">
 						</div>
-					</div>
-					<div class="table-responsive" id="table-member">
-						<table class="table table-bordered">
+					</div> -->
+					<div class="table-responsive">
+						<table class="table table-bordered" id="table">
 							<thead>
 								<tr>
 									<th>No</th>
@@ -22,16 +22,10 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php if (empty($member)) : ?>
+								<?php $start = 1;
+								foreach ($member as $m) : ?>
 									<tr>
-										<td colspan="4">
-											<div class="alert alert-danger" role="alert">Member Tidak Ditemukan..!!</div>
-										</td>
-									</tr>
-								<?php endif; ?>
-								<?php foreach ($member as $m) : ?>
-									<tr>
-										<td><?php echo ++$start; ?></td>
+										<td><?php echo $start++; ?></td>
 										<td><?php echo $m->id_member; ?></td>
 										<td><?php echo $m->nama; ?></td>
 										<td>
@@ -41,7 +35,7 @@
 								<?php endforeach; ?>
 							</tbody>
 						</table>
-						<?php echo $this->pagination->create_links(); ?>
+						<!-- <?php echo $this->pagination->create_links(); ?> -->
 					</div>
 				</div>
 			</div>

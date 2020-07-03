@@ -144,7 +144,7 @@ $autoload['model'] = array(
     'Home_model'                => 'home',
     'Instruktur_model'          => 'instruktur',
     'Konfirmasi_model'          => 'konfirmasi',
-    'Transaksipaket_model'      => 'transpaket',
+    'Pembelian_model'           => 'beli',
     'Laporan_model'             => 'laporan',
     'Galeri_model'              => 'galeri'
 );

@@ -68,13 +68,13 @@
 					<li>
 						<a class="has-arrow" href="#" aria-expanded="false">
 							<i class="fa fa-fw fa-folder-open" aria-hidden="true"></i>
-							<span class="mini-click-non">Transaksi</span>
+							<span class="mini-click-non">Pembelian</span>
 						</a>
 						<ul class="submenu-angle" aria-expanded="true">
 							<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 								<li>
-									<a href="<?php echo base_url('admin/transaksi'); ?>">
-										<span class="mini-sub-pro">Transaksi</span>
+									<a href="<?php echo base_url('admin/pembelian/member'); ?>">
+										<span class="mini-sub-pro">Member</span>
 									</a>
 								</li>
 								<li>
