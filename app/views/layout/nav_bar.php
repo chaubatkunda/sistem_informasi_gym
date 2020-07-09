@@ -101,8 +101,15 @@
 					<?php endif; ?>
 					<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 						<li>
+							<a href="<?php echo base_url('admin/transaksi'); ?>">
+								<span class="mini-sub-pro">
+									<i class="fa fa-fw fa-money"></i> Transaksi
+								</span>
+							</a>
+						</li>
+						<li>
 							<a class="has-arrow" href="#" aria-expanded="false">
-								<i class="fa fa-fw fa-money" aria-hidden="true"></i>
+								<i class="fa fa-fw fa-file" aria-hidden="true"></i>
 								<span class="mini-click-non">Laporan</span>
 							</a>
 							<ul class="submenu-angle" aria-expanded="true">
@@ -114,8 +121,13 @@
 								</li>
 							</ul>
 						</li>
+
 						<li>
-							<a href="<?php echo base_url('admin/instruktur'); ?>"><span class="mini-sub-pro"><i class="fa fa-fw fa-users"></i> Instruktur</span></a>
+							<a href="<?php echo base_url('admin/instruktur'); ?>">
+								<span class="mini-sub-pro">
+									<i class="fa fa-fw fa-users"></i> Instruktur
+								</span>
+							</a>
 						</li>
 
 						<li>

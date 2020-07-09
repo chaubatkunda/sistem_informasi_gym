@@ -52,50 +52,6 @@ class Pembelian extends CI_Controller
     //     $this->load->view('transaksi/paket/cari_ajax', $data);
     // }
 
-    public function transpaket()
-    {
-        $data = array(
-            'title'         => 'Transaksi Paket',
-            'topik'         => 'Keseluruhan Transaksi Paket',
-            'transaksi'     => $this->transpaket->getAllTransPaket(),
-            'isi'           => 'transaksi/paket/home'
-        );
-        $this->load->view('layout/wrap', $data, false);
-    }
-    public function periodetranspaket()
-    {
-        $data = array(
-            'title'     => 'Periode Paket',
-            'topik'     => 'Data Transaksi Paket Dalam Satu Hari',
-            'periode'     => $this->transpaket->getPeriodeTransPaket(),
-            'isi'         => 'transaksi/paket/periode'
-        );
-        $this->load->view('layout/wrap', $data, false);
-    }
-    public function dettranspaket($id)
-    {
-        $data = array(
-            'title'     => 'Detail Paket',
-            'topik'     => 'Data Transaksi Paket Dalam Satu Hari',
-            'detail'     => $this->transpaket->getAllDetPaketById($id),
-            'trpaket'     => $this->transpaket->getValidPaketById($id),
-            'isi'         => 'transaksi/paket/det'
-        );
-        $this->load->view('layout/wrap', $data, false);
-    }
-
-    public function validasipaket($id)
-    {
-
-        $data = array(
-            'title'     => 'Validasi Paket',
-            'topik'     => '',
-            'validasi'  => $this->transpaket->getValidPaketById($id),
-            'isi'       => 'transaksi/paket/validasi'
-        );
-        $this->load->view('layout/wrap', $data, false);
-    }
-
 
 
     //!======================== End Transaksi Paket ========================//

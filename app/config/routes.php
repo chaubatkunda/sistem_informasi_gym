@@ -127,13 +127,6 @@ $route['admin/hapus_senam/(:any)']        = 'senam/hapussenam/$1';
 $route['admin/pembelian/member']    = 'pembelian';
 $route['cari.member']               = 'transaksi/carimember';
 
-// !Kusam
-$route['transaksiPaket']            = 'transaksi/transpaket';
-$route['detmember']                 = 'transaksi_fasilitas/detmember';
-$route['periodeTransPaket']         = 'transaksi/periodetranspaket';
-$route['detailTransPaket/(:any)']   = 'transaksi/dettranspaket/$1';
-$route['validasiPaket/(:any)']      = 'transaksi/validasipaket/$1';
-
 // !Konfirmasi
 $route['admin/konfirmasi']                        = 'konfirmasi';
 // ? paket
