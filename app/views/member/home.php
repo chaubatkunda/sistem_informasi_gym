@@ -5,7 +5,7 @@
 					<div class="sparkline13-hd">
 						<div class="main-sparkline13-hd">
 							<span class="table-project-n">
-								<a href="<?php echo base_url('add-member'); ?>" class="btn btn-custon-three btn-primary mg-tb-15">
+								<a href="<?php echo base_url('admin/add-member'); ?>" class="btn btn-custon-three btn-primary mg-tb-15">
 									<i class="fa fa-plus"></i>
 									Add Member</a>
 							</span>

@@ -27,8 +27,19 @@ class Pesertapaket extends CI_Controller
         $data = array(
             'title'     => 'Peserta Paket',
             'topik'     => 'Data Peserta Paket',
-            'peserta'   => $this->peserta->getAllPesertaPaket(),
+            'peserta'   => $this->paket->getAllPaket(),
             'isi'       => 'peserta_paket/home'
+        );
+        $this->load->view('layout/wrap', $data, false);
+    }
+
+    public function detail($id)
+    {
+        $data = array(
+            'title'     => 'Peserta Paket',
+            'topik'     => 'Data Peserta Paket',
+            'peserta'   => $this->peserta->getAllPeserta($id),
+            'isi'       => 'peserta_paket/detail-peserta'
         );
         $this->load->view('layout/wrap', $data, false);
     }

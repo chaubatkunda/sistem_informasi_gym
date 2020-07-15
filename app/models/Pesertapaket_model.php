@@ -17,5 +17,16 @@ class Pesertapaket_model extends CI_Model
         // $this->db->where('t_member,id_member');
         return $this->db->get()->result();
     }
+
+    public function getAllPeserta($id)
+    {
+        $this->db->select('*');
+        $this->db->from('t_transpaket');
+        $this->db->join('t_member', 't_member.id_member = t_transpaket.id_member');
+        $this->db->join('t_user', 't_user.id = t_member.id_user');
+        $this->db->where('nama_paket', $id);
+        return $this->db->get()->result();
+        // return $this->db->get_where('t_transpaket', ['nama_paket' => $id])->result();
+    }
     //!=========================== EndPeserta Paket ===========================//
 }

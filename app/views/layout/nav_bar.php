@@ -28,9 +28,6 @@
 							</a>
 							<ul class="submenu-angle" aria-expanded="true">
 								<li>
-									<a href="<?php echo base_url('admin/add_member'); ?>"><span class="mini-sub-pro">Add Member</span></a>
-								</li>
-								<li>
 									<a href="<?php echo base_url('admin/member'); ?>"><span class="mini-sub-pro">Member</span></a>
 								</li>
 								<li>
@@ -47,13 +44,13 @@
 						<ul class="submenu-angle" aria-expanded="true">
 							<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 								<li>
-									<a title="Paket" href="<?php echo base_url('admin/paket'); ?>"><span class="mini-sub-pro">Paket</span></a>
+									<a href="<?php echo base_url('admin/paket'); ?>"><span class="mini-sub-pro">Paket</span></a>
 								</li>
 								<li>
-									<a title="Fasilitas" href="<?php echo base_url('admin/fasilitas'); ?>"><span class="mini-sub-pro">Fasilitas</span></a>
+									<a href="<?php echo base_url('admin/fasilitas'); ?>"><span class="mini-sub-pro">Fasilitas</span></a>
 								</li>
 								<li>
-									<a title="Senam" href="<?php echo base_url('admin/senam'); ?>"><span class="mini-sub-pro">Senam</span></a>
+									<a href="<?php echo base_url('admin/senam'); ?>"><span class="mini-sub-pro">Senam</span></a>
 								</li>
 							<?php else : ?>
 								<li>
@@ -74,7 +71,7 @@
 							<?php if ($this->fungsi->user_login()['level'] == 1) : ?>
 								<li>
 									<a href="<?php echo base_url('admin/pembelian/member'); ?>">
-										<span class="mini-sub-pro">Member</span>
+										<span class="mini-sub-pro">Paket dan Fasilitas</span>
 									</a>
 								</li>
 								<li>
@@ -109,7 +106,7 @@
 						</li>
 						<li>
 							<a class="has-arrow" href="#" aria-expanded="false">
-								<i class="fa fa-fw fa-file" aria-hidden="true"></i>
+								<i class="fa fa-fw fa-book"></i>
 								<span class="mini-click-non">Laporan</span>
 							</a>
 							<ul class="submenu-angle" aria-expanded="true">
