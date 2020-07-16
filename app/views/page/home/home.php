@@ -84,7 +84,7 @@
                 <div class="card">
                     <img src="<?php echo base_url('public/assets/page/'); ?>images/image01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Sumba | Rp20.0000</h5>
+                        <h5 class="card-title">Sumba | Rp50.0000</h5>
                         <a href="#" class="btn btn-primary text-center">Selengkapnya</a>
                     </div>
                 </div>
