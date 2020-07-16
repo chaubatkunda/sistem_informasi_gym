@@ -2,8 +2,7 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="tab-content-details shadow-reset">
-                <h2>Custom Animate Tab Bootstrap</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit in repellat blanditiis, eius esse aliquam.</p>
+                <h2>Konfirmasi Pembelian Paket dan Sewa Fasilitas</h2>
             </div>
         </div>
     </div>

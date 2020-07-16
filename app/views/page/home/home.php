@@ -66,8 +66,8 @@
                 <div class="card">
                     <img src="<?php echo base_url('public/assets/page/'); ?>images/image01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Sumba | Rp20.0000</h5>
-                        <a href="#" class="btn btn-primary text-center">Selengkapnya</a>
+                        <!-- <h5 class="card-title">Sumba | Rp20.0000</h5> -->
+                        <a href="#" class="btn btn-primary btn-sm">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -75,8 +75,8 @@
                 <div class="card">
                     <img src="<?php echo base_url('public/assets/page/'); ?>images/image01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Sumba | Rp20.0000</h5>
-                        <a href="#" class="btn btn-primary text-center">Selengkapnya</a>
+                        <!-- <h5 class="card-title">Sumba | Rp20.0000</h5> -->
+                        <a href="#" class="btn btn-primary btn-sm">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -84,8 +84,8 @@
                 <div class="card">
                     <img src="<?php echo base_url('public/assets/page/'); ?>images/image01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Sumba | Rp50.0000</h5>
-                        <a href="#" class="btn btn-primary text-center">Selengkapnya</a>
+                        <!-- <h5 class="card-title">Sumba | Rp50.0000</h5> -->
+                        <a href="#" class="btn btn-primary btn-sm">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -93,8 +93,8 @@
                 <div class="card">
                     <img src="<?php echo base_url('public/assets/page/'); ?>images/image01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Sumba | Rp40.0000</h5>
-                        <a href="#" class="btn btn-primary text-center">Selengkapnya</a>
+                        <!-- <h5 class="card-title">Sumba | Rp40.0000</h5> -->
+                        <a href="#" class="btn btn-primary btn-sm">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
         <div class="row mt-3">
             <div class="col-md-12">
                 <div class="full center">
-                    <a href="about.html" class="hvr-radial-out button-theme">See More ></a>
+                    <a href="#" class="hvr-radial-out button-theme">See More ></a>
                 </div>
             </div>
         </div>
