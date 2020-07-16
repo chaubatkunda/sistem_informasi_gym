@@ -16,7 +16,7 @@ class Galeri extends CI_Controller
     {
         $data = array(
             'title'     => 'Galeri',
-            'topik'     => 'Data Paket',
+            'topik'     => '',
             'galeri'    => $this->galeri->getAllGaleri(),
             'isi'       => 'galeri/galeri'
         );

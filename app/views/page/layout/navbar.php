@@ -11,9 +11,9 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                 <ul class="navbar-nav">
                     <li><a class="nav-link active" href="<?php echo base_url('/'); ?>">Home</a></li>
-                    <li><a class="nav-link" href="">Tentang Kami</a></li>
-                    <li><a class="nav-link" href="">Produk</a></li>
-                    <li><a class="nav-link" href="">Kontak</a></li>
+                    <li><a class="nav-link" href="#">Tentang Kami</a></li>
+                    <li><a class="nav-link" href="#">Produk</a></li>
+                    <li><a class="nav-link" href="#">Kontak</a></li>
                     <li><a class="nav-link active" style="background:#fff;color:#000;" href="<?php echo base_url('auth'); ?>">Login</a></li>
                 </ul>
             </div>

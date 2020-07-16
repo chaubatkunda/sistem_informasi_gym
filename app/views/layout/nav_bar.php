@@ -100,7 +100,7 @@
 						<li>
 							<a href="<?php echo base_url('admin/transaksi'); ?>">
 								<span class="mini-sub-pro">
-									<i class="fa fa-fw fa-money"></i> Transaksi
+									<i class="fa fa-fw fa-money"></i> Riwayat Pembelian
 								</span>
 							</a>
 						</li>
@@ -127,20 +127,20 @@
 							</a>
 						</li>
 
-						<li>
+						<!-- <li>
 							<a href="<?php echo base_url('admin/galeri'); ?>">
 								<span class="mini-sub-pro">
 									<i class="fa fa-fw fa-image"></i> Galeri
 								</span>
 							</a>
-						</li>
+						</li> -->
 
-						<li>
+						<!-- <li>
 							<a title="Info" href="<?php echo base_url('info'); ?>">
 								<i class="fa fa-fw fa-info-circle" rue"></i>
 								<span class="mini-sub-pro">Info</span>
 							</a>
-						</li>
+						</li> -->
 					<?php endif; ?>
 				</ul>
 			</nav>
