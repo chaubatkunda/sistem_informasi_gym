@@ -25,9 +25,10 @@ class Transaksi extends CI_Controller
     public function index()
     {
         $data = array(
-            'title'     => 'Peserta Paket',
-            'topik'     => 'Data Peserta Paket',
-            'peserta'   => $this->paket->getAllPaket(),
+            'title'     => 'Riwayat Transaksi',
+            'topik'     => 'Riwayat Transaksi',
+            'transaksi' => $this->transaksi->transaksiAllPaket(),
+            'fasilitas' => $this->transaksi->transaksiAllFasilita(),
             'isi'       => 'transaksi/riwayat_transaksi/riwayat'
         );
         $this->load->view('layout/wrap', $data, false);

@@ -146,5 +146,6 @@ $autoload['model'] = array(
     'Konfirmasi_model'          => 'konfirmasi',
     'Pembelian_model'           => 'beli',
     'Laporan_model'             => 'laporan',
-    'Galeri_model'              => 'galeri'
+    'Galeri_model'              => 'galeri',
+    'Transaksi_model'           => 'transaksi'
 );
