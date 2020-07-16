@@ -36,6 +36,16 @@ class User extends CI_Controller
 		if ($this->form_validation->run() == false) {
 			$this->load->view('layout/user_wrap', $data, false);
 		} else {
+			$id = $this->input->post('iduser', true);
+			$datau = [
+				'id_member'		=> $this->input->post('idmem', true),
+				'id_user'		=> $id,
+				'alamat'		=> $this->input->post('alamat', true),
+				'notelp'		=> $this->input->post('notelp', true)
+			];
+			$this->user->update_user($id);
+			$this->user->insert_member($datau);
+			redirect('user');
 		}
 	}
 
