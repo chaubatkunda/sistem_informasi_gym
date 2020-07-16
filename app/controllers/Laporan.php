@@ -48,12 +48,12 @@ class Laporan extends CI_Controller
 		if ($tgl1 and $tgl2) {
 			$data = array(
 				'title' 	=> 'Laporan Fasilitas',
-				'topik'		=> '',
+				'topik'		=> 'Laporan Sewa Fasilitas',
 				// 'transaksi'	=> $this->laporan->getAllTransPaket(),
 				'transaksi' => $this->laporan->filterLaporanFasilitas($tgl1, $tgl2),
 				'total' 	=> $this->laporan->sumSearchFasilitas($tgl1, $tgl2),
 				'cetak'		=> $cetak,
-				'isi'		=> 'laporan/paket'
+				'isi'		=> 'laporan/fasilitas'
 			);
 		} else {
 			$data = array(

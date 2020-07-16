@@ -76,13 +76,8 @@ class Paket_model extends CI_Model
     public function updateDetkPaket($id)
     {
         $data = [
-            'id_paket' => htmlspecialchars($this->input->post('id_paket', true)),
-            'id_jenis_senam' => htmlspecialchars($this->input->post('senam', true)),
-            'kuota' => htmlspecialchars($this->input->post('kuota', true)),
-            'date1' => $this->input->post('periode1', true),
-            'date2' => $this->input->post('periode2', true),
-            'jam_mulai' => htmlspecialchars($this->input->post('jam1', true)),
-            'jam_selesai' => htmlspecialchars($this->input->post('jam2', true))
+            'id_paket'          => htmlspecialchars($this->input->post('id_paket', true)),
+            'id_jenis_senam'    => htmlspecialchars($this->input->post('senam', true))
         ];
         return $this->db->update('t_setingpaket', $data, ['id_setingpaket' => $id]);
     }

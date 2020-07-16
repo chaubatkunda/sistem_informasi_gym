@@ -183,7 +183,6 @@
                 $('.kuota2').hide();
             }
         });
-        console.log(kuota);
     });
 </script>
 <script>
@@ -209,26 +208,7 @@
         });
     });
 </script>
-<!-- <?php if ($this->uri->segment(1) !== 'user.transaksi') : ?>
-    <script>
-        $(function() {
-            var key = document.getElementById('cari');
-            var tabel = document.getElementById('table-member');
 
-            key.addEventListener('keyup', function() {
-                var xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        tabel.innerHTML = xhr.responseText;
-                    }
-                }
-                xhr.open('GET', '<?php echo base_url('cari.member?key='); ?>' + key.value, true);
-                xhr.send();
-            });
-
-        });
-    </script>
-<?php endif; ?> -->
 </body>
 
 </html>

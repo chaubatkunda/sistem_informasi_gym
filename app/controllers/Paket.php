@@ -161,22 +161,12 @@ class Paket extends CI_Controller
         );
 
         $this->form_validation->set_rules('senam', 'Senam', 'required');
-        $this->form_validation->set_rules('kuota', 'Kuota', 'required|trim|numeric|max_length[2]');
         if ($this->form_validation->run() == false) {
             $this->load->view('layout/wrap', $data, false);
         } else {
-            if ($this->paket->updateDetkPaket($id) == true) {
-                if ($this->db->affected_rows() > 0) {
-                    $this->session->set_flashdata('detpaket', 'Berhasil Diubah');
-                    redirect('detail.paket/' . $idp);
-                } else {
-                    $this->session->set_flashdata('detpaket', 'Gagal Diubah');
-                    redirect('detail.paket/' . $idp);
-                }
-            } else {
-                $this->session->set_flashdata('detpaket', 'Gagal Diubah');
-                redirect('detail.paket/' . $idp);
-            }
+            $this->paket->updateDetkPaket($id);
+            $this->session->set_flashdata('detpaket', 'Berhasil Diubah');
+            redirect('admin/detail_paket/' . $idp);
         }
     }
     public function hapusdetpaket($id)
