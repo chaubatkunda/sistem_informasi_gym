@@ -109,12 +109,29 @@ class Member extends CI_Controller
 	public function editmember($id)
 	{
 		$data = array(
-			'title' 	=> 'Member',
+			'title' 	=> 'Edit Member',
 			'topik' 	=> '',
-			'member' 	=> $this->member->getAllMember(),
+			'member' 	=> $this->member->getAllMemberById($id),
 			'isi' 		=> 'member/edit_member'
 		);
-		$this->load->view('layout/wrap', $data, false);
+		$this->form_validation->set_rules('notelp', 'No Telp', 'required|trim|numeric|max_length[12]|min_length[4]');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'required|trim');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('layout/wrap', $data, false);
+		} else {
+			$idus = $this->input->post('idus', true);
+			$data = [
+				'alamat'	=> $this->input->post('alamat', true),
+				'notelp'	=> $this->input->post('notelp', true)
+			];
+			$datau = [
+				'nama'	=> $this->input->post('nama', true)
+			];
+			$this->member->update_member($id, $data);
+			$this->member->update_user($idus, $datau);
+			$this->session->set_flashdata('warning', 'Berhasil Mengubah Data');
+			redirect('admin/member');
+		}
 	}
 
 	public function pilihproduk($id)

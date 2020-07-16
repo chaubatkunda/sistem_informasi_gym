@@ -32,6 +32,25 @@ class Member_model extends CI_Model
 		$this->db->join('t_member', 't_member.id_user = t_user.id', 'right');
 		return $this->db->get()->result();
 	}
+	public function getAllMemberById($id)
+	{
+		$this->db->select('*');
+		$this->db->from('t_user');
+		$this->db->join('t_member', 't_member.id_user = t_user.id', 'right');
+		$this->db->where('idm', $id);
+		return $this->db->get()->row();
+	}
+
+	public function update_member($id, $data)
+	{
+		return $this->db->update('t_member', $data, ['idm' => $id]);
+	}
+	public function update_user($idus, $datau)
+	{
+		return $this->db->update('t_user', $datau, ['id' => $idus]);
+	}
+
+
 	public function getAllTransFasilitas($id)
 	{
 		return $this->db->get_where('t_transfasilitas', ['kode_pembelian' => $id])->row();
@@ -240,10 +259,6 @@ class Member_model extends CI_Model
 			];
 			return $this->db->insert('t_transfasilitas', $dataFasilitas);
 		}
-	}
-	public function getAllMemberById($id)
-	{
-		return $this->db->get_where('t_member', ['id_member' => $id])->row();
 	}
 
 	public function deleteMember($id)

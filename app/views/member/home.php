@@ -12,7 +12,7 @@
 						</div>
 					</div>
 					<div class="sparkline13-graph">
-						<div class="flash-data" data-flashdata="<?php echo $this->session->flashdata('member'); ?>"></div>
+						<div class="flash-data" data-flashdata="<?php echo $this->session->flashdata('warning'); ?>"></div>
 						<div class="datatable-dashv1-list custom-datatable-overright">
 							<table id="table" class="table table-hover table-bordered">
 								<thead>
