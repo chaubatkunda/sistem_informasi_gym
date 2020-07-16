@@ -11,7 +11,6 @@
                             <tr>
                                 <th>#</th>
                                 <th>Jenis Senam</th>
-                                <th>Status</th>
                                 <th>Opsi</th>
                             </tr>
                         </thead>
@@ -23,9 +22,6 @@
                                 <tr>
                                     <td><?php echo $no++; ?></td>
                                     <td><?php echo $i->jenis_senam; ?></td>
-                                    <td>
-                                        <a href="">Jadwal</a>
-                                    </td>
                                     <td>
                                         <a href="<?php echo base_url('admin/instruktur/detail/edit/' . $i->id); ?>" class="btn btn-primary btn-sm">Edit</a>
                                         <a href="<?php echo base_url('admin/instruktur/detail/delete/' . $i->id . "?ins=" . $instruktur->id_instruktur); ?>" class="btn btn-danger btn-sm">Hapus</a>

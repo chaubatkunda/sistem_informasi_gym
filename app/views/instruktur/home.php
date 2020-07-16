@@ -3,6 +3,8 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <a href="<?php echo base_url('admin/instruktur/create'); ?>" class="btn btn-primary">Tambah</a>
+            <br>
+            <br>
             <div class="sparkline13-list">
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover" id="table">

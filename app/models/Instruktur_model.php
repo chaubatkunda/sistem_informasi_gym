@@ -36,7 +36,7 @@ class Instruktur_model extends CI_Model
     {
         $this->db->select('id, instruktur_id, senam_id, id_senam,jenis_senam');
         $this->db->from('t_instruktur_detail');
-        $this->db->join('t_jenis_senam', 't_instruktur_detail.senam_id = t_jenis_senam.id_senam');
+        $this->db->join('t_jenis_senam', 't_instruktur_detail.senam_id = t_jenis_senam.id_senam', 'left');
         $this->db->where('instruktur_id', $id);
         return $this->db->get()->result();
     }

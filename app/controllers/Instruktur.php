@@ -47,7 +47,7 @@ class Instruktur extends CI_Controller
         } else {
             $instruktur = [
                 'nama_instruktur'   =>   $this->input->post('nama', true),
-                'no_hp'           => $this->input->post('telp', true),
+                'no_hp'             => $this->input->post('telp', true),
                 'alamat'            => $this->input->post('alamat', true),
                 'aktif'             => 1
             ];
