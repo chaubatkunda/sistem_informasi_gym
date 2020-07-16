@@ -3,13 +3,10 @@
         <div class="col-md-3">
             <div class="list-group">
                 <a href="#" class="list-group-item active">
-                    Cras justo odio
+                    Pembelian Paket dan Sewa Fasilitas
                 </a>
                 <button class="list-group-item btn-userpaket">Paket</button>
                 <button class="list-group-item btn-userfasilitas">Fasilitas</button>
-                <a href="#" class="list-group-item">Success</a>
-                <a href="#" class="list-group-item">Menunggu Konfirmasi</a>
-                <a href="#" class="list-group-item">Pending</a>
             </div>
         </div>
         <div class="col-md-6">

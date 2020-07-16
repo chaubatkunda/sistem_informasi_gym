@@ -48,11 +48,11 @@
 										<?php if ($this->fungsi->user_login()['level'] == 2) : ?>
 											<?php if (date('Y-m-d') > $p->tgl_akhir) : ?>
 												<a href="#" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="left" title="Beli">
-													<i class="fa fa-money"></i> Beli
+													<i class="fa fa-money"></i>
 												</a>
 											<?php else : ?>
 												<a href="<?php echo base_url('beli.paket/') . $p->id_paket; ?>" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="left" title="Beli">
-													<i class="fa fa-money"></i> Beli
+													<i class="fa fa-money"></i>
 												</a>
 											<?php endif; ?>
 											<a href="<?php echo base_url('user.detai_paket/') . $p->id_paket; ?>" class="btn btn-info btn-sm mr-2" data-toggle="tooltip" data-placement="right" title="Detail">

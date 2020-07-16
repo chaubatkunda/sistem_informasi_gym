@@ -26,9 +26,6 @@
 										</td>
 									</tr>
 									<tr>
-										<th colspan="2" class="text-primary"><i>Jenis Fasilitas*</i></th>
-									</tr>
-									<tr>
 										<th>ID Fasilitas</th>
 										<td>
 											<?php echo $fasilitas->id_fasilitas; ?>
@@ -54,9 +51,6 @@
 											<?php echo Rp($fasilitas->harga); ?>
 											<input type="hidden" name="total" value="<?php echo $fasilitas->harga; ?>">
 										</th>
-									</tr>
-									<tr>
-										<th colspan="2" class="text-primary"><i>Detail Booking*</i></th>
 									</tr>
 									<tr>
 										<th>Nama</th>
