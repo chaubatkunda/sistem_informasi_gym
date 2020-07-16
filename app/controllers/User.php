@@ -26,12 +26,17 @@ class User extends CI_Controller
 	public function daftar()
 	{
 		$data = array(
-			'title' 		=> 'Paket',
+			'title' 		=> 'Daftar Member',
 			'topik' 		=> '',
 			'paket' 		=> $this->paket->getAllPaket(),
 			'isi' 			=> 'user/add_member'
 		);
-		$this->load->view('layout/user_wrap', $data, false);
+		$this->form_validation->set_rules('notelp', 'Telepon', 'trim|required|numeric');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('layout/user_wrap', $data, false);
+		} else {
+		}
 	}
 
 	// !user paket

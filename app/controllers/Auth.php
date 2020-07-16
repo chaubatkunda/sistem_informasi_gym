@@ -53,7 +53,7 @@ class Auth extends CI_Controller
 				} else {
 					$this->session->set_flashdata('login', '<div class="alert alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <strong>Warning!</strong> Akun Tidak
+                    <strong>Warning!</strong> Akun Tidak Aktif
                     </div>');
 					redirect('auth');
 				}
@@ -111,7 +111,7 @@ class Auth extends CI_Controller
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <strong>Berhasil</strong> Logout
                 </div>');
-		redirect('auth');
+		redirect('/');
 	}
 	public function blocked()
 	{

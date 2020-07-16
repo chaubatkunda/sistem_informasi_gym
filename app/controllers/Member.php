@@ -106,6 +106,17 @@ class Member extends CI_Controller
 		}
 	}
 
+	public function editmember($id)
+	{
+		$data = array(
+			'title' 	=> 'Member',
+			'topik' 	=> '',
+			'member' 	=> $this->member->getAllMember(),
+			'isi' 		=> 'member/edit_member'
+		);
+		$this->load->view('layout/wrap', $data, false);
+	}
+
 	public function pilihproduk($id)
 	{
 		$data = array(

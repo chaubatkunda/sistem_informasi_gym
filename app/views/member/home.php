@@ -53,10 +53,10 @@
 												<?php endif; ?>
 											</td>
 											<td>
-												<a href="<?php echo base_url('edit-member/') . $mem->idm; ?>" class="btn btn-custon-three btn-success btn-sm mr-2" data-toggle="tooltip" data-placement="left" title="Edit">
+												<a href="<?php echo base_url('admin/edit-member/') . $mem->idm; ?>" class="btn btn-custon-three btn-success btn-sm mr-2" data-toggle="tooltip" data-placement="left" title="Edit">
 													<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 												</a>
-												<a href="<?php echo base_url('hapus-member/') . $mem->idm; ?>" class="btn btn-custon-three btn-danger btn-sm tombol-hapusm" data-toggle="tooltip" data-placement="right" title="Hapus">
+												<a href="<?php echo base_url('admin/hapus-member/') . $mem->idm; ?>" class="btn btn-custon-three btn-danger btn-sm tombol-hapusm" data-toggle="tooltip" data-placement="right" title="Hapus">
 													<i class="fa fa-trash-o" aria-hidden="true"></i>
 												</a>
 											</td>

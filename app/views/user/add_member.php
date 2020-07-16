@@ -1,5 +1,5 @@
 <div class="container-fluid">
-	<form action="" method="post" class="form-horizontal">
+	<form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
@@ -40,12 +40,6 @@
 									<div class="bt-df-checkbox pull-left">
 										<label>
 											<input class="pull-left radio-checked chek-transfer" name="chek-transfer" type="checkbox" value="1">Transfer
-										</label>
-										<label>
-											<input class="pull-left radio-checked" name="chek-tunai" type="checkbox" value="2">Tunai
-										</label>
-										<label>
-											<input class="pull-left radio-checked" name="chek-edc" type="checkbox" value="3">EDC
 										</label>
 										<p class="text-warning">Diwajibkan untuk semua member* </p>
 									</div>

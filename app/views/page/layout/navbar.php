@@ -2,7 +2,7 @@
 <header class="top-header">
     <nav class="navbar header-nav navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url('/'); ?>"><img src="<?php echo base_url('public/assets/icon/'); ?>logogymblack.png" width="80"></a>
+            <a class="navbar-brand" href="<?php echo base_url('/'); ?>"><img src="<?php echo base_url('public/assets/icon/'); ?>logogymblack.png" width="70"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>

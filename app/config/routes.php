@@ -76,7 +76,8 @@ $route['user.savekonfirmasi.fasilitas/(:any)']          = 'user/usersaveconfirmf
 
 //?===================== Member =====================//
 $route['admin/member']                                  = 'member/member';
-$route['admin/add.member']                              = 'member/addmember';
+$route['admin/add-member']                              = 'member/addmember';
+$route['admin/edit-member/(:num)']                      = 'member/editmember/$1';
 $route['admin/pilih_produk/(:any)']                     = 'member/pilihproduk/$1';
 $route['admin/cheout_paket/(:num)/(:any)']              = 'member/chekoutpaket/$1/$2';
 $route['admin/detail_pembelian_paket/(:num)/(:any)']    = 'member/detailbeli/$1/$2';
