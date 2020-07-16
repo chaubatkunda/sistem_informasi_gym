@@ -154,12 +154,13 @@ class Paket extends CI_Controller
         $data = array(
             'title'     => 'Detail Paket',
             'topik'     => 'Data Paket',
+            'kuota'     => ['1', '2', '3'],
             'senam'     => $this->senam->getAllJenisSenam(),
             'paket'     => $this->paket->getAllSetingPaketById($id),
             'isi'       => 'paket/edit_det'
         );
 
-        $this->form_validation->set_rules('senam', 'Senam', 'required', ['required' => 'Wajib Diisi']);
+        $this->form_validation->set_rules('senam', 'Senam', 'required');
         $this->form_validation->set_rules('kuota', 'Kuota', 'required|trim|numeric|max_length[2]');
         if ($this->form_validation->run() == false) {
             $this->load->view('layout/wrap', $data, false);

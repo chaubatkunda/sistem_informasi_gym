@@ -104,6 +104,7 @@ $route['admin/detail_paket/(:num)']        = 'paket/detpaket/$1';
 $route['admin/edit_paket/(:num)']          = 'paket/editpaket/$1';
 $route['admin/hapus_paket/(:num)']         = 'paket/hapuspaket/$1';
 $route['admin/add_detail_paket/(:num)']    = 'paket/adddetpaket/$1';
+$route['admin/edit_detail/(:num)']         = 'paket/editdetpaket/$1';
 $route['admin/hapus_detail/(:num)']        = 'paket/hapusdetpaket/$1';
 
 $route['edit.detail/(:num)']         = 'paket/editdetpaket/$1';

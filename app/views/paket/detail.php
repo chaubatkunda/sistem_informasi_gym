@@ -69,7 +69,7 @@
 											</ul>
 										</td>
 										<td>
-											<a href="<?php echo base_url('admin/edit_etail/') . $pk->id_setingpaket; ?>" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="left" title="Edit">Edit</a>
+											<a href="<?php echo base_url('admin/edit_detail/') . $pk->id_setingpaket; ?>" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="left" title="Edit">Edit</a>
 											<a href="<?php echo base_url('admin/hapus_detail/') . $pk->id_setingpaket; ?>" class="btn btn-danger btn-sm tombol-hapus-detail" data-toggle="tooltip" data-placement="right" title="Hapus">Hapus</a>
 										</td>
 									</tr>

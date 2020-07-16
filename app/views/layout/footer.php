@@ -169,6 +169,7 @@
 
 <script>
     $(document).ready(function() {
+        // const kuota = $(this).data('kuota');
         $("#kuota").on("change", function() {
             const kt = $(this).val();
             if (kt == 2) {
@@ -182,6 +183,7 @@
                 $('.kuota2').hide();
             }
         });
+        console.log(kuota);
     });
 </script>
 <script>
@@ -207,7 +209,7 @@
         });
     });
 </script>
-<?php if ($this->uri->segment(1) !== 'user.transaksi') : ?>
+<!-- <?php if ($this->uri->segment(1) !== 'user.transaksi') : ?>
     <script>
         $(function() {
             var key = document.getElementById('cari');
@@ -226,7 +228,7 @@
 
         });
     </script>
-<?php endif; ?>
+<?php endif; ?> -->
 </body>
 
 </html>
