@@ -108,7 +108,7 @@ $route['admin/hapus_detail/(:num)']        = 'paket/hapusdetpaket/$1';
 $route['edit.detail/(:num)']         = 'paket/editdetpaket/$1';
 
 // !Kusam
-$route['getpaket']                  = 'paket/getpaketbyid';
+// $route['getpaket']                  = 'paket/getpaketbyid';
 
 //*===================== Fasilitas =====================//
 $route['admin/fasilitas']                 = 'fasilitas';
@@ -146,6 +146,8 @@ $route['save.cofirmfasil/(:any)']           = 'konfirmasi/savefericonfirm/$1';
 // * Galeri
 $route['admin/galeri']                  = 'galeri';
 $route['admin/galeri/create']           = 'galeri/create';
+
+$route['admin/transaksi']             = 'transaksi';
 
 //*===================== Cetak Transaksi Paket =====================//
 $route['cetak-trans-detpaket/(:num)'] = 'cetak/cetaktrpaket/$1';
