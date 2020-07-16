@@ -67,7 +67,7 @@ class Konfirmasi extends CI_Controller
 				'is_success'		=> 1
 			];
 			$this->konfirmasi->update_transpaket($datap, $id);
-			redirect('info.peket.success/' . $id);
+			redirect('admin/transaksi');
 		} elseif (isset($edc)) {
 			$datap = [
 				'ket_bayar'			=> $edc,
@@ -75,7 +75,7 @@ class Konfirmasi extends CI_Controller
 			];
 
 			$this->konfirmasi->update_transpaket($datap, $id);
-			redirect('info.peket.success/' . $id);
+			redirect('admin/transaksi');
 		} elseif (isset($transfer)) {
 			$config['upload_path']          = './public/assets/buktitransfer/';
 			$config['allowed_types']        = 'jpg|jpeg|png';
@@ -90,7 +90,7 @@ class Konfirmasi extends CI_Controller
 					'is_success'		=> 1
 				];
 				$this->konfirmasi->update_transpaket($datap, $id);
-				redirect('info.peket.success/' . $id);
+				redirect('admin/transaksi');
 			} else {
 				$error = $this->upload->display_errors('Gambar Tidak Dapat Diupload');
 				$this->session->set_flashdata('error', $error);
@@ -111,7 +111,7 @@ class Konfirmasi extends CI_Controller
 		$this->load->view('layout/wrap', $data, false);
 	}
 
-	public function infopaketsukses($id)
+	public function infopaketsukses()
 	{
 		$data = array(
 			'title' 	=> 'Success',

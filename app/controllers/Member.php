@@ -144,6 +144,8 @@ class Member extends CI_Controller
 			'member'	=> $this->member->getAllMemberById($id),
 			'isi' 		=> 'member/pilih_produk'
 		);
+		// var_dump($id);
+		// die;
 		$this->load->view('layout/wrap', $data, false);
 	}
 	public function chekoutpaket($id, $idm)

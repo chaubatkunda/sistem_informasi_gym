@@ -37,7 +37,7 @@ class Member_model extends CI_Model
 		$this->db->select('*');
 		$this->db->from('t_user');
 		$this->db->join('t_member', 't_member.id_user = t_user.id', 'right');
-		$this->db->where('idm', $id);
+		$this->db->where('id_member', $id);
 		return $this->db->get()->row();
 	}
 
