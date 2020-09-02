@@ -51,17 +51,16 @@
 													<i class="fa fa-money"></i>
 												</a>
 											<?php else : ?>
-												<a href="<?php echo base_url('beli.paket/') . $p->id_paket; ?>" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="left" title="Beli">
+
+												<a href="<?php echo base_url('beli.paket/') . $p->id_paket; ?>" class="btn btn-success btn-sm" data-toggle="tooltip" data-placement="left" title="Beli">
 													<i class="fa fa-money"></i>
 												</a>
+
 											<?php endif; ?>
-											<a href="<?php echo base_url('user.detai_paket/') . $p->id_paket; ?>" class="btn btn-info btn-sm mr-2" data-toggle="tooltip" data-placement="right" title="Detail">
-												<i class="fa fa-info-circle"></i>
-											</a>
 										<?php else : ?>
-											<a href="" class="btn btn-success btn-sm btn-user-beli" data-toggle="tooltip" data-placement="left" title="Beli">
+											<!-- <a href="" class="btn btn-success btn-sm btn-user-beli" data-toggle="tooltip" data-placement="left" title="Beli">
 												<i class="fa fa-money"></i>
-											</a>
+											</a> -->
 											<a href="<?php echo base_url('user.detai_paket/') . $p->id_paket; ?>" class="btn btn-info btn-sm mr-2" data-toggle="tooltip" data-placement="right" title="Detail">
 												<i class="fa fa-info-circle"></i>
 											</a>

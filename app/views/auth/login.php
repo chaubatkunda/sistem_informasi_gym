@@ -110,7 +110,7 @@
                 <?php echo form_error('password', '<span class="help-block small text-danger">', '</span>'); ?>
               </div>
               <button type="submit" class="btn btn-success btn-block loginbtn">Login</button>
-              <a class="btn btn-default btn-block" href="<?php echo base_url('registrasi'); ?>">Register</a>
+              <a class="btn btn-danger btn-block" href="<?php echo base_url(); ?>"><i class="fa fa-arrow-circle-left"></i> Kembali</a>
             </form>
           </div>
         </div>

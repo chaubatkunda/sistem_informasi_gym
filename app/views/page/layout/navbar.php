@@ -14,7 +14,12 @@
                     <li><a class="nav-link" href="#">Tentang Kami</a></li>
                     <li><a class="nav-link" href="#">Produk</a></li>
                     <li><a class="nav-link" href="#">Kontak</a></li>
-                    <li><a class="nav-link active" style="background:#fff;color:#000;" href="<?php echo base_url('auth'); ?>">Login</a></li>
+                    <li>
+                        <a class="nav-link active" style="background:#fff;color:#000;" href="<?php echo base_url('auth'); ?>">Login</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" style="background:#fff;color:#000;" href="<?php echo base_url('registrasi'); ?>">Daftar</a>
+                    </li>
                 </ul>
             </div>
         </div>
