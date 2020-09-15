@@ -3,6 +3,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  * Controller Auth
+ * Group TA 1
+ * Desain Interface, Perancangan Sistem	: Yerry Kalele
+ * Perancangan Sistem					: Lina M W
  * This Controller for ...
  * @package     Codeigniter
  * @category    Controller CI

@@ -3,14 +3,6 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<div class="sparkline10-list mg-tb-30 responsive-mg-t-0">
-					<!-- <div class="form-group">
-						<div class="input-group">
-							<span class="input-group-addon" id="basic-addon1">
-								<i class="fa fa-search"></i>
-							</span>
-							<input type="text" name="cari" class="form-control" placeholder="Cari Berdasarkan ID dan Nama" id="cari" autocomplete="off">
-						</div>
-					</div> -->
 					<div class="table-responsive">
 						<table class="table table-bordered" id="table">
 							<thead>
